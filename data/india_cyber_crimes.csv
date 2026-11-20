@@ -1,0 +1,601 @@
+region,region_type,zone,year,indicator,unit,Crime Head,Cyber Motive,Law,Victim Type,SLL Act,value,quality,source
+India,Country,,2015,Number of Cases,,,,,,,11592.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2016,Number of Cases,,,,,,,12317.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Online Banking Fraud,,,,,804.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Obscene or Sexually Explicit Material in Electronic Form,,,,,1768.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Computer Related Offences (Sec 66),,,,,3508.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Other IPC/BNS Crimes,,,,,1086.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Other Sections of IT Act,,,,,1503.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Identity Theft,,,,,3724.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Obscene Material in Electronic Form (Sec 67),,,,,948.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,Child,,7.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Forgery,,,,,99.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,,,542.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Data Theft,,,,,307.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Cyber Blackmailing or Threatening,,,,,311.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Counterfeiting,,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Other Fraud,,,,,390.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Unauthorised Access to Protected Computer System,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Defamation or Morphing,,,,,12.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,,,SLL Crimes,,,185.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Crimes through Online Games and Gaming Apps,,,Child,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Sexually Explicit Material in Electronic Form (Sec 67A),,,,,401.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Fake Profile,,,,,86.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Cyber Terrorism,,,,,13.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Receiving Stolen Computer Resource or Communication Device,,,,,360.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Abetment of Suicide Online,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,,,IT Act Offences,,,13635.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Interception or Monitoring of Information,,,,,4.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Counterfeiting of Currency,,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Other Subsections of Sec 67 IT Act,,,,,362.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Fraud,,,,,3466.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Online Gambling,,,,,45.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,,,,Child,,88.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,Child,,7.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,,,,,,21796.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,,,IPC/BNS Crimes,,,7976.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Credit Card or Debit Card Fraud,,,,,395.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Computer Related Offences Other Than Ransomware,,,,,3208.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,,,,,Trade Marks Act,11.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,,,46.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Online Lotteries,,,,,11.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Attempt to Commit IT Act Offences,,,,,4.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Preservation and Retention of Information by Intermediaries,,,,,11.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Other Cyber Crimes,,,Child,,70.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,,,,,Other SLL Crimes,29.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Cheating,,,,,1896.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Abetment to Commit IT Act Offences,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Tampering Computer Source Documents,,,,,233.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Counterfeiting of Stamps,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Cheating by Personation Using Computer Resource,,,,,2269.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Violation of Privacy,,,,,247.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Cyber Blackmailing or Threatening,,,Child,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,,,,,Copyright Act,89.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,OTP Fraud,,,,,334.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Ransomware,,,,,300.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,ATM Fraud,,,,,1543.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Fake News on Social Media,,,,,170.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Computer Related Offences,,,,,10108.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Number of Cases,,Fake Profile,,,Child,,3.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Cheating by Personation Using Computer Resource,,,,,2704.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Other Subsections of Sec 67 IT Act,,,,,536.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Cyber Blackmailing or Threatening,,,,,223.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Cyber Blackmailing or Threatening,,,Child,,4.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,,,,Copyright Act,62.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Terrorist Funding,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Other Cyber Crimes,,,Child,,141.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Other Terrorist Activities,,,,42.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Fake News on Social Media,,,,,97.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Other IPC/BNS Crimes,,,,,1713.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,,SLL Crimes,,,106.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Abetment of Suicide Online,,,,,7.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Tampering Computer Source Documents,,,,,257.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,,,739.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Counterfeiting of Currency,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Violation of Privacy,,,,,389.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Fraud,,,,,3353.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Psycho or Pervert,,,,4.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Counterfeiting of Stamps,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Other Motives,,,,4956.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Defamation or Morphing,,,,,18.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,,IPC/BNS Crimes,,,8647.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Spreading Piracy,,,,671.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,,,Child,,232.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Sale or Purchase of Illegal Drugs,,,,6.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Identity Theft,,,,,6688.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Sexually Explicit Material in Electronic Form (Sec 67A),,,,,1097.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Abetment to Commit IT Act Offences,,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,,,,,27248.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Terrorist Activities,,,,44.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Attempt to Commit IT Act Offences,,,,,13.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Cyber Terrorism,,,,,21.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Abetment to Suicide,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Developing Own Business,,,,198.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Computer Related Offences Other Than Ransomware,,,,,2751.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Receiving Stolen Computer Resource or Communication Device,,,,,391.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,,,,Other SLL Crimes,22.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Online Gambling,,,,,20.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Computer Related Offences,,,,,14141.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Personal Revenge,,,,794.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Fake Profile,,,Child,,3.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Fake Profile,,,,,78.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,Child,,44.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Cheating,,,,,2051.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Credit Card or Debit Card Fraud,,,,,309.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Interception or Monitoring of Information,,,,,6.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,OTP Fraud,,,,,319.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Other Sections of IT Act,,,,,980.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Data Theft,,,,,106.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Obscene Material in Electronic Form (Sec 67),,,,,1334.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Preservation and Retention of Information by Intermediaries,,,,,27.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Obscene or Sexually Explicit Material in Electronic Form,,,,,3076.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,,,,Trade Marks Act,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Political Motives,,,,218.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Prank,,,,296.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Steal Information,,,,16.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Fraud,,,,15051.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,,IT Act Offences,,,18495.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Extortion,,,,1050.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,,,82.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Online Banking Fraud,,,,,968.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Unauthorised Access to Protected Computer System,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Counterfeiting,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,Child,,40.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,ATM Fraud,,,,,1284.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Other Fraud,,,,,473.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Computer Related Offences (Sec 66),,,,,3969.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Forgery,,,,,260.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Ransomware,,,,,1218.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Crimes through Online Games and Gaming Apps,,,Child,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Sexual Exploitation,,,,2030.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,Online Lotteries,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Disrupt Public Service,,,,21.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Inciting Hate against Country,,,,218.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Anger and Other Emotional Motives,,,,461.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Terrorist Recruitment,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Number of Cases,,,Causing Disrepute,,,,1212.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,Child,,102.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,,,,Trade Marks Act,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,Child,,45.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Data Theft,,,,,285.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Abetment to Suicide,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Steal Information,,,,93.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Sexually Explicit Material in Electronic Form (Sec 67A),,,,,1394.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Tampering Computer Source Documents,,,,,173.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Computer Related Offences,,,,,23612.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,,SLL Crimes,,,87.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Unauthorised Access to Protected Computer System,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Identity Theft,,,,,12255.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Counterfeiting of Stamps,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Computer Related Offences (Sec 66),,,,,4467.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Obscene or Sexually Explicit Material in Electronic Form,,,,,4187.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Credit Card or Debit Card Fraud,,,,,367.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Terrorist Recruitment,,,,8.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Personal Revenge,,,,1207.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Other Sections of IT Act,,,,,2720.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Other Motives,,,,7578.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Political Motives,,,,316.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Prank,,,,1385.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Cyber Terrorism,,,,,12.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Counterfeiting,,,,,5.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Cyber Blackmailing or Threatening,,,Child,,3.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Attempt to Commit IT Act Offences,,,,,14.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Other Terrorist Activities,,,,191.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Anger and Other Emotional Motives,,,,581.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Interception or Monitoring of Information,,,,,9.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Inciting Hate against Country,,,,49.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Crimes through Online Games and Gaming Apps,,,Child,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Counterfeiting of Currency,,,,,5.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,,,777.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Terrorist Funding,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Spreading Piracy,,,,45.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,,,,,44735.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,,,Child,,305.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Computer Related Offences Other Than Ransomware,,,,,3444.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Abetment of Suicide Online,,,,,8.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,,,,Copyright Act,34.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Receiving Stolen Computer Resource or Communication Device,,,,,558.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,,,,Other SLL Crimes,22.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Forgery,,,,,512.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Sexual Exploitation,,,,2266.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Other Fraud,,,,,1157.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Violation of Privacy,,,,,812.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Fake News on Social Media,,,,,190.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Fraud,,,,26891.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Developing Own Business,,,,181.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Terrorist Activities,,,,199.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,,,102.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Abetment to Commit IT Act Offences,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Cheating by Personation Using Computer Resource,,,,,5520.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Obscene Material in Electronic Form (Sec 67),,,,,1845.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Defamation or Morphing,,,,,19.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Disrupt Public Service,,,,28.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Online Gambling,,,,,22.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Other Subsections of Sec 67 IT Act,,,,,832.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,OTP Fraud,,,,,549.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Extortion,,,,1842.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Other IPC/BNS Crimes,,,,,1849.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Online Lotteries,,,,,9.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Other Cyber Crimes,,,Child,,153.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Ransomware,,,,,1023.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,,IT Act Offences,,,30729.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Preservation and Retention of Information by Intermediaries,,,,,14.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Causing Disrepute,,,,1874.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,ATM Fraud,,,,,2067.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Online Banking Fraud,,,,,2093.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Fake Profile,,,Child,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Fake Profile,,,,,87.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,,IPC/BNS Crimes,,,13730.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Cyber Blackmailing or Threatening,,,,,372.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Sale or Purchase of Illegal Drugs,,,,10.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Cheating,,,,,3393.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,Fraud,,,,,6233.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Number of Cases,,,Psycho or Pervert,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,,,735.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Online Banking Fraud,,,,,4047.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Fake Profile,,,Child,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Sexually Explicit Material in Electronic Form (Sec 67A),,,,,1484.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Counterfeiting,,,,,9.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Causing Disrepute,,,,1706.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,OTP Fraud,,,,,1093.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Credit Card or Debit Card Fraud,,,,,1194.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Attempt to Commit IT Act Offences,,,,,18.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,Child,,738.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Terrorist Funding,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Fake News on Social Media,,,,,578.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Abetment to Suicide,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Extortion,,,,2440.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Cyber Blackmailing or Threatening,,,,,303.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Anger and Other Emotional Motives,,,,822.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Inciting Hate against Country,,,,165.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Sexual Exploitation,,,,3293.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Personal Revenge,,,,1470.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Receiving Stolen Computer Resource or Communication Device,,,,,288.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Steal Information,,,,62.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Other Subsections of Sec 67 IT Act,,,,,1020.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Cheating by Personation Using Computer Resource,,,,,11191.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Identity Theft,,,,,5148.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Political Motives,,,,356.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Forgery,,,,,582.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Other IPC/BNS Crimes,,,,,2674.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Other Terrorist Activities,,,,106.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,,,,Trade Marks Act,5.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Tampering Computer Source Documents,,,,,338.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Disrupt Public Service,,,,92.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,,,Child,,1102.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Abetment to Commit IT Act Offences,,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Fake Profile,,,,,149.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Ransomware,,,,,727.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Terrorist Recruitment,,,,7.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Other Motives,,,,8814.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Data Theft,,,,,98.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,,,872.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,,IT Act Offences,,,29643.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Developing Own Business,,,,210.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Psycho or Pervert,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Crimes through Online Games and Gaming Apps,,,Child,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,,IPC/BNS Crimes,,,20201.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Counterfeiting of Stamps,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Online Lotteries,,,,,26.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Computer Related Offences Other Than Ransomware,,,,,3830.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Spreading Piracy,,,,75.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Online Gambling,,,,,63.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Unauthorised Access to Protected Computer System,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Prank,,,,254.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Counterfeiting of Currency,,,,,9.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Other Sections of IT Act,,,,,1017.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Cyber Terrorism,,,,,26.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,Child,,140.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Obscene or Sexually Explicit Material in Electronic Form,,,,,6308.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,ATM Fraud,,,,,2160.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Interception or Monitoring of Information,,,,,7.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,,,,,50035.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,,,,Other SLL Crimes,48.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Abetment of Suicide Online,,,,,10.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Cheating,,,,,4480.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,,,,Copyright Act,49.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,,SLL Crimes,,,191.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Obscene Material in Electronic Form (Sec 67),,,,,3008.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Terrorist Activities,,,,113.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Violation of Privacy,,,,,742.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Fraud,,,,,10395.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Other Fraud,,,,,1901.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Other Cyber Crimes,,,Child,,220.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Preservation and Retention of Information by Intermediaries,,,,,61.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Fraud,,,,30142.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,,Sale or Purchase of Illegal Drugs,,,,21.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Computer Related Offences (Sec 66),,,,,4557.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Cyber Blackmailing or Threatening,,,Child,,3.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Computer Related Offences,,,,,21926.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Number of Cases,,Defamation or Morphing,,,,,51.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,Child,,123.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Psycho or Pervert,,,,3.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Cheating,,,,,6343.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Other Subsections of Sec 67 IT Act,,,,,1231.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Receiving Stolen Computer Resource or Communication Device,,,,,295.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Causing Disrepute,,,,1715.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Sale or Purchase of Illegal Drugs,,,,14.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,,IT Act Offences,,,27427.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,,SLL Crimes,,,163.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Counterfeiting of Stamps,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Counterfeiting of Currency,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Other Motives,,,,8043.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Other IPC/BNS Crimes,,,,,2456.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,,IPC/BNS Crimes,,,25384.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Cheating by Personation Using Computer Resource,,,,,11422.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Computer Related Offences,,,,,19915.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,,,Child,,1376.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,,,,,52974.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Cyber Terrorism,,,,,15.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Personal Revenge,,,,1724.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,,,,Other SLL Crimes,99.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Extortion,,,,2883.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Sexual Exploitation,,,,4555.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Cyber Blackmailing or Threatening,,,,,689.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,,,1176.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Prank,,,,240.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Forgery,,,,,198.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Crimes through Online Games and Gaming Apps,,,Child,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Online Gambling,,,,,27.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Terrorist Activities,,,,11.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Fake News on Social Media,,,,,179.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Data Theft,,,,,170.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Cyber Blackmailing or Threatening,,,Child,,23.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Steal Information,,,,40.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,,,969.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Other Cyber Crimes,,,Child,,252.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Ransomware,,,,,648.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Abetment to Suicide,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Computer Related Offences Other Than Ransomware,,,,,3107.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Interception or Monitoring of Information,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Preservation and Retention of Information by Intermediaries,,,,,53.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Fake Profile,,,,,123.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Developing Own Business,,,,177.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,,,,Copyright Act,32.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Fraud,,,,32230.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Identity Theft,,,,,4071.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Anger and Other Emotional Motives,,,,883.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,OTP Fraud,,,,,2028.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Unauthorised Access to Protected Computer System,,,,,3.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Obscene Material in Electronic Form (Sec 67),,,,,2659.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,,,,Trade Marks Act,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Sexually Explicit Material in Electronic Form (Sec 67A),,,,,1686.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Violation of Privacy,,,,,372.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Other Sections of IT Act,,,,,827.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Counterfeiting,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Computer Related Offences (Sec 66),,,,,3755.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Abetment to Commit IT Act Offences,,,,,7.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Online Banking Fraud,,,,,4823.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,Child,,969.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Fraud,,,,,14007.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Tampering Computer Source Documents,,,,,55.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Inciting Hate against Country,,,,31.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Spreading Piracy,,,,74.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Disrupt Public Service,,,,40.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,ATM Fraud,,,,,1899.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Attempt to Commit IT Act Offences,,,,,5.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Abetment of Suicide Online,,,,,10.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Credit Card or Debit Card Fraud,,,,,1624.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Online Lotteries,,,,,4.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Defamation or Morphing,,,,,31.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Other Fraud,,,,,3633.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Fake Profile,,,Child,,9.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,,Political Motives,,,,311.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Number of Cases,,Obscene or Sexually Explicit Material in Electronic Form,,,,,6598.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Receiving Stolen Computer Resource or Communication Device,,,,,358.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,,,1471.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Sexual Exploitation,,,,3434.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Prank,,,,173.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Developing Own Business,,,,1068.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Forgery,,,,,224.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Spreading Piracy,,,,89.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Other Motives,,,,10791.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Psycho or Pervert,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Tampering Computer Source Documents,,,,,65.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,,,,Copyright Act,27.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Obscene or Sexually Explicit Material in Electronic Form,,,,,6896.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Disrupt Public Service,,,,70.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Cyber Terrorism,,,,,12.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Steal Information,,,,137.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Computer Related Offences (Sec 66),,,,,3867.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Attempt to Commit IT Act Offences,,,,,18.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Other Subsections of Sec 67 IT Act,,,,,1003.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Cyber Blackmailing or Threatening,,,,,696.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Fake Profile,,,,,157.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Data Theft,,,,,97.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,,IT Act Offences,,,31908.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Online Banking Fraud,,,,,6491.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Political Motives,,,,165.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Other IPC/BNS Crimes,,,,,2857.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,,,,,65893.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Preservation and Retention of Information by Intermediaries,,,,,41.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Causing Disrepute,,,,1902.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Cheating,,,,,10509.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Terrorist Activities,,,,6.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Violation of Privacy,,,,,423.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Fraud,,,,42710.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Computer Related Offences,,,,,23894.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Other Fraud,,,,,4714.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Personal Revenge,,,,857.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,,IPC/BNS Crimes,,,33798.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Abetment of Suicide Online,,,,,24.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,,,,Other SLL Crimes,103.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Identity Theft,,,,,5740.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Sexually Explicit Material in Electronic Form (Sec 67A),,,,,1931.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Sale or Purchase of Illegal Drugs,,,,11.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Fraud,,,,,17470.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Computer Related Offences Other Than Ransomware,,,,,2909.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Counterfeiting,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Abetment to Commit IT Act Offences,,,,,4.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Other Sections of IT Act,,,,,1017.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Obscene Material in Electronic Form (Sec 67),,,,,2755.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,,SLL Crimes,,,187.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Credit Card or Debit Card Fraud,,,,,1665.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Extortion,,,,3648.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Ransomware,,,,,958.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,,,,Trade Marks Act,14.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Defamation or Morphing,,,,,61.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,,,1166.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Counterfeiting of Stamps,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,ATM Fraud,,,,,1690.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Fake News on Social Media,,,,,230.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Counterfeiting of Currency,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Anger and Other Emotional Motives,,,,792.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Inciting Hate against Country,,,,34.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Cheating by Personation Using Computer Resource,,,,,13506.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,,Abetment to Suicide,,,,4.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,OTP Fraud,,,,,2910.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Online Lotteries,,,,,6.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Online Gambling,,,,,37.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Interception or Monitoring of Information,,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Number of Cases,,Unauthorised Access to Protected Computer System,,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Disrupt Public Service,,,,49.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Other Subsections of Sec 67 IT Act,,,,,1120.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,,SLL Crimes,,,334.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Fake News on Social Media,,,,,209.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Online Gambling,,,,,87.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Ransomware,,,,,795.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Computer Related Offences (Sec 66),,,,,4154.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Forgery,,,,,444.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Unauthorised Access to Protected Computer System,,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Terrorist Activities,,,,6.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Computer Related Offences Other Than Ransomware,,,,,3359.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Obscene Material in Electronic Form (Sec 67),,,,,3110.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,,,1472.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Violation of Privacy,,,,,468.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Psycho or Pervert,,,,47.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Causing Disrepute,,,,2436.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Cyber Blackmailing or Threatening,,,Child,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Extortion,,,,3326.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Credit Card or Debit Card Fraud,,,,,2098.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Cheating,,,,,16943.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,OTP Fraud,,,,,5116.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Crimes through Online Games and Gaming Apps,,,Child,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Online Lotteries,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Other Sections of IT Act,,,,,920.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Fraud,,,,59526.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Counterfeiting of Stamps,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Spreading Piracy,,,,41.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Receiving Stolen Computer Resource or Communication Device,,,,,395.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Fake Profile,,,,,225.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Counterfeiting of Currency,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,,,,Trade Marks Act,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Other Motives,,,,13025.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Tampering Computer Source Documents,,,,,71.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Counterfeiting,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,,,,Copyright Act,23.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Cyber Terrorism,,,,,11.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,,IT Act Offences,,,44237.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Cyber Blackmailing or Threatening,,,,,689.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Abetment to Commit IT Act Offences,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Cheating by Personation Using Computer Resource,,,,,25334.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,,,1305.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Personal Revenge,,,,1118.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Computer Related Offences,,,,,35329.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,ATM Fraud,,,,,1783.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Fraud,,,,,19466.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Prank,,,,190.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Preservation and Retention of Information by Intermediaries,,,,,23.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Abetment to Suicide,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Interception or Monitoring of Information,,,,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Other Cyber Crimes,,,Child,,373.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Steal Information,,,,85.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Sale or Purchase of Illegal Drugs,,,,7.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Other Fraud,,,,,6034.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Obscene or Sexually Explicit Material in Electronic Form,,,,,7893.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,Child,,28.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,Child,,1499.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Sexually Explicit Material in Electronic Form (Sec 67A),,,,,2168.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Online Banking Fraud,,,,,4435.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,,IPC/BNS Crimes,,,41849.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Inciting Hate against Country,,,,17.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,,,,,86420.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Abetment of Suicide Online,,,,,30.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Political Motives,,,,205.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Fake Profile,,,Child,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,,,,Other SLL Crimes,223.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Identity Theft,,,,,4978.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Other IPC/BNS Crimes,,,,,2389.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Defamation or Morphing,,,,,36.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Anger and Other Emotional Motives,,,,1110.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,,,Child,,1902.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Sexual Exploitation,,,,4199.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,,Developing Own Business,,,,1031.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Attempt to Commit IT Act Offences,,,,,11.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Number of Cases,,Data Theft,,,,,113.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Other Subsections of Sec 67 IT Act,,,,,787.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,False Information Jeopardising Sovereignty or Security of India,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Obscene or Sexually Explicit Material in Electronic Form,,,,,6990.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Abetment to Commit IT Act Offences,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Inciting Hate against Country,,,,11.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,OTP Fraud,,,,,965.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Attempt to Commit IT Act Offences,,,,,14.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Terrorist Activities,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,E-Wallet or UPI Fraud,,,,,723.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Forgery,,,,,702.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Fraud,,,,73987.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Fake News on Social Media,,,,,483.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Political Motives,,,,464.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Ransomware,,,,,554.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Interception or Monitoring of Information,,,,,4.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Online Gambling,,,,,37.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Sexually Explicit Material in Electronic Form (Sec 67A),,,,,2197.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Identity Theft,,,,,3668.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Other IPC/BNS Crimes,,,,,4109.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Extortion,,,,2536.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Cheating by Personation Using Computer Resource,,,,,29557.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,,,,Trade Marks Act,6.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Counterfeiting of Stamps,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Abetment to Suicide,,,,9.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Steal Information,,,,15.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Cheating,,,,,19296.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Spreading Piracy,,,,57.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,,IT Act Offences,,,44872.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Computer Related Offences,,,,,36920.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,ATM Fraud,,,,,1659.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Tampering Computer Source Documents,,,,,162.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Fraud,,,,,29758.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Defamation or Morphing,,,,,28.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Other Motives,,,,15309.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Other Cyber Crimes,,,Child,,529.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Computer Related Offences Other Than Ransomware,,,,,2379.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Obscene Material in Electronic Form (Sec 67),,,,,2914.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Marketing or Investment Fraud,,,,,3044.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Unauthorised Access to Protected Computer System,,,,,2.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,Child,,1099.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Cyber Blackmailing or Threatening,,,,,601.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Publication of Electronic Signatures for Fraudulent Purposes,,,,,5.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,,,,Other SLL Crimes,236.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Fraud Call or Vishing,,,,,1264.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,,,1240.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Organised Cyber Crime,,,,,60.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Cyber Terrorism,,,,,18.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Abetment of Suicide Online,,,,,12.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Violation of Privacy,,,,,436.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Sale or Purchase of Illegal Drugs,,,,40.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Other Sections of IT Act,,,,,718.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Personal Revenge,,,,1850.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Online Lotteries,,,,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Counterfeiting,,,,,3.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Cyber Stalking or Bullying of Women and Children,,,Child,,105.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Causing Disrepute,,,,2231.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,,,,Copyright Act,30.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Prank,,,,247.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Counterfeiting of Currency,,,,,3.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Cyber Blackmailing or Threatening,,,Child,,19.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Fake Profile,,,,,266.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Online Banking Fraud,,,,,4659.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Disrupt Public Service,,,,100.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Psycho or Pervert,,,,7.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Developing Own Business,,,,537.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,,,,,101928.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Fake Profile,,,Child,,0.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Breach of Confidentiality and Privacy,,,,,37.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Anger and Other Emotional Motives,,,,1336.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Data Theft,,,,,88.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,,IPC/BNS Crimes,,,56747.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Credit Card or Debit Card Fraud,,,,,3829.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Gaming App or Website Fraud,,,,,1019.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,Sexual Exploitation,,,,3190.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Receiving Stolen Computer Resource or Communication Device,,,,,326.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Sexual Intercourse by Deceit,,,,,99.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,,SLL Crimes,,,309.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Preservation and Retention of Information by Intermediaries,,,,,56.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Computer Related Offences (Sec 66),,,,,2933.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Other Fraud,,,,,12596.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,,,,Child,,1753.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Crimes through Online Games and Gaming Apps,,,Child,,1.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Number of Cases,,Material Depicting Children in Sexually Explicit Act (Sec 67B),,,,,1036.0,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Chargesheeting Rate,%,,,,,,47.5,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Chargesheeting Rate,%,,,,,,33.8,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Chargesheeting Rate,%,,,,,,29.6,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Chargesheeting Rate,%,,,,,,33.9,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Chargesheeting Rate,%,,,,,,31.9,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2017,Crime Rate,Cases / 100K Population,,,,,,1.7,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2018,Crime Rate,Cases / 100K Population,,,,,,2.1,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2019,Crime Rate,Cases / 100K Population,,,,,,3.3,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2020,Crime Rate,Cases / 100K Population,,,,,,3.7,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2021,Crime Rate,Cases / 100K Population,,,,,,3.9,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2022,Crime Rate,Cases / 100K Population,,,,,,4.8,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2023,Crime Rate,Cases / 100K Population,,,,,,6.2,,Crime in India / Table 9A: Cyber Crimes
+India,Country,,2024,Crime Rate,Cases / 100K Population,,,,,,7.3,,Crime in India / Table 9A: Cyber Crimes
