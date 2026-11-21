@@ -1,4 +1,4 @@
-// Overview: Sovereign Cyber Observatory Executive Command Center.
+// Overview: Cyber Crime Observatory Executive Command Center.
 // Asymmetric command layout: High-contrast telemetry hero, live 3D geospatial radar,
 // longitudinal velocity & volume trajectory console, and tactical jurisdiction hotspots.
 // Strictly derived from official NCRB figures via Apache Spark SQL backend.
@@ -29,9 +29,7 @@ import {
   MapPin,
   Shield,
   ShieldAlert,
-  Sparkles,
   TrendingUp,
-  Zap,
 } from 'lucide-react';
 import type { OverviewResponse, StateRow, TrendPoint } from '../lib/types';
 import { LazyIndiaMap3D as IndiaMap3D } from '../map/lazy';
@@ -128,7 +126,7 @@ export function Overview({
   return (
     <div className="overview-root">
       {/* ---------------------------------------------------------------------
-          COMMAND HEADER: Sovereign Title, Status Badge, and Time Navigator
+          COMMAND HEADER: Platform Title, Status Badge, and Time Navigator
           --------------------------------------------------------------------- */}
       <section className="command-hero-header">
         <div className="hero-title-block">
@@ -496,7 +494,7 @@ export function Overview({
                   </div>
 
                   <div className="tile-action-row">
-                    <span className="action-link">Open Forensic Dossier</span>
+                    <span className="action-link">Open State Dossier</span>
                     <ChevronRight size={12} className="chevron" />
                   </div>
                 </motion.div>

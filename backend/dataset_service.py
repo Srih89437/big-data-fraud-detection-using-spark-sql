@@ -228,83 +228,6 @@ def profile_dataset(rows: List[Dict[str, Any]]) -> Dict[str, Any]:
 
         columns_meta.append(stats)
 
-    # Smart Visualizations Recommendations Engine
-    recommendations = []
-
-    # 1. Geographic recommendation if India states present
-    if geo_cols:
-        primary_geo = geo_cols[0]
-        if numeric_cols:
-            recommendations.append({
-                "type": "geo_map_3d",
-                "title": "3D Geographic State Choropleth",
-                "reason": f"Detected India jurisdiction column '{primary_geo}' and numeric metric '{numeric_cols[0]}'.",
-                "confidence": 0.95,
-                "mappings": {"geo": primary_geo, "height": numeric_cols[0], "color": numeric_cols[0]}
-            })
-
-    # 2. 3D Bar Matrix (Categorical vs Numeric)
-    if categorical_cols and numeric_cols:
-        cat = categorical_cols[0]
-        num = numeric_cols[0]
-        z_col = categorical_cols[1] if len(categorical_cols) > 1 else (numeric_cols[1] if len(numeric_cols) > 1 else None)
-        recommendations.append({
-            "type": "bar_3d",
-            "title": "3D Extruded Bar Matrix",
-            "reason": f"Ideal for comparing category '{cat}' across quantitative volume '{num}'.",
-            "confidence": 0.90,
-            "mappings": {"x": cat, "y": num, "z": z_col or cat, "color": num}
-        })
-
-    # 3. 3D Scatter (Multi-variable numeric analysis)
-    if len(numeric_cols) >= 3:
-        recommendations.append({
-            "type": "scatter_3d",
-            "title": "3D Multi-Variable Point Cloud",
-            "reason": f"Discovered continuous numeric dimensions: '{numeric_cols[0]}', '{numeric_cols[1]}', and '{numeric_cols[2]}'.",
-            "confidence": 0.88,
-            "mappings": {"x": numeric_cols[0], "y": numeric_cols[1], "z": numeric_cols[2], "color": numeric_cols[0]}
-        })
-    elif len(numeric_cols) >= 2 and categorical_cols:
-        recommendations.append({
-            "type": "scatter_3d",
-            "title": "3D Scatter Plot",
-            "reason": f"Correlate '{numeric_cols[0]}' vs '{numeric_cols[1]}' classified by '{categorical_cols[0]}'.",
-            "confidence": 0.82,
-            "mappings": {"x": numeric_cols[0], "y": numeric_cols[1], "z": numeric_cols[0], "color": categorical_cols[0]}
-        })
-
-    # 4. 3D Bubble Chart
-    if len(numeric_cols) >= 2:
-        size_metric = numeric_cols[1] if len(numeric_cols) > 1 else numeric_cols[0]
-        recommendations.append({
-            "type": "bubble_3d",
-            "title": "3D Volumetric Bubble Cluster",
-            "reason": f"Evaluates magnitude and volumetric scale mapped to bubble radius using '{size_metric}'.",
-            "confidence": 0.85,
-            "mappings": {"x": categorical_cols[0] if categorical_cols else numeric_cols[0], "y": numeric_cols[0], "size": size_metric, "color": numeric_cols[0]}
-        })
-
-    # 5. 3D Surface Terrain (Smooth Numeric or Grid Distribution)
-    if len(numeric_cols) >= 2 or (len(categorical_cols) >= 2 and len(numeric_cols) >= 1):
-        recommendations.append({
-            "type": "surface_3d",
-            "title": "3D Elevation Contour Surface",
-            "reason": "Constructs a smooth interpolated topological terrain across dimension intersections.",
-            "confidence": 0.78,
-            "mappings": {"x": categorical_cols[0] if categorical_cols else numeric_cols[0], "z": categorical_cols[1] if len(categorical_cols) > 1 else (numeric_cols[1] if len(numeric_cols) > 1 else numeric_cols[0]), "y": numeric_cols[0]}
-        })
-
-    # 6. 3D Time-Series Progression
-    if datetime_cols and numeric_cols:
-        recommendations.append({
-            "type": "time_progression_3d",
-            "title": "4D Temporal Progression Walkthrough",
-            "reason": f"Temporal column '{datetime_cols[0]}' allows animated progression playback of '{numeric_cols[0]}'.",
-            "confidence": 0.92,
-            "mappings": {"time": datetime_cols[0], "y": numeric_cols[0], "x": categorical_cols[0] if categorical_cols else numeric_cols[0]}
-        })
-
     return {
         "row_count": total_rows,
         "column_count": len(all_keys),
@@ -313,7 +236,7 @@ def profile_dataset(rows: List[Dict[str, Any]]) -> Dict[str, Any]:
         "categorical_columns": categorical_cols,
         "datetime_columns": datetime_cols,
         "geographic_columns": geo_cols,
-        "recommendations": recommendations
+        "recommendations": []
     }
 
 
@@ -472,7 +395,7 @@ def seed_demo_datasets():
             infra_rows.append({
                 "state_ut": display_name,
                 "Cyber_Police_Stations": random.randint(2, 68),
-                "Cyber_Forensic_Labs": random.randint(1, 14),
+                "Cyber_Digital_Labs": random.randint(1, 14),
                 "Digital_Literacy_Index": round(random.uniform(42.0, 94.5), 1),
                 "Broadband_Penetration_Pct": round(random.uniform(38.0, 96.0), 1),
                 "Annual_Cyber_Budget_Cr": round(random.uniform(4.5, 125.0), 2),

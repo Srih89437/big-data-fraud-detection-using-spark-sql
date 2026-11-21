@@ -124,7 +124,7 @@ export function NationalAnalytics({
             <span className="headline-gradient-text"> Jurisdictional Stratification.</span>
           </h1>
           <p className="analytics-headline-desc">
-            Multi-dimensional synthesis of official police cybercrime registrations. Explores sovereign administrative divisions,
+            Multi-dimensional synthesis of official police cybercrime registrations. Explores administrative divisions,
             frequency clustering, top jurisdiction rankings, and multi-year progression patterns across the Republic of India.
           </p>
         </div>
@@ -156,7 +156,7 @@ export function NationalAnalytics({
         </div>
       </div>
 
-      {/* Row 1: Sovereign Split & Five-Year Longitudinal Evolution */}
+      {/* Row 1: Constitutional Jurisdictional Split & Five-Year Longitudinal Evolution */}
       <div className="analytics-twin-grid">
         {/* Card 1: 5-Year Trajectory */}
         <div className="analytics-card trajectory-card">
@@ -202,17 +202,17 @@ export function NationalAnalytics({
           </div>
         </div>
 
-        {/* Card 2: Sovereign Split Donut & Breakdown */}
-        <div className="analytics-card sovereign-split-card">
+        {/* Card 2: State vs UT Split Donut & Breakdown */}
+        <div className="analytics-card category-split-card constitutional-split-card">
           <div className="analytics-card-header">
             <div className="card-header-title">
               <PieIcon size={16} />
-              <h3>Constitutional Sovereign Classification ({year})</h3>
+              <h3>State & Union Territory Distribution ({year})</h3>
             </div>
             <span className="card-header-badge">STATES VS UTs</span>
           </div>
 
-          <div className="sovereign-donut-content">
+          <div className="constitutional-donut-content category-donut-content">
             <div className="donut-canvas-wrap">
               <ResponsiveContainer width="100%" height={200}>
                 <PieChart>
@@ -236,7 +236,7 @@ export function NationalAnalytics({
               </div>
             </div>
 
-            <div className="sovereign-stats-column">
+            <div className="jurisdiction-stats-column">
               <div className="split-metric-tile">
                 <div className="split-metric-header">
                   <span className="split-color-dot dot-states" />

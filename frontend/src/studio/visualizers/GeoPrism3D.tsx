@@ -35,6 +35,7 @@ export function GeoPrism3D({ data, dark = true }: GeoPrism3DProps) {
         selected={selectedState}
         year={2024}
         dark={dark}
+        metricName={valCol}
         onSelect={(name) => setSelectedState(name)}
       />
 

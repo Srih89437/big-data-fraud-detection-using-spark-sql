@@ -110,7 +110,7 @@ export function Methodology() {
             <dt>Underlying Dataset</dt>
             <dd>
               <code>data/statewise_cyber_crimes_2020_2024.csv</code> — Official longitudinal series recording registered
-              cases across all 28 states and 8 Union Territories (36 sovereign jurisdictions) for calendar years 2020 through 2024.
+              cases across all 28 states and 8 Union Territories (36 administrative jurisdictions) for calendar years 2020 through 2024.
             </dd>
 
             <dt>Coverage Standard</dt>
@@ -199,7 +199,7 @@ export function Methodology() {
             <dd>
               High-throughput asynchronous FastAPI gateway exposing:
               <ul className="api-endpoint-list">
-                <li><code>GET /api/overview?year={'{y}'}</code> — Sovereign national aggregates & jurisdiction counts</li>
+                <li><code>GET /api/overview?year={'{y}'}</code> — National aggregates & jurisdiction counts</li>
                 <li><code>GET /api/states?year={'{y}'}</code> — Statewise case counts and administrative types</li>
                 <li><code>GET /api/trends</code> — Five-year all-India historical registration trajectory</li>
                 <li><code>GET /api/state/{'{name}'}</code> — Deep 2020–2024 historical dossier for specific jurisdiction</li>

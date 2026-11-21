@@ -4,7 +4,6 @@ import {
   FileSpreadsheet,
   Trash2,
   Table,
-  Sparkles,
   Box,
   Layers,
   Sliders,
@@ -109,45 +108,27 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
         setProfile(data);
         setLoadingProfile(false);
 
-        // Apply first smart recommendation if present
-        if (data.recommendations && data.recommendations.length > 0) {
-          const rec = data.recommendations[0];
-          applyRecommendation(rec);
-        } else if (data.columns.length > 0) {
+        // Deterministically map schema dimensions based on column types
+        if (data.columns && data.columns.length > 0) {
           const numCols = data.columns.filter((c) => c.inferred_type === 'numeric');
           const catCols = data.columns.filter((c) => c.inferred_type === 'categorical');
-          setXCol(catCols[0]?.name || data.columns[0].name);
-          setYCol(numCols[0]?.name || data.columns[0].name);
-          setZCol(numCols[1]?.name || '');
-          setVizType('bar_matrix_3d');
+          const geoCols = data.columns.filter((c) => c.semantic_type === 'india_state_ut');
+          if (geoCols.length > 0 && numCols.length > 0) {
+            setVizType('geo_map_3d');
+            setXCol(geoCols[0].name);
+            setYCol(numCols[0].name);
+          } else {
+            setVizType('bar_matrix_3d');
+            setXCol(catCols[0]?.name || data.columns[0].name);
+            setYCol(numCols[0]?.name || data.columns[0].name);
+            setZCol(numCols[1]?.name || '');
+          }
         }
       })
       .catch(() => {
         setLoadingProfile(false);
       });
   }, [activeDatasetId]);
-
-  const applyRecommendation = (rec: Recommendation) => {
-    const typeMap: Record<string, VizType> = {
-      geo_map_3d: 'geo_map_3d',
-      scatter_3d: 'scatter_3d',
-      bubble_3d: 'bubble_3d',
-      surface_3d: 'surface_3d',
-      time_series_3d: 'time_series_3d',
-      bar_matrix_3d: 'bar_matrix_3d',
-    };
-    setVizType(typeMap[rec.type] || 'bar_matrix_3d');
-    if (rec.mappings.geo) setXCol(rec.mappings.geo);
-    else if (rec.mappings.x) setXCol(rec.mappings.x);
-
-    if (rec.mappings.height) setYCol(rec.mappings.height);
-    else if (rec.mappings.y) setYCol(rec.mappings.y);
-
-    if (rec.mappings.z) setZCol(rec.mappings.z);
-    if (rec.mappings.color) setColorCol(rec.mappings.color);
-    if (rec.mappings.size) setSizeCol(rec.mappings.size);
-    setActiveTab('viz');
-  };
 
   // Run dynamic analytical query whenever mappings change
   useEffect(() => {
@@ -289,7 +270,7 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
             className={`studio-tab-btn ${activeTab === 'profile' ? 'active-tab' : ''}`}
             onClick={() => setActiveTab('profile')}
           >
-            <Sparkles size={13} />
+            <Activity size={13} />
             <span>Schema Profiler</span>
           </button>
 
@@ -572,26 +553,6 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
                     className="inspector-range"
                   />
                 </div>
-
-                {/* Recommendations Shortcut Shelf */}
-                {profile && profile.recommendations.length > 0 && (
-                  <div className="inspector-recommendations-shelf">
-                    <label className="inspector-label">
-                      <Sparkles size={11} style={{ display: 'inline', marginRight: 4 }} />
-                      SMART SUGGESTIONS
-                    </label>
-                    {profile.recommendations.map((rec, i) => (
-                      <button
-                        key={i}
-                        className="rec-pill-btn"
-                        onClick={() => applyRecommendation(rec)}
-                      >
-                        <span>{rec.title}</span>
-                        <small>{(rec.confidence * 100).toFixed(0)}%</small>
-                      </button>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
           )}
@@ -601,10 +562,7 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
           )}
 
           {activeTab === 'profile' && profile && (
-            <DatasetProfiler
-              profile={profile}
-              onApplyRecommendation={applyRecommendation}
-            />
+            <DatasetProfiler profile={profile} />
           )}
         </div>
       </div>

@@ -1,8 +1,7 @@
 import { memo, useEffect, useRef } from 'react';
-import type { SectionId } from './Navigation';
 
 interface AtmosphericBackgroundProps {
-  section: SectionId;
+  section: string;
   dark: boolean;
 }
 

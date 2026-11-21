@@ -1,4 +1,4 @@
-// State Intelligence: Sovereign Jurisdiction Intelligence Dossier.
+// State Intelligence: Jurisdiction Intelligence Dossier.
 // Official police FIR records sourced via Apache Spark SQL backend.
 
 import { useEffect, useMemo, useState } from 'react';
@@ -156,7 +156,7 @@ export function StateIntelligence({
           <MapPin size={32} className="empty-intel-icon" />
           <h3>No Jurisdiction Selected</h3>
           <p>
-            Choose a state or Union Territory from the 3D map or the directory below to view its forensic intelligence dossier.
+            Choose a state or Union Territory from the 3D map or the directory below to view its intelligence dossier.
           </p>
           <button className="stripe-glow-btn" onClick={onOpenMap}>
             <span>Open India 3D Map</span>
@@ -170,12 +170,12 @@ export function StateIntelligence({
   return (
     <div className="dossier-root-container">
       {/* Confidential Classification Watermark Header */}
-      <div className="dossier-sovereign-banner">
-        <div className="sovereign-banner-left">
+      <div className="dossier-jurisdiction-banner">
+        <div className="jurisdiction-banner-left">
           <ShieldCheck size={14} className="banner-icon" />
           <span className="banner-classification">CONFIDENTIAL // FOR OFFICIAL USE ONLY // NCRB CRIME IN INDIA</span>
         </div>
-        <div className="sovereign-banner-right">
+        <div className="jurisdiction-banner-right">
           <span className="banner-engine">SPARK SQL IN-MEMORY PROFILE · JURISDICTION #{ranking?.rank ?? '—'}</span>
         </div>
       </div>
@@ -185,7 +185,7 @@ export function StateIntelligence({
         <div className="dossier-identity-left">
           <div className="dossier-eyebrow-row">
             <span className="dossier-status-dot" />
-            <span className="dossier-eyebrow-text">SOVEREIGN JURISDICTION PROFILE</span>
+            <span className="dossier-eyebrow-text">JURISDICTION INTELLIGENCE PROFILE</span>
             <span className="dossier-eyebrow-sep">/</span>
             <span className="dossier-year-indicator">REPORTING YEAR {year}</span>
           </div>
@@ -349,7 +349,7 @@ export function StateIntelligence({
         </InteractiveCard>
       </div>
 
-      {/* Asymmetric Deep-Dive Grid: Historical Trajectory + Forensic Standing Barometer */}
+      {/* Asymmetric Deep-Dive Grid: Historical Trajectory + Jurisdictional Standing Barometer */}
       <div className="dossier-deep-grid">
         {/* Left Column: 5-Year Trajectory */}
         <div className="dossier-deep-card trajectory-card">
@@ -399,7 +399,7 @@ export function StateIntelligence({
           </div>
         </div>
 
-        {/* Right Column: Comparative Forensic Barometer */}
+        {/* Right Column: Comparative Standing Barometer */}
         <div className="dossier-deep-card barometer-card">
           <div className="deep-card-header">
             <div className="deep-header-title">
@@ -451,7 +451,7 @@ export function StateIntelligence({
               <p>
                 In {year}, {selected} accounted for <strong>{share != null ? share.toFixed(1) : '0'}%</strong> of all cybercrimes registered in the Republic of India.
                 {ranking && ranking.rank <= 5
-                  ? ` It ranks among the top 5 cybercrime hubs nationwide, requiring prioritized law enforcement resources and digital forensic capability upgrades.`
+                  ? ` It ranks among the top 5 cybercrime hubs nationwide, requiring prioritized law enforcement resources and digital crime investigation capability upgrades.`
                   : ` Its incidence levels remain aligned with the national median band.`}
               </p>
             </div>

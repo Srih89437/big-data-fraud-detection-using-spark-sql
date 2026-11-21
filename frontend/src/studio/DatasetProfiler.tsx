@@ -1,13 +1,12 @@
-import { CheckCircle2, Sparkles, MapPin, Hash, Calendar, Type } from 'lucide-react';
-import type { DatasetProfile, Recommendation } from './types';
+import { CheckCircle2, MapPin, Hash, Calendar, Type } from 'lucide-react';
+import type { DatasetProfile } from './types';
 
 interface DatasetProfilerProps {
   profile: DatasetProfile;
-  onApplyRecommendation: (rec: Recommendation) => void;
 }
 
-export function DatasetProfiler({ profile, onApplyRecommendation }: DatasetProfilerProps) {
-  const { columns, recommendations, row_count, column_count, filename } = profile;
+export function DatasetProfiler({ profile }: DatasetProfilerProps) {
+  const { columns, row_count, column_count, filename } = profile;
 
   const getTypeIcon = (type: string, semantic: string) => {
     if (semantic === 'india_state_ut') return <MapPin size={12} className="type-icon-geo" />;
@@ -37,42 +36,6 @@ export function DatasetProfiler({ profile, onApplyRecommendation }: DatasetProfi
           </div>
         </div>
       </div>
-
-      {/* Smart Recommendations Engine */}
-      {recommendations.length > 0 && (
-        <div className="recommendations-shelf">
-          <div className="recommendations-heading">
-            <Sparkles size={14} className="sparkle-icon" />
-            <span>Smart 3D Analytical Recommendations</span>
-          </div>
-          <div className="recommendations-grid">
-            {recommendations.map((rec, idx) => (
-              <div key={idx} className="recommendation-card">
-                <div className="rec-card-top">
-                  <div className="rec-title-wrap">
-                    <strong className="rec-title">{rec.title}</strong>
-                    <span className="rec-confidence">{(rec.confidence * 100).toFixed(0)}% MATCH</span>
-                  </div>
-                  <button
-                    className="rec-apply-btn"
-                    onClick={() => onApplyRecommendation(rec)}
-                  >
-                    <span>Visualize in 3D</span>
-                  </button>
-                </div>
-                <p className="rec-reason">{rec.reason}</p>
-                <div className="rec-mappings">
-                  {Object.entries(rec.mappings).map(([k, v]) => (
-                    <span key={k} className="rec-mapping-chip">
-                      {k.toUpperCase()}: <strong>{String(v)}</strong>
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* Detailed Columns Table */}
       <div className="profiler-table-wrap">

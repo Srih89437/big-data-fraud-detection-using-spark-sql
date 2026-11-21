@@ -30,6 +30,7 @@ export interface MapSceneProps {
   showBorders?: boolean;
   showLabels?: boolean;
   renderMode?: 'prism' | 'column' | 'bubble' | 'bar_matrix' | 'relief' | 'choropleth';
+  metricName?: string;
 }
 
 /** Ground plane with subtle cartographic concentric rings. */
@@ -173,12 +174,14 @@ function HoverTooltip({
   cases,
   frame,
   year,
+  metricName = 'REGISTERED FIRs',
   depth = 0.4,
 }: {
   feature: ProjectedFeature;
   cases: Map<string, number>;
   frame: Frame;
   year: number;
+  metricName?: string;
   depth?: number;
 }) {
   const [x, z] = toScene(feature.centroid[0], feature.centroid[1], frame);
@@ -257,9 +260,10 @@ function HoverTooltip({
               fontSize: '9.5px',
               color: '#94a3b8',
               letterSpacing: '0.06em',
+              textTransform: 'uppercase',
             }}
           >
-            CASES ({year})
+            {metricName} ({year})
           </span>
         </div>
 
@@ -300,6 +304,7 @@ export function MapScene({
   showBorders = true,
   showLabels = true,
   renderMode = 'prism',
+  metricName = 'REGISTERED FIRs',
 }: MapSceneProps) {
   const hoveredFeature = hovered ? ordered.find((f) => f.name === hovered) ?? null : null;
   const selectedFeature = selected ? ordered.find((f) => f.name === selected) ?? null : null;
@@ -485,6 +490,7 @@ export function MapScene({
           cases={cases}
           frame={frame}
           year={year}
+          metricName={metricName}
           depth={depths?.get(hoveredFeature.name)}
         />
       )}

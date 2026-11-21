@@ -1,6 +1,7 @@
 // Typed client for the Spark SQL backend. All dashboard figures come from these calls.
 
 import type {
+  BootstrapResponse,
   MatrixResponse,
   OverviewResponse,
   StateDetailResponse,
@@ -38,6 +39,7 @@ async function getJSON<T>(path: string): Promise<T> {
   return p;
 }
 
+export const fetchBootstrap = () => getJSON<BootstrapResponse>('/api/bootstrap');
 export const fetchYears = () => getJSON<YearsResponse>('/api/years');
 export const fetchStates = (year: number) =>
   getJSON<StatesResponse>(`/api/states?year=${year}`);
@@ -48,6 +50,14 @@ export const fetchStateDetail = (name: string) =>
   getJSON<StateDetailResponse>(`/api/state/${encodeURIComponent(name)}`);
 export const fetchMatrix = (year: number) =>
   getJSON<MatrixResponse>(`/api/matrix?year=${year}`);
+
+/** Prefetch application data on hover of "Open the app" CTA */
+export function prefetchAppData(year = 2024): void {
+  void fetchOverview(year);
+  void fetchStates(year);
+  void fetchTrends();
+  void fetchMatrix(year);
+}
 
 /** Hard-refresh every cached endpoint (used by the retry affordance). */
 export function clearApiCache(): void {

@@ -1,6 +1,8 @@
 import json
 import math
+import re
 import threading
+import uuid
 from contextlib import asynccontextmanager
 from typing import Optional, Dict, Any, List
 from pathlib import Path
@@ -12,20 +14,29 @@ from fastapi.responses import JSONResponse
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 
-from backend.dataset_service import (
-    CUSTOM_DIR,
-    parse_file_to_records,
-    profile_dataset,
-    query_dataset,
-    seed_demo_datasets,
-)
+try:
+    from backend.dataset_service import (
+        CUSTOM_DIR,
+        parse_file_to_records,
+        profile_dataset,
+        query_dataset,
+        seed_demo_datasets,
+    )
+except ImportError:
+    from dataset_service import (
+        CUSTOM_DIR,
+        parse_file_to_records,
+        profile_dataset,
+        query_dataset,
+        seed_demo_datasets,
+    )
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "statewise_cyber_crimes_2020_2024.csv"
 # The validated, bundled boundary file (also served statically by Vite at
 # /geo/india-states.geojson). Keeping one canonical copy avoids drift.
 GEO_PATH = ROOT / "frontend" / "public" / "geo" / "india-states.geojson"
-SOURCE_LINE = "NCRB, Crime in India; Ministry of Home Affairs / PIB (21 July 2026)"
+SOURCE_LINE = "NCRB, Crime in India; Ministry of Home Affairs / PIB (Press Release PRID 2287039, 21 July 2026)"
 
 
 @asynccontextmanager
@@ -202,6 +213,92 @@ def health():
         )
 
 
+@app.get("/api/bootstrap")
+def bootstrap():
+    """Consolidated bootstrap payload for high-performance initial page render."""
+    def compute():
+        cols = [c for c in year_cols() if c.isdigit()]
+        sums = ", ".join(f"SUM(`{c}`) AS `{c}`" for c in sorted(cols))
+        totals_row = query_rows(f"SELECT {sums} FROM state_cyber_crimes")[0]
+        national_totals = [{"year": int(c), "cases": int(totals_row[c] or 0)} for c in sorted(cols)]
+
+        c2024 = int(totals_row.get("2024") or 0)
+        c2023 = int(totals_row.get("2023") or 0)
+        yoy = round(((c2024 - c2023) / c2023) * 100, 1) if c2023 > 0 else 0.0
+
+        top_rows = query_rows("""
+            SELECT state_ut, category,
+                   CAST(`2020` AS BIGINT) AS c2020,
+                   CAST(`2023` AS BIGINT) AS c2023,
+                   CAST(`2024` AS BIGINT) AS c2024
+            FROM state_cyber_crimes
+            ORDER BY c2024 DESC
+            LIMIT 5
+        """)
+        top_5 = []
+        for idx, r in enumerate(top_rows):
+            cnt = int(r["c2024"])
+            p_cnt = int(r["c2023"])
+            ryoy = round(((cnt - p_cnt) / p_cnt) * 100, 1) if p_cnt > 0 else 0.0
+            share = round((cnt / c2024) * 100, 1) if c2024 > 0 else 0.0
+            top_5.append({
+                "rank": idx + 1,
+                "state_ut": r["state_ut"],
+                "code": STATE_TO_CODE.get(r["state_ut"], ""),
+                "category": r["category"],
+                "cases": cnt,
+                "share": share,
+                "yoy_change": ryoy,
+            })
+
+        top_5_cases = sum(t["cases"] for t in top_5)
+        top_5_share = round((top_5_cases / c2024) * 100, 1) if c2024 > 0 else 0.0
+
+        all_states_rows = query_rows("""
+            SELECT state_ut,
+                   CAST(`2023` AS BIGINT) AS c2023,
+                   CAST(`2024` AS BIGINT) AS c2024
+            FROM state_cyber_crimes
+            WHERE `2023` > 100
+        """)
+        fastest = max(all_states_rows, key=lambda r: (r["c2024"] - r["c2023"]) / r["c2023"] if r["c2023"] > 0 else 0)
+        fastest_yoy = round(((fastest["c2024"] - fastest["c2023"]) / fastest["c2023"]) * 100, 1)
+        fastest_growth = {
+            "state_ut": fastest["state_ut"],
+            "code": STATE_TO_CODE.get(fastest["state_ut"], ""),
+            "cases": int(fastest["c2024"]),
+            "yoy_change": fastest_yoy,
+        }
+
+        return {
+            "status": "healthy",
+            "version": "1.2.0",
+            "as_of": "21 July 2026",
+            "source": SOURCE_LINE,
+            "engine": "Apache Spark SQL 3.5",
+            "years": sorted(int(c) for c in cols),
+            "latest_year": 2024,
+            "latest_total": c2024,
+            "previous_total": c2023,
+            "yoy_change_pct": yoy,
+            "jurisdiction_count": 36,
+            "national_totals": national_totals,
+            "top_5": top_5,
+            "top_5_cases": top_5_cases,
+            "top_5_share": top_5_share,
+            "fastest_growth": fastest_growth,
+        }
+
+    data = _cached("bootstrap", compute)
+    return JSONResponse(
+        content=data,
+        headers={
+            "Cache-Control": "public, max-age=60, stale-while-revalidate=120",
+            "ETag": '"icip-bootstrap-2024-v120"',
+        }
+    )
+
+
 @app.get("/api/years")
 def years():
     cols = year_cols()
@@ -250,7 +347,7 @@ def overview(year: int = 2024):
                 "cases": t_row["cases"],
                 "share": round((t_row["cases"] / tot) * 100, 1) if tot > 0 else 0.0,
             }
-        return {"year": year, **summary, "top_state": top_state}
+        return {"year": year, **summary, "top_state": top_state, "source": SOURCE_LINE}
 
     return _cached(f"overview:{year}", compute)
 

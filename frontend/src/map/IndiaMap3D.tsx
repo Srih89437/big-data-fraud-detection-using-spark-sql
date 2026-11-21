@@ -35,6 +35,8 @@ export interface IndiaMap3DProps {
   onSelect: (name: string) => void;
   /** Compact mode drops the tour bar (used for the overview preview). */
   compact?: boolean;
+  /** Label for the metric shown in tooltips. Defaults to "REGISTERED FIRs". */
+  metricName?: string;
 }
 
 type TourStop =
@@ -115,6 +117,7 @@ export function IndiaMap3D({
   onHover,
   onSelect,
   compact = false,
+  metricName,
 }: IndiaMap3DProps) {
   const [webgl] = useState(hasWebGL);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -297,6 +300,7 @@ export function IndiaMap3D({
               showBorders={showBorders}
               showLabels={showLabels}
               renderMode={renderMode}
+              metricName={metricName}
               onHover={(n) => {
                 setHovered(n);
                 onHover?.(n);
@@ -311,7 +315,7 @@ export function IndiaMap3D({
       {!mapData.ready && (
         <div className="map3d-loading">
           <div className="map-loader-spinner" />
-          <span>Synthesizing 36 administrative boundaries…</span>
+          <span>Projecting 36 administrative boundaries…</span>
         </div>
       )}
 

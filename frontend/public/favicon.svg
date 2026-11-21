@@ -6,56 +6,54 @@
         --border-plate: #223244;
         --base-prism: #1E293B;
         --side-prism: #0F172A;
-        --top-prism: #283548;
-        --contour-stroke: #475569;
+        --top-prism: #1E293B;
+        --contour-stroke: #E07A38;
         --amber-dot: #E07A38;
-        --amber-glow: rgba(224, 122, 56, 0.45);
+        --amber-glow: rgba(224, 122, 56, 0.5);
       }
       @media (prefers-color-scheme: light) {
         :root {
-          --bg-plate: #F8F7F4;
+          --bg-plate: #F3F0E8;
           --border-plate: #D1CBC0;
           --base-prism: #E2E8F0;
           --side-prism: #CBD5E1;
           --top-prism: #FFFFFF;
-          --contour-stroke: #94A3B8;
+          --contour-stroke: #E07A38;
           --amber-dot: #E07A38;
-          --amber-glow: rgba(224, 122, 56, 0.35);
+          --amber-glow: rgba(224, 122, 56, 0.4);
         }
       }
     </style>
   </defs>
 
   <!-- Base Plate Frame -->
-  <rect x="2" y="2" width="60" height="60" rx="14" fill="var(--bg-plate)" stroke="var(--border-plate)" stroke-width="1.5" />
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="var(--bg-plate)" stroke="var(--border-plate)" stroke-width="2" />
 
   <!-- Outer Cartographic Range Ring -->
-  <circle cx="32" cy="33" r="24" fill="none" stroke="var(--border-plate)" stroke-width="0.75" stroke-dasharray="3 2" />
+  <circle cx="32" cy="33" r="25" fill="none" stroke="var(--border-plate)" stroke-width="1.2" stroke-dasharray="3 3" />
 
-  <!-- Extruded Prism Lower Drop / Shadow (South facing depth) -->
+  <!-- Extruded Prism Lower Depth Shadow -->
   <path d="
     M 31 10
     L 37 15
     L 45 22
-    L 50 25
-    L 46 30
+    L 52 24
+    L 48 30
     L 42 35
     L 39 42
     L 33 54
-    L 32 57
-    L 32 60
-    L 34 57
+    L 32 58
+    L 34 56
     L 41 45
-    L 45 37
-    L 53 28
-    L 49 23
+    L 46 37
+    L 54 27
+    L 50 23
     L 40 17
-    L 33 13
+    L 33 12
     Z"
-    fill="var(--side-prism)" opacity="0.85" />
+    fill="var(--side-prism)" opacity="0.9" />
 
-  <!-- Extruded Prism Base Geometry (Simplified Sovereign Boundary of India) -->
-  <!-- Coordinates: North (J&K) at top ~10, South (Kanyakumari) at ~54, Gujarat at ~15, NE at ~52 -->
+  <!-- Extruded Prism Boundary Geometry of India -->
   <path d="
     M 31 10
     C 33 11, 35 13, 37 15
@@ -83,19 +81,19 @@
     Z"
     fill="var(--top-prism)"
     stroke="var(--contour-stroke)"
-    stroke-width="1.4"
+    stroke-width="2.2"
     stroke-linejoin="round"
   />
 
-  <!-- Top Elevation Stepped Contour Line -->
+  <!-- Stepped Elevation Contour Ring -->
   <path d="
-    M 31 14
-    L 35 18
-    L 40 21
-    L 45 25
-    L 41 27
-    L 37 34
-    L 35 41
+    M 31 15
+    L 35 19
+    L 40 22
+    L 45 26
+    L 41 28
+    L 37 35
+    L 35 42
     L 32 50
     L 29 42
     L 25 35
@@ -104,13 +102,14 @@
     L 27 21
     Z"
     fill="none"
-    stroke="var(--amber-dot)"
-    stroke-width="0.9"
-    opacity="0.6"
+    stroke="#F2A33A"
+    stroke-width="1.2"
+    stroke-dasharray="2 2"
+    opacity="0.8"
   />
 
-  <!-- Amber Hotspot Intelligence Beacon (Central India coordinates, hovering at [33, 34]) -->
-  <circle cx="33" cy="34" r="5.5" fill="var(--amber-glow)" />
-  <circle cx="33" cy="34" r="2.8" fill="var(--amber-dot)" />
-  <circle cx="33" cy="34" r="1.1" fill="#FFFFFF" />
+  <!-- Amber Hotspot Intelligence Beacon -->
+  <circle cx="32" cy="33" r="6.5" fill="var(--amber-glow)" />
+  <circle cx="32" cy="33" r="3.5" fill="var(--amber-dot)" />
+  <circle cx="32" cy="33" r="1.4" fill="#FFFFFF" />
 </svg>

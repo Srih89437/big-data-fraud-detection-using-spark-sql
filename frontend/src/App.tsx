@@ -1,28 +1,31 @@
-// Application shell: section routing, global data loading from the Spark SQL
-// backend, theme, year selection, live IST observatory clock, keyboard shortcuts and error boundaries.
+// Application Shell: Vertical Left Sidebar + Content Routing
+// Strictly adheres to Section C0 and master prompt requirements:
+// - Left vertical sidebar fixed on left (~232px, collapsible to ~64px rail)
+// - NO horizontal menu bar at the top on desktop/tablet anywhere (/ or /app/*)
+// - Content sits on the right
+// - Exact 7 sidebar items: Overview 1, India 3D Map 2, State Dossier 3,
+//   National Analytics 4, Data Explorer 5, Dataset Studio 6, Methodology 7
+// - Complete introduction website mounted at `/` (LandingPage)
+// - Application mounted at `/app/*`
+// - Dynamic URL synchronization & shareable links (?year=YYYY&state=NAME)
 
 import { Component, Suspense, useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
 import {
   AlertTriangle,
-  Moon,
   RefreshCw,
-  Shield,
-  Sun,
   Command,
-  Clock,
   ChevronRight,
-  Database,
+  Menu,
+  Clock,
   Radio,
-  ExternalLink,
-  Play,
-  Pause,
-  GitCompare,
-  ArrowRight,
+  Calendar,
+  Shield,
 } from 'lucide-react';
 import { StripeBadge } from './components/MotionPrimitives';
 import {
   clearApiCache,
+  fetchBootstrap,
   fetchMatrix,
   fetchOverview,
   fetchStateDetail,
@@ -30,8 +33,15 @@ import {
   fetchTrends,
   fetchYears,
 } from './lib/api';
-import type { MatrixRow, OverviewResponse, StateRow, TrendPoint } from './lib/types';
-import { Navigation, type SectionId, SECTIONS } from './components/Navigation';
+import type {
+  BootstrapResponse,
+  MatrixRow,
+  OverviewResponse,
+  StateRow,
+  TrendPoint,
+} from './lib/types';
+import { Sidebar, type AppRoute } from './components/Sidebar';
+import { LandingPage } from './components/LandingPage';
 import { Overview } from './components/Overview';
 import { StateIntelligence } from './components/StateIntelligence';
 import { NationalAnalytics } from './components/NationalAnalytics';
@@ -41,6 +51,9 @@ import { AtmosphericBackground } from './components/AtmosphericBackground';
 import { DatasetStudio } from './studio/DatasetStudio';
 import { Skeleton } from './components/ui';
 import { LazyIndiaMap3D as IndiaMap3D } from './map/lazy';
+import { CODE_TO_STATE, STATE_TO_CODE } from './lib/geo';
+import { CommandPalette } from './components/CommandPalette';
+import { IndiaPrismMark } from './components/IndiaPrismMark';
 
 function MapFallback() {
   return (
@@ -87,19 +100,53 @@ class ErrorBoundary extends Component<
   }
 }
 
+/** Parses path into application route and optional state code/name */
+function parsePathname(pathname: string): { route: AppRoute; stateArg?: string } {
+  const p = pathname.replace(/\/+$/, '') || '/';
+  if (p === '' || p === '/') return { route: 'landing' };
+  if (p === '/app' || p === '/app/overview') return { route: 'overview' };
+  if (p === '/app/map') return { route: 'map' };
+  if (p.startsWith('/app/state')) {
+    const parts = p.split('/');
+    return { route: 'state', stateArg: parts[3] ? decodeURIComponent(parts[3]) : undefined };
+  }
+  if (p === '/app/analytics') return { route: 'analytics' };
+  if (p === '/app/data' || p === '/app/explorer') return { route: 'explorer' };
+  if (p === '/app/studio') return { route: 'studio' };
+  if (p === '/app/method' || p === '/app/methodology') return { route: 'methodology' };
+  return { route: 'landing' };
+}
+
 export default function App() {
-  const [section, setSection] = useState<SectionId>('overview');
-  const [year, setYear] = useState(2024);
+  const [currentRoute, setCurrentRoute] = useState<AppRoute>(() => {
+    if (typeof window !== 'undefined') {
+      return parsePathname(window.location.pathname).route;
+    }
+    return 'landing';
+  });
+
+  const [year, setYear] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const p = new URLSearchParams(window.location.search);
+      const y = parseInt(p.get('year') || '', 10);
+      if (y >= 2020 && y <= 2024) return y;
+    }
+    return 2024;
+  });
+
   const [years, setYears] = useState<number[]>([2020, 2021, 2022, 2023, 2024]);
   const [states, setStates] = useState<StateRow[]>([]);
   const [overview, setOverview] = useState<OverviewResponse | null>(null);
   const [trends, setTrends] = useState<TrendPoint[]>([]);
+  const [bootstrapData, setBootstrapData] = useState<BootstrapResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selected, setSelected] = useState<string | null>('Telangana');
+  const [selected, setSelected] = useState<string>('Telangana');
   const [dark, setDark] = useState(() => prefersDark());
   const [showShortcuts, setShowShortcuts] = useState(false);
+  const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [clockTime, setClockTime] = useState<string>('');
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   // Live IST Observatory Clock
   useEffect(() => {
@@ -117,16 +164,68 @@ export default function App() {
     return () => clearInterval(timer);
   }, []);
 
+  // Sync state param from URL on initial mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const { stateArg } = parsePathname(window.location.pathname);
+      if (stateArg) {
+        const resolved = CODE_TO_STATE[stateArg] || stateArg;
+        setSelected(resolved);
+      } else {
+        const p = new URLSearchParams(window.location.search);
+        const s = p.get('state');
+        if (s) {
+          const resolved = CODE_TO_STATE[s] || s;
+          setSelected(resolved);
+        }
+      }
+    }
+  }, []);
+
+  // Update dynamic page title
+  useEffect(() => {
+    const baseTitle = 'India Cyber Crime Intelligence Platform';
+    switch (currentRoute) {
+      case 'landing':
+        document.title = `${baseTitle} — 3D National Observatory`;
+        break;
+      case 'overview':
+        document.title = `Overview (${year}) — ${baseTitle}`;
+        break;
+      case 'map':
+        document.title = `India 3D Map (${year}) — 3D Geospatial Intelligence`;
+        break;
+      case 'state':
+        document.title = `${selected} Dossier (${year}) — ${baseTitle}`;
+        break;
+      case 'analytics':
+        document.title = `National Analytics — ${baseTitle}`;
+        break;
+      case 'explorer':
+        document.title = `Data Explorer Matrix (${year}) — ${baseTitle}`;
+        break;
+      case 'studio':
+        document.title = `Dataset Studio — 3D Telemetry Visualizer`;
+        break;
+      case 'methodology':
+        document.title = `Methodology & Spark Architecture — ${baseTitle}`;
+        break;
+    }
+  }, [currentRoute, year, selected]);
+
+  // Load backend data (with bootstrap support)
   const load = useCallback(async (y: number) => {
     setLoading(true);
     setError(null);
     try {
-      const [s, o, t, yr] = await Promise.all([
+      const [boot, s, o, t, yr] = await Promise.all([
+        fetchBootstrap().catch(() => null),
         fetchStates(y),
         fetchOverview(y),
         fetchTrends(),
         fetchYears(),
       ]);
+      if (boot) setBootstrapData(boot);
       setStates(s.states);
       setOverview(o);
       setTrends(t.national_total);
@@ -142,30 +241,7 @@ export default function App() {
     void load(year);
   }, [year, load]);
 
-  // Keyboard navigation shortcuts: 1-6 to switch tabs, 't' to toggle theme, '?' for shortcuts
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (['INPUT', 'TEXTAREA', 'SELECT'].includes((e.target as HTMLElement)?.tagName)) {
-        return;
-      }
-      if (e.key >= '1' && e.key <= '7') {
-        const idx = parseInt(e.key, 10) - 1;
-        if (SECTIONS[idx]) {
-          setSection(SECTIONS[idx].id);
-        }
-      } else if (e.key.toLowerCase() === 't') {
-        setDark((d) => !d);
-      } else if (e.key === '?') {
-        setShowShortcuts((s) => !s);
-      } else if (e.key === 'Escape') {
-        setShowShortcuts(false);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Historical matrix for the explorer
+  // Historical matrix for the explorer and landing table
   const [history, setHistory] = useState<Map<string, Map<number, number>>>(new Map());
   const [matrixRows, setMatrixRows] = useState<MatrixRow[]>([]);
 
@@ -188,8 +264,8 @@ export default function App() {
         }
         setHistory(m);
       } catch {
-        /* fallback to individual state details if matrix fails */
-        if (section === 'explorer' && states.length > 0) {
+        /* fallback to individual state details */
+        if (states.length > 0) {
           const m = new Map<string, Map<number, number>>();
           for (const s of states) {
             if (cancelled) return;
@@ -211,18 +287,85 @@ export default function App() {
     return () => {
       cancelled = true;
     };
-  }, [year, section, states]);
+  }, [year, states]);
 
-  const source = useMemo(
-    () => 'NCRB, Crime in India · Ministry of Home Affairs / Press Information Bureau · 21 July 2026',
-    [],
+  // Navigation handler with browser History API push
+  const navigateTo = useCallback(
+    (route: AppRoute, path: string) => {
+      setCurrentRoute(route);
+      if (typeof window !== 'undefined') {
+        let finalPath = path;
+        // If navigating to state dossier, append the state code
+        if (route === 'state' && !path.includes('/state/')) {
+          const code = STATE_TO_CODE[selected] || selected;
+          finalPath = `/app/state/${code}`;
+        }
+        // Retain year query param if not landing
+        if (route !== 'landing' && year !== 2024) {
+          finalPath += `?year=${year}`;
+        }
+        window.history.pushState(null, '', finalPath);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    },
+    [selected, year]
   );
 
-  const handleSelect = useCallback((name: string) => {
-    if (!name) return;
-    setSelected(name);
-    setSection('state');
+  // Popstate listener for browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      const { route, stateArg } = parsePathname(window.location.pathname);
+      setCurrentRoute(route);
+      if (stateArg) {
+        const resolved = CODE_TO_STATE[stateArg] || stateArg;
+        setSelected(resolved);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  // Keyboard navigation shortcuts: 1-7, T (theme), ? (shortcuts), ⌘K / Ctrl+K (command palette), Esc (close)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setIsCommandPaletteOpen((prev) => !prev);
+        return;
+      }
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes((e.target as HTMLElement)?.tagName)) {
+        return;
+      }
+      if (e.key === '1') navigateTo('overview', '/app');
+      else if (e.key === '2') navigateTo('map', '/app/map');
+      else if (e.key === '3') {
+        const code = STATE_TO_CODE[selected] || selected;
+        navigateTo('state', `/app/state/${code}`);
+      } else if (e.key === '4') navigateTo('analytics', '/app/analytics');
+      else if (e.key === '5') navigateTo('explorer', '/app/data');
+      else if (e.key === '6') navigateTo('studio', '/app/studio');
+      else if (e.key === '7') navigateTo('methodology', '/app/method');
+      else if (e.key.toLowerCase() === 't') setDark((d) => !d);
+      else if (e.key === '?') setShowShortcuts((s) => !s);
+      else if (e.key === 'Escape') {
+        setShowShortcuts(false);
+        setIsCommandPaletteOpen(false);
+        setIsMobileOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [navigateTo, selected]);
+
+  const handleSelectState = useCallback(
+    (name: string) => {
+      if (!name) return;
+      setSelected(name);
+      const code = STATE_TO_CODE[name] || name;
+      navigateTo('state', `/app/state/${code}`);
+    },
+    [navigateTo]
+  );
 
   const retry = useCallback(() => {
     clearApiCache();
@@ -230,320 +373,410 @@ export default function App() {
     void load(year);
   }, [load, year]);
 
-  const activeSectionDef = useMemo(
-    () => SECTIONS.find((s) => s.id === section) ?? SECTIONS[0],
-    [section],
-  );
+  const isAppSection = currentRoute !== 'landing';
 
   return (
     <MotionConfig reducedMotion="user">
       <div className={`platform-root ${dark ? 'dark' : 'light'}`}>
-        <AtmosphericBackground section={section} dark={dark} />
-        {/* Precision hairline Sovereign Tricolor Bar */}
+        <AtmosphericBackground section={currentRoute} dark={dark} />
+
+        {/* Precision Hairline Tricolor Bar */}
         <div className="national-accent-bar" aria-hidden="true">
           <span className="accent-saffron" />
           <span className="accent-white" />
           <span className="accent-green" />
         </div>
 
-        <header className="platform-header">
-          <div className="header-inner">
-            <div className="brand-group">
-              <div className="brand-crest">
-                <Shield size={19} strokeWidth={2.2} />
-                <div className="crest-ring" />
-              </div>
-              <div className="brand-text">
-                <div className="brand-title">
-                  <strong>INDIA CYBER INTELLIGENCE</strong>
-                  <span className="sovereign-tag">OBSERVATORY</span>
-                </div>
-                <div className="header-breadcrumbs">
-                  <span className="crumb-root">ICIP 2026</span>
-                  <ChevronRight size={10} className="crumb-sep" />
-                  <span className="crumb-group">{activeSectionDef.group.toUpperCase()}</span>
-                  <ChevronRight size={10} className="crumb-sep" />
-                  <span className="crumb-current">{activeSectionDef.label.toUpperCase()}</span>
-                </div>
-              </div>
-            </div>
+        {/* ===================================================================
+            TWO-COLUMN GRID LAYOUT (Section C0 Hard Requirement):
+            [Vertical Left Sidebar: 232px] [Content Column: 1fr]
+            NO horizontal top menu bar anywhere.
+            =================================================================== */}
+        <div className="app-shell-layout">
+          {/* Vertical Left Sidebar */}
+          <Sidebar
+            currentRoute={currentRoute}
+            onNavigate={(route, path) => navigateTo(route, path)}
+            selectedState={selected}
+            dark={dark}
+            onToggleTheme={() => setDark(!dark)}
+            onOpenShortcuts={() => setShowShortcuts(true)}
+            sparkOnline={!error}
+            isMobileOpen={isMobileOpen}
+            onCloseMobile={() => setIsMobileOpen(false)}
+          />
 
-            {/* Sovereign Floating Navigation Dock in Header */}
-            <Navigation active={section} onChange={setSection} selectedState={selected} />
+          {/* Right Content Area */}
+          <div className="app-content-column">
+            {/* Mobile Drawer Trigger for Landing Page */}
+            {!isAppSection && (
+              <button
+                className="landing-mobile-menu-btn mobile-menu-btn"
+                onClick={() => setIsMobileOpen(true)}
+                aria-label="Open navigation drawer"
+              >
+                <Menu size={18} />
+              </button>
+            )}
 
-            <div className="header-status-group">
-              {/* Live Clock */}
-              {clockTime && (
-                <div className="header-clock-pill" title="Indian Standard Time">
-                  <Clock size={12} className="clock-icon" />
-                  <span className="clock-time">{clockTime}</span>
+            {/* Minimal In-Content Header (Only shown inside /app/*, NOT on /) */}
+            {isAppSection && (
+              <div className="content-page-subbar">
+                <div className="subbar-left">
+                  {/* Mobile Drawer Hamburger Button */}
+                  <button
+                    className="mobile-menu-trigger-btn mobile-menu-btn"
+                    onClick={() => setIsMobileOpen(true)}
+                    aria-label="Open navigation drawer"
+                  >
+                    <Menu size={18} />
+                  </button>
+
+                  <div className="subbar-breadcrumbs">
+                    <button
+                      className="subbar-crumb-link"
+                      onClick={() => navigateTo('landing', '/')}
+                    >
+                      ICIP 2026
+                    </button>
+                    <ChevronRight size={11} className="subbar-sep" />
+                    <span className="subbar-crumb-app">APP</span>
+                    <ChevronRight size={11} className="subbar-sep" />
+                    <span className="subbar-crumb-current">
+                      {currentRoute === 'overview' && 'OVERVIEW'}
+                      {currentRoute === 'map' && 'INDIA 3D MAP'}
+                      {currentRoute === 'state' && `STATE DOSSIER // ${selected.toUpperCase()}`}
+                      {currentRoute === 'analytics' && 'NATIONAL ANALYTICS'}
+                      {currentRoute === 'explorer' && 'DATA EXPLORER'}
+                      {currentRoute === 'studio' && 'DATASET STUDIO'}
+                      {currentRoute === 'methodology' && 'METHODOLOGY'}
+                    </span>
+                  </div>
                 </div>
+
+                <div className="subbar-right">
+                  {/* Year Switcher for the Application Views */}
+                  {currentRoute !== 'studio' && currentRoute !== 'methodology' && (
+                    <div className="subbar-year-switcher">
+                      <span className="subbar-year-label">CYCLE:</span>
+                      <div className="subbar-year-pills">
+                        {years.map((y) => {
+                          const isActive = year === y;
+                          return (
+                            <button
+                              key={y}
+                              className={`subbar-year-btn ${isActive ? 'active' : ''}`}
+                              onClick={() => setYear(y)}
+                            >
+                              {isActive && (
+                                <motion.div
+                                  className="subbar-active-year-pill"
+                                  layoutId="subbarYearActivePill"
+                                  transition={{ type: 'spring', stiffness: 480, damping: 36 }}
+                                  aria-hidden="true"
+                                />
+                              )}
+                              <span className="year-btn-text">{y}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* IST Clock */}
+                  {clockTime && (
+                    <div className="subbar-clock-pill" title="Indian Standard Time">
+                      <Clock size={12} className="clock-icon" />
+                      <span>{clockTime}</span>
+                    </div>
+                  )}
+
+                  {/* Command Palette Trigger */}
+                  <button
+                    className="subbar-action-icon-btn"
+                    onClick={() => setIsCommandPaletteOpen(true)}
+                    title="Command Palette (⌘K / Ctrl+K)"
+                    aria-label="Command Palette"
+                  >
+                    <Command size={14} />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Error Callout if Backend Service Unreachable */}
+            {error && (
+              <div className="error-callout global-error">
+                <AlertTriangle size={18} className="error-icon" />
+                <div className="error-content">
+                  <strong>Backend service unreachable</strong>
+                  <p>{error}</p>
+                  <small>
+                    Run <code>uvicorn backend.main:app --port 8000</code> to reconnect the Spark SQL backend.
+                  </small>
+                </div>
+                <button className="primary-btn" onClick={retry}>
+                  <RefreshCw size={13} /> Reconnect
+                </button>
+              </div>
+            )}
+
+            {/* Main Section Viewport */}
+            <main
+              className={`app-main-viewport ${
+                currentRoute === 'landing'
+                  ? 'viewport-landing'
+                  : currentRoute === 'map'
+                  ? 'viewport-map-cockpit'
+                  : 'viewport-editorial'
+              }`}
+              id="main-content"
+            >
+              {/* Mobile Menu Opener on Landing Page */}
+              {!isAppSection && (
+                <button
+                  className="landing-mobile-menu-btn"
+                  onClick={() => setIsMobileOpen(true)}
+                  aria-label="Open navigation menu"
+                >
+                  <Menu size={18} />
+                  <span>Menu</span>
+                </button>
               )}
 
-              {/* Spark SQL Live Status */}
-              <StripeBadge variant="mint" dot className="live-engine-badge" title="Spark SQL Cluster Engine Online">
-                SPARK 3.5
-              </StripeBadge>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentRoute}
+                  className="route-animation-container"
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  {/* 1. Introduction Website at `/` */}
+                  {currentRoute === 'landing' && (
+                    <ErrorBoundary label="Introduction Website">
+                      <LandingPage
+                        bootstrapData={bootstrapData}
+                        states={states}
+                        matrixRows={matrixRows}
+                        year={year}
+                        dark={dark}
+                        onNavigate={(r, p) => navigateTo(r as AppRoute, p)}
+                        onSelectState={handleSelectState}
+                      />
+                    </ErrorBoundary>
+                  )}
 
-              {/* Quick Header Year Selector with sliding pill */}
-              <div className="header-year-switcher" title="Change active year across all views">
-                <span className="header-year-label">YEAR</span>
-                <div className="header-year-buttons">
-                  {years.map((y) => {
-                    const isActive = year === y;
-                    return (
-                      <button
-                        key={y}
-                        className={`header-year-btn ${isActive ? 'active' : ''}`}
-                        onClick={() => setYear(y)}
+                  {/* 2. Overview at `/app` */}
+                  {currentRoute === 'overview' && (
+                    <ErrorBoundary label="Overview">
+                      <Overview
+                        year={year}
+                        years={years}
+                        onYearChange={setYear}
+                        overview={overview}
+                        states={states}
+                        trends={trends}
+                        loading={loading}
+                        selected={selected}
+                        dark={dark}
+                        onSelect={handleSelectState}
+                      />
+                    </ErrorBoundary>
+                  )}
+
+                  {/* 3. India 3D Map at `/app/map` */}
+                  {currentRoute === 'map' && (
+                    <ErrorBoundary label="India 3D Map">
+                      <MapSection
+                        year={year}
+                        years={years}
+                        onYearChange={setYear}
+                        states={states}
+                        loading={loading}
+                        selected={selected}
+                        dark={dark}
+                        onSelect={(name) => setSelected(name)}
+                        onOpenDossier={(name) => handleSelectState(name)}
+                      />
+                    </ErrorBoundary>
+                  )}
+
+                  {/* 4. State Dossier at `/app/state/*` */}
+                  {currentRoute === 'state' && (
+                    <ErrorBoundary label="State Dossier">
+                      <StateIntelligence
+                        selected={selected}
+                        year={year}
+                        years={years}
+                        states={states}
+                        overview={overview}
+                        trends={trends}
+                        loading={loading}
+                        onOpenMap={() => navigateTo('map', '/app/map')}
+                        onSelect={handleSelectState}
+                      />
+                    </ErrorBoundary>
+                  )}
+
+                  {/* 5. National Analytics at `/app/analytics` */}
+                  {currentRoute === 'analytics' && (
+                    <ErrorBoundary label="National Analytics">
+                      <NationalAnalytics
+                        year={year}
+                        years={years}
+                        states={states}
+                        trends={trends}
+                        overview={overview}
+                        loading={loading}
+                        onSelect={handleSelectState}
+                        onYearChange={setYear}
+                      />
+                    </ErrorBoundary>
+                  )}
+
+                  {/* 6. Data Explorer at `/app/data` */}
+                  {currentRoute === 'explorer' && (
+                    <ErrorBoundary label="Data Explorer">
+                      <DataExplorer
+                        states={states}
+                        years={years}
+                        year={year}
+                        loading={loading}
+                        source="NCRB, Crime in India · Ministry of Home Affairs / Press Information Bureau · 21 July 2026"
+                        onSelect={handleSelectState}
+                        history={history}
+                        matrixRows={matrixRows}
+                      />
+                    </ErrorBoundary>
+                  )}
+
+                  {/* 7. Dataset Studio at `/app/studio` */}
+                  {currentRoute === 'studio' && (
+                    <ErrorBoundary label="Dataset Studio">
+                      <DatasetStudio dark={dark} />
+                    </ErrorBoundary>
+                  )}
+
+                  {/* 8. Methodology at `/app/method` */}
+                  {currentRoute === 'methodology' && (
+                    <ErrorBoundary label="Methodology">
+                      <Methodology />
+                    </ErrorBoundary>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Minimal App Footer */}
+              {isAppSection && currentRoute !== 'map' && (
+                <footer className="platform-footer">
+                  <div className="footer-content">
+                    <div className="footer-left">
+                      <div className="footer-brand">
+                        <IndiaPrismMark size={16} />
+                        <span>INDIA CYBER CRIME INTELLIGENCE PLATFORM</span>
+                      </div>
+                      <p className="footer-provenance">
+                        Official NCRB Statewise Statistics · Ministry of Home Affairs, Government of India
+                      </p>
+                    </div>
+                    <div className="footer-right">
+                      <span className="footer-engine">Apache Spark SQL distributed query pipeline</span>
+                      <a
+                        href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287039&lang=1&reg=3"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="footer-link"
                       >
-                        {isActive && (
-                          <motion.div
-                            className="header-year-active-pill"
-                            layoutId="activeYearPill"
-                            transition={{ type: 'spring', stiffness: 450, damping: 35 }}
-                            aria-hidden="true"
-                          />
-                        )}
-                        <span className="header-year-btn-text">{y}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div className="header-divider" />
-
-              <button
-                className="quick-action-btn"
-                onClick={() => setShowShortcuts(true)}
-                title="Keyboard shortcuts (?)"
-                aria-label="Keyboard shortcuts"
-              >
-                <Command size={15} />
-              </button>
-
-              <button
-                className="quick-action-btn theme-toggle"
-                onClick={() => setDark(!dark)}
-                title={`Switch to ${dark ? 'light' : 'dark'} mode (T)`}
-                aria-label="Toggle visual theme"
-              >
-                {dark ? <Sun size={16} /> : <Moon size={16} />}
-              </button>
-            </div>
+                        PIB Gazette 2287039 ↗
+                      </a>
+                    </div>
+                  </div>
+                </footer>
+              )}
+            </main>
           </div>
-        </header>
+        </div>
 
-      <div className={`platform-canvas-root ${section === 'map' ? 'full-bleed-mode' : 'editorial-mode'}`}>
-        <main className="platform-main-viewport" id="main-content">
-          {error && (
-            <div className="error-callout global-error">
-              <AlertTriangle size={18} className="error-icon" />
-              <div className="error-content">
-                <strong>Backend service unreachable</strong>
-                <p>{error}</p>
-                <small>Run <code>uvicorn backend.main:app --port 8000</code> to reconnect the Spark SQL backend.</small>
-              </div>
-              <button className="primary-btn" onClick={retry}>
-                <RefreshCw size={13} /> Reconnect
-              </button>
+        {/* Keyboard Shortcuts Modal */}
+        <AnimatePresence>
+          {showShortcuts && (
+            <div className="modal-backdrop" onClick={() => setShowShortcuts(false)}>
+              <motion.div
+                className="shortcuts-dialog"
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                transition={{ duration: 0.2 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="dialog-header">
+                  <div className="dialog-title-wrap">
+                    <Command size={18} />
+                    <h3>Keyboard Navigation Controls</h3>
+                  </div>
+                  <button className="dialog-close" onClick={() => setShowShortcuts(false)}>
+                    ✕
+                  </button>
+                </div>
+                <div className="shortcuts-grid">
+                  <div className="shortcut-row">
+                    <kbd>1</kbd> <span>Overview (/app)</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>2</kbd> <span>India 3D Map (/app/map)</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>3</kbd> <span>State Dossier (/app/state)</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>4</kbd> <span>National Analytics (/app/analytics)</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>5</kbd> <span>Data Explorer (/app/data)</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>6</kbd> <span>Dataset Studio (/app/studio)</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>7</kbd> <span>Methodology (/app/method)</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>T</kbd> <span>Toggle Dark / Light Theme</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>?</kbd> <span>Toggle this shortcuts modal</span>
+                  </div>
+                  <div className="shortcut-row">
+                    <kbd>Esc</kbd> <span>Dismiss dialog</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           )}
+        </AnimatePresence>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={section}
-              className={`section-viewport ${section === 'map' ? 'viewport-map-cockpit' : 'viewport-editorial'}`}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -6 }}
-              transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            >
-              {section === 'overview' && (
-                <ErrorBoundary label="Overview">
-                  <Overview
-                    year={year}
-                    years={years}
-                    onYearChange={setYear}
-                    overview={overview}
-                    states={states}
-                    trends={trends}
-                    loading={loading}
-                    selected={selected}
-                    dark={dark}
-                    onSelect={handleSelect}
-                  />
-                </ErrorBoundary>
-              )}
-
-              {section === 'map' && (
-                <ErrorBoundary label="India Map">
-                  <MapSection
-                    year={year}
-                    years={years}
-                    onYearChange={setYear}
-                    states={states}
-                    loading={loading}
-                    selected={selected}
-                    dark={dark}
-                    onSelect={(name) => setSelected(name)}
-                    onOpenDossier={(name) => {
-                      setSelected(name);
-                      setSection('state');
-                    }}
-                  />
-                </ErrorBoundary>
-              )}
-
-              {section === 'state' && (
-                <ErrorBoundary label="State Intelligence">
-                  <StateIntelligence
-                    selected={selected}
-                    year={year}
-                    years={years}
-                    states={states}
-                    overview={overview}
-                    trends={trends}
-                    loading={loading}
-                    onOpenMap={() => setSection('map')}
-                    onSelect={handleSelect}
-                  />
-                </ErrorBoundary>
-              )}
-
-              {section === 'analytics' && (
-                <ErrorBoundary label="National Analytics">
-                  <NationalAnalytics
-                    year={year}
-                    years={years}
-                    states={states}
-                    trends={trends}
-                    overview={overview}
-                    loading={loading}
-                    onSelect={handleSelect}
-                    onYearChange={setYear}
-                  />
-                </ErrorBoundary>
-              )}
-
-              {section === 'explorer' && (
-                <ErrorBoundary label="Data Explorer">
-                  <DataExplorer
-                    states={states}
-                    years={years}
-                    year={year}
-                    loading={loading}
-                    source={source}
-                    onSelect={handleSelect}
-                    history={history}
-                    matrixRows={matrixRows}
-                  />
-                </ErrorBoundary>
-              )}
-
-              {section === 'studio' && (
-                <ErrorBoundary label="Dataset Studio">
-                  <DatasetStudio dark={dark} />
-                </ErrorBoundary>
-              )}
-
-              {section === 'methodology' && (
-                <ErrorBoundary label="Methodology">
-                  <Methodology />
-                </ErrorBoundary>
-              )}
-            </motion.div>
-          </AnimatePresence>
-
-          <footer className="platform-footer">
-            <div className="footer-content">
-              <div className="footer-left">
-                <div className="footer-brand">
-                  <Shield size={14} />
-                  <span>INDIA CYBER CRIME INTELLIGENCE PLATFORM</span>
-                </div>
-                <p className="footer-provenance">
-                  Official NCRB Statewise Statistics · Ministry of Home Affairs, Government of India
-                </p>
-              </div>
-              <div className="footer-right">
-                <span className="footer-engine">Apache Spark SQL distributed query pipeline</span>
-                <a
-                  href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287039&lang=1&reg=3"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="footer-link"
-                >
-                  PIB Gazette 2287039 ↗
-                </a>
-              </div>
-            </div>
-          </footer>
-        </main>
-      </div>
-
-      {/* Keyboard Shortcuts Modal */}
-      <AnimatePresence>
-        {showShortcuts && (
-          <div className="modal-backdrop" onClick={() => setShowShortcuts(false)}>
-            <motion.div
-              className="shortcuts-dialog"
-              initial={{ opacity: 0, scale: 0.95, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              transition={{ duration: 0.2 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="dialog-header">
-                <div className="dialog-title-wrap">
-                  <Command size={18} />
-                  <h3>Keyboard Navigation Controls</h3>
-                </div>
-                <button className="dialog-close" onClick={() => setShowShortcuts(false)}>✕</button>
-              </div>
-              <div className="shortcuts-grid">
-                <div className="shortcut-row">
-                  <kbd>1</kbd> <span>Executive National Overview</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>2</kbd> <span>India 3D Intelligence Map</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>3</kbd> <span>State Intelligence Dossier</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>4</kbd> <span>National Analytics Suite</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>5</kbd> <span>Data Explorer & Matrix</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>6</kbd> <span>Dataset Studio & 3D Analytics</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>7</kbd> <span>Methodology & Provenance</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>T</kbd> <span>Toggle Dark / Light Theme</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>?</kbd> <span>Toggle this shortcuts modal</span>
-                </div>
-                <div className="shortcut-row">
-                  <kbd>Esc</kbd> <span>Dismiss dialog</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+        {/* Command Palette (⌘K / Ctrl+K) */}
+        <CommandPalette
+          isOpen={isCommandPaletteOpen}
+          onClose={() => setIsCommandPaletteOpen(false)}
+          onNavigate={(route, path) => navigateTo(route, path)}
+          onSelectState={handleSelectState}
+          onSelectYear={setYear}
+          onToggleTheme={() => setDark(!dark)}
+          states={states}
+          years={years}
+          currentYear={year}
+          dark={dark}
+        />
       </div>
     </MotionConfig>
   );
 }
 
-/** Edge-to-Edge Sovereign 3D Geospatial Intelligence Cockpit */
+/** Edge-to-Edge 3D Geospatial Intelligence Cockpit */
 function MapSection({
   year,
   years,
@@ -574,14 +807,12 @@ function MapSection({
   useEffect(() => {
     if (!isPlayingTimelapse || years.length === 0) return;
     const timer = setInterval(() => {
-      onYearChange((prevYear) => {
-        const idx = years.indexOf(prevYear);
-        const nextIdx = idx >= 0 ? (idx + 1) % years.length : 0;
-        return years[nextIdx];
-      });
+      const idx = years.indexOf(year);
+      const nextIdx = idx >= 0 ? (idx + 1) % years.length : 0;
+      onYearChange(years[nextIdx]);
     }, 2200);
     return () => clearInterval(timer);
-  }, [isPlayingTimelapse, years, onYearChange]);
+  }, [isPlayingTimelapse, years, year, onYearChange]);
 
   const cases = useMemo(() => {
     const m = new Map<string, number>();
@@ -662,177 +893,75 @@ function MapSection({
             Critical Hotspot: <strong>{sortedStates[0].state_ut}</strong> ({sortedStates[0].cases.toLocaleString('en-IN')} cases)
           </p>
         )}
+      </div>
 
-        {/* Play-Years Time-Lapse Scrubber */}
-        <div className="timelapse-dock-wrap" style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
+      {/* Floating Tactical HUD: Top-Right Controls */}
+      <div className="hud-panel hud-top-right">
+        <div className="hud-ctrl-group">
           <button
-            className={`timelapse-play-btn ${isPlayingTimelapse ? 'playing' : ''}`}
-            onClick={() => setIsPlayingTimelapse((p) => !p)}
-            title={isPlayingTimelapse ? 'Pause Time-Lapse' : 'Play 5-Year Time-Lapse (2020-2024)'}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 5,
-              padding: '4px 10px',
-              borderRadius: 6,
-              background: isPlayingTimelapse ? '#e07a38' : 'rgba(255,255,255,0.08)',
-              border: '1px solid rgba(224,122,56,0.4)',
-              color: '#fff',
-              fontSize: 11,
-              fontWeight: 600,
-              cursor: 'pointer',
-            }}
+            className={`hud-btn ${isPlayingTimelapse ? 'active' : ''}`}
+            onClick={() => setIsPlayingTimelapse(!isPlayingTimelapse)}
+            title={isPlayingTimelapse ? 'Pause time-lapse playback' : 'Play 5-year longitudinal time-lapse (2020-2024)'}
           >
-            {isPlayingTimelapse ? <Pause size={12} /> : <Play size={12} />}
-            <span>{isPlayingTimelapse ? 'PAUSE' : 'PLAY 5-YR'}</span>
+            {isPlayingTimelapse ? 'Pause ⏸' : 'Play Time-Lapse ▶'}
           </button>
 
-          <div style={{ display: 'flex', gap: 3 }}>
-            {years.map((y) => (
-              <button
-                key={y}
-                onClick={() => onYearChange(y)}
-                style={{
-                  padding: '3px 7px',
-                  borderRadius: 4,
-                  fontSize: 10,
-                  fontFamily: 'var(--font-mono)',
-                  background: year === y ? '#e07a38' : 'rgba(255,255,255,0.05)',
-                  border: year === y ? '1px solid #e07a38' : '1px solid rgba(255,255,255,0.08)',
-                  color: year === y ? '#fff' : '#94a3b8',
-                  cursor: 'pointer',
-                  fontWeight: year === y ? 700 : 500,
-                }}
-              >
-                {y}
-              </button>
-            ))}
-          </div>
-
           <button
-            onClick={() => setCompareMode((c) => !c)}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 4,
-              padding: '3px 8px',
-              borderRadius: 4,
-              fontSize: 10,
-              fontFamily: 'var(--font-mono)',
-              background: compareMode ? '#d97706' : 'rgba(255,255,255,0.05)',
-              border: compareMode ? '1px solid #f59e0b' : '1px solid rgba(255,255,255,0.08)',
-              color: compareMode ? '#fff' : '#94a3b8',
-              cursor: 'pointer',
-              fontWeight: 600,
-            }}
-            title="Toggle Side-by-Side Jurisdiction Comparison Mode"
+            className={`hud-btn ${compareMode ? 'active' : ''}`}
+            onClick={() => setCompareMode(!compareMode)}
+            title="Toggle side-by-side comparative inspection"
           >
-            <GitCompare size={11} />
-            <span>COMPARE</span>
+            {compareMode ? 'Exit Compare ✕' : 'Compare Jurisdictions ⇄'}
           </button>
         </div>
       </div>
 
-      {/* Floating Tactical HUD: Bottom-Left Dynamic Spectrum */}
-      <div className="hud-panel hud-bottom-left">
-        <span className="hud-legend-title">DENSITY CHOROPLETH</span>
-        <div className="hud-spectrum-bar">
-          <span className="spec-step step-1" />
-          <span className="spec-step step-2" />
-          <span className="spec-step step-3" />
-          <span className="spec-step step-4" />
-        </div>
-        <div className="hud-spectrum-labels">
-          <span>0 (Baseline)</span>
-          <span>5K</span>
-          <span>10K</span>
-          <span>15K+ FIRs</span>
-        </div>
-      </div>
-
-      {/* Floating Tactical HUD: Bottom-Right Selected Jurisdiction Dossier Drawer */}
+      {/* Floating Bottom Intelligence Drawer (When a Jurisdiction is Selected) */}
       {activeRow && (
-        <motion.div
-          className="hud-panel hud-bottom-right-dossier"
-          initial={{ opacity: 0, x: 20, scale: 0.96 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 20, scale: 0.96 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-          style={{ maxWidth: compareMode ? 460 : 340 }}
-        >
-          <div className="dossier-card-header">
-            <div className="dossier-card-title">
-              <span className="dossier-state-name">{activeRow.state_ut}</span>
-              <span className="dossier-cat-badge">
-                {activeRow.category === 'Union Territory' ? 'UT' : 'CONSTITUTIONAL STATE'}
-              </span>
+        <div className="hud-panel hud-bottom-drawer">
+          <div className="drawer-main-info">
+            <div className="drawer-meta-tag">
+              <span>{activeRow.category.toUpperCase()}</span>
+              <span className="meta-sep">·</span>
+              <span>RANK #{rank} OF 36</span>
+              <span className="meta-sep">·</span>
+              <span>{share}% OF NATIONAL TOTAL</span>
             </div>
-            <button
-              className="dossier-close-btn"
-              onClick={() => setActiveJurisdiction(null)}
-              title="Clear selection to national overview"
-            >
-              ✕
-            </button>
+            <h3 className="drawer-state-name">{activeRow.state_ut}</h3>
+            <div className="drawer-metric-row">
+              <span className="drawer-metric-num">{activeRow.cases.toLocaleString('en-IN')}</span>
+              <span className="drawer-metric-sub">REGISTERED FIRs IN {year}</span>
+            </div>
           </div>
 
-          {!compareMode ? (
-            <div className="dossier-kpi-grid">
-              <div className="dossier-kpi-cell">
-                <span className="kpi-label">REGISTERED FIRs ({year})</span>
-                <strong className="kpi-number">{activeRow.cases.toLocaleString('en-IN')}</strong>
+          {compareMode && compareRow && (
+            <div className="drawer-compare-info">
+              <div className="drawer-meta-tag">
+                <span>COMPARISON BENCHMARK</span>
+                <span className="meta-sep">·</span>
+                <span>RANK #{compareRank}</span>
               </div>
-              <div className="dossier-kpi-cell">
-                <span className="kpi-label">NATIONAL SHARE</span>
-                <strong className="kpi-number">{share}%</strong>
+              <h3 className="drawer-state-name">{compareRow.state_ut}</h3>
+              <div className="drawer-metric-row">
+                <span className="drawer-metric-num">{compareRow.cases.toLocaleString('en-IN')}</span>
+                <span className="drawer-metric-sub">
+                  Δ {Math.abs(activeRow.cases - compareRow.cases).toLocaleString('en-IN')} cases (
+                  {activeRow.cases > compareRow.cases ? 'higher' : 'lower'})
+                </span>
               </div>
-              <div className="dossier-kpi-cell">
-                <span className="kpi-label">ALL-INDIA RANK</span>
-                <strong className="kpi-number">
-                  #{rank} <small>of 36</small>
-                </strong>
-              </div>
-            </div>
-          ) : (
-            <div className="dossier-compare-deck" style={{ padding: '8px 0' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 8 }}>
-                <div style={{ background: 'rgba(255,255,255,0.04)', padding: 8, borderRadius: 6 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: '#e07a38' }}>{activeRow.state_ut}</div>
-                  <div style={{ fontSize: 16, fontWeight: 800, fontFamily: 'var(--font-mono)' }}>
-                    {activeRow.cases.toLocaleString('en-IN')}
-                  </div>
-                  <div style={{ fontSize: 10, color: '#94a3b8' }}>Rank #{rank} · {share}% share</div>
-                </div>
-
-                {compareRow && (
-                  <div style={{ background: 'rgba(255,255,255,0.04)', padding: 8, borderRadius: 6 }}>
-                    <div style={{ fontSize: 11, fontWeight: 700, color: '#38bdf8' }}>{compareRow.state_ut}</div>
-                    <div style={{ fontSize: 16, fontWeight: 800, fontFamily: 'var(--font-mono)' }}>
-                      {compareRow.cases.toLocaleString('en-IN')}
-                    </div>
-                    <div style={{ fontSize: 10, color: '#94a3b8' }}>Rank #{compareRank} · {compareShare}% share</div>
-                  </div>
-                )}
-              </div>
-
-              {compareRow && (
-                <div style={{ fontSize: 11, color: '#94a3b8', textAlign: 'center', padding: '4px 0' }}>
-                  Delta: <strong style={{ color: activeRow.cases >= compareRow.cases ? '#e07a38' : '#38bdf8' }}>
-                    {Math.abs(activeRow.cases - compareRow.cases).toLocaleString('en-IN')} cases
-                  </strong> ({activeRow.cases >= compareRow.cases ? `${activeRow.state_ut} higher` : `${compareRow.state_ut} higher`})
-                </div>
-              )}
             </div>
           )}
 
-          <button
-            className="dossier-open-btn stripe-glow-btn"
-            onClick={() => onOpenDossier(activeRow.state_ut)}
-          >
-            <span>Open Confidential State Dossier</span>
-            <ExternalLink size={14} />
-          </button>
-        </motion.div>
+          <div className="drawer-actions">
+            <button
+              className="primary-btn drawer-dossier-btn"
+              onClick={() => onOpenDossier(activeRow.state_ut)}
+            >
+              <span>Open Complete Dossier</span>
+              <ChevronRight size={14} />
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );

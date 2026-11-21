@@ -72,3 +72,38 @@ export interface TrendsResponse {
 export interface YearsResponse {
   years: number[];
 }
+
+export interface BootstrapTopJurisdiction {
+  rank: number;
+  state_ut: string;
+  code: string;
+  category: JurisdictionCategory;
+  cases: number;
+  share: number;
+  yoy_change: number;
+}
+
+/** Response of GET /api/bootstrap */
+export interface BootstrapResponse {
+  status: string;
+  version: string;
+  as_of: string;
+  source: string;
+  engine: string;
+  years: number[];
+  latest_year: number;
+  latest_total: number;
+  previous_total: number;
+  yoy_change_pct: number;
+  jurisdiction_count: number;
+  national_totals: TrendPoint[];
+  top_5: BootstrapTopJurisdiction[];
+  top_5_cases?: number;
+  top_5_share?: number;
+  fastest_growth?: {
+    state_ut: string;
+    code: string;
+    cases: number;
+    yoy_change: number;
+  };
+}

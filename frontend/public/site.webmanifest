@@ -1,7 +1,7 @@
 {
   "name": "India Cyber Crime Intelligence Platform",
   "short_name": "ICIP Observatory",
-  "description": "National Sovereign Cyber Crime Intelligence & 3D Geospatial Observatory (NCRB Data)",
+  "description": "National Cyber Crime Intelligence & 3D Geospatial Observatory (NCRB Data)",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0A0D10",

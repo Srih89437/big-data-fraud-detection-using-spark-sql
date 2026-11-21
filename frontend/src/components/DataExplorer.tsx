@@ -16,7 +16,6 @@ import {
   FileCode,
   ExternalLink,
   Table as TableIcon,
-  Sparkles,
 } from 'lucide-react';
 import type { MatrixRow, StateRow } from '../lib/types';
 import { Skeleton } from './ui';
@@ -213,7 +212,7 @@ export function DataExplorer({
             <span className="eyebrow-year">NCRB MASTER DATASET</span>
           </div>
           <h1 className="explorer-main-headline">
-            All 36 Sovereign Jurisdictions,
+            All 36 Jurisdictions,
             <span className="headline-gradient-text"> Standardized & Audited.</span>
           </h1>
           <p className="explorer-headline-desc">
