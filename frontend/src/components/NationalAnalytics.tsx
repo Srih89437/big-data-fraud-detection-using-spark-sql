@@ -124,7 +124,7 @@ export function NationalAnalytics({
             <span className="headline-gradient-text"> Jurisdictional Stratification.</span>
           </h1>
           <p className="analytics-headline-desc">
-            Multi-dimensional synthesis of official police cybercrime registrations. Explores administrative divisions,
+            Multi-dimensional synthesis of police cybercrime registrations. Explores administrative divisions,
             frequency clustering, top jurisdiction rankings, and multi-year progression patterns across the Republic of India.
           </p>
         </div>
@@ -198,7 +198,7 @@ export function NationalAnalytics({
             </ResponsiveContainer>
           </div>
           <div className="card-footer-meta">
-            <span>National totals derived from validated NCRB records across all 36 reporting police jurisdictions.</span>
+            <span>National totals derived from validated records across all 36 reporting police jurisdictions.</span>
           </div>
         </div>
 

@@ -149,7 +149,7 @@ export function DataExplorer({
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `NCRB_India_Cybercrime_${year}_Matrix.csv`;
+    a.download = `India_Cybercrime_${year}_Matrix.csv`;
     a.click();
     URL.revokeObjectURL(url);
     showToast(`Downloaded CSV for ${rows.length} jurisdictions`);
@@ -174,7 +174,7 @@ export function DataExplorer({
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `NCRB_India_Cybercrime_${year}_Matrix.json`;
+    a.download = `India_Cybercrime_${year}_Matrix.json`;
     a.click();
     URL.revokeObjectURL(url);
     showToast(`Exported JSON for ${rows.length} jurisdictions`);
@@ -209,14 +209,14 @@ export function DataExplorer({
             <span className="eyebrow-accent-dot" />
             <span className="eyebrow-title">CENTRAL JURISDICTION MATRIX</span>
             <span className="eyebrow-slash">/</span>
-            <span className="eyebrow-year">NCRB MASTER DATASET</span>
+            <span className="eyebrow-year">MASTER DATASET</span>
           </div>
           <h1 className="explorer-main-headline">
             All 36 Jurisdictions,
             <span className="headline-gradient-text"> Standardized & Audited.</span>
           </h1>
           <p className="explorer-headline-desc">
-            Complete high-density data matrix representing all 28 States and 8 Union Territories with official five-year police FIR registrations (2020–2024).
+            Complete high-density data matrix representing all 28 States and 8 Union Territories with five-year police FIR registrations (2020–2024).
           </p>
         </div>
 

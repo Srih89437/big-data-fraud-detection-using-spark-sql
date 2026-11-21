@@ -55,8 +55,8 @@ Verified live via Chromium browser runtime:
 | Viewport | Route / Feature | Evidence Screenshot | Verification Notes |
 | :--- | :--- | :--- | :--- |
 | **Desktop (1440×900)** | `/` Hero | [desktop_landing_01_hero.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_landing_01_hero.png) | Left vertical sidebar visible; Instrument Serif hero headline; live national total (`1,01,928`); interactive dot-matrix canvas with drifting topographic contours. |
-| **Desktop (1440×900)** | `/` Scale Strip | [desktop_landing_02_scale_strip.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_landing_02_scale_strip.png) | 5-year longitudinal scale strip (2020→2024); exact count-ups; NCRB provenance annotation. |
-| **Desktop (1440×900)** | `/` Map Story | [desktop_landing_03_story.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_landing_03_story.png) | Deep Ink section (`#0A0D10`); 3 editorial forensic stories with data concentration callouts. |
+| **Desktop (1440×900)** | `/` Scale Strip | [desktop_landing_02_scale_strip.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_landing_02_scale_strip.png) | 5-year longitudinal scale strip (2020→2024); exact count-ups; provenance annotation. |
+| **Desktop (1440×900)** | `/` Map Story | [desktop_landing_03_story.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_landing_03_story.png) | Deep Ink section (`#0A0D10`); 3 editorial data stories with data concentration callouts. |
 | **Desktop (1440×900)** | `/` State Profiles Demo | [desktop_landing_04_states.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_landing_04_states.png) | Paper section (`#F3F0E8`); live jurisdiction picker; 36-state filter; exact cases, rank & share cards. |
 | **Desktop (1440×900)** | `/` State Picker (KA Click) | [desktop_landing_state_picker_KA.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_landing_state_picker_KA.png) | Instant update to Karnataka (`21,993` cases, Rank #2, 21.6% share, +0.5% YoY). |
 | **Desktop (1440×900)** | `/` Analytics Demo | [desktop_landing_05_analytics.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_landing_05_analytics.png) | Interactive SVG bump chart (5-year rank movement) + volume vs growth scatter plot. |
@@ -68,11 +68,11 @@ Verified live via Chromium browser runtime:
 | **Desktop (1440×900)** | `/app/map` 3D Map | [desktop_app_map.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_map.png) | Full-bleed North-Up 3D choropleth map; polylabel centroid labels; square-root height extrusion. |
 | **Desktop (1440×900)** | `/app/map` Column Mode | [desktop_app_map_mode_column.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_map_mode_column.png) | Vertical extruded 3D columns for all 36 jurisdictions. |
 | **Desktop (1440×900)** | `/app/map` Compare Mode | [desktop_app_map_compare.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_map_compare.png) | Side-by-side jurisdiction comparison HUD with delta differentials. |
-| **Desktop (1440×900)** | `/app/state/TG` Dossier | [desktop_app_state_dossier.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_state_dossier.png) | Telangana confidential dossier with FIR breakdown, growth barometer, and longitudinal sparkline. |
+| **Desktop (1440×900)** | `/app/state/TG` Dossier | [desktop_app_state_dossier.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_state_dossier.png) | Telangana state dossier with FIR breakdown, growth barometer, and longitudinal sparkline. |
 | **Desktop (1440×900)** | `/app/analytics` Analytics | [desktop_app_analytics.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_analytics.png) | National analytics with 5-year trajectory curves, CAGR metrics, and category distributions. |
 | **Desktop (1440×900)** | `/app/data` Explorer | [desktop_app_explorer.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_explorer.png) | Full 36-jurisdiction multi-year table with search, sorting, and CSV/JSON downloads. |
 | **Desktop (1440×900)** | `/app/studio` Studio | [desktop_app_studio.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_studio.png) | Dataset Studio with sample telemetry loaded and active 3D scatter chart. |
-| **Desktop (1440×900)** | `/app/method` Methodology | [desktop_app_methodology.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_methodology.png) | Complete NCRB Table 9A provenance advisory, legal notices, and PySpark pipeline code. |
+| **Desktop (1440×900)** | `/app/method` Methodology | [desktop_app_methodology.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/desktop_app_methodology.png) | Complete Table 9A provenance advisory, legal notices, and PySpark pipeline code. |
 | **Tablet (1024×768)** | `/` Hero | [tablet_landing_hero.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/tablet_landing_hero.png) | Responsive 232px vertical sidebar on left with hero content on right; no horizontal top bar. |
 | **Tablet (1024×768)** | `/app/map` Map | [tablet_app_map.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/tablet_app_map.png) | 3D canvas scales fluidly; floating HUDs adapt to 1024px width. |
 | **Tablet (1024×768)** | `/app/data` Explorer | [tablet_app_explorer.png](file:///C:/Users/srih8/Downloads/Bigdata-Fraud-Detection-India-Upgrade/qa/after/tablet_app_explorer.png) | Multi-column table with horizontal scroll protection. |
@@ -98,7 +98,7 @@ Recorded directly via Chromium test session into `qa/video/`:
 
 ## 5. Spark SQL & Data Fidelity Reconciled
 
-All metrics match the official backend Spark SQL computation over 600 records across 36 jurisdictions:
+All metrics match the backend Spark SQL computation over 600 records across 36 jurisdictions:
 - **National Total (2024)**: `1,01,928` cases (`+17.9%` YoY from `86,420` in 2023).
 - **Top 5 Concentration**: `76,598` cases (`71.5%` of national total).
   1. **Telangana**: `27,230` cases (26.7% share, `+49.3%` YoY)

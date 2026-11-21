@@ -2,7 +2,7 @@
 
 ## Overview
 All endpoints are serviced by FastAPI using an Apache Spark 3.5 SQL engine connected to `data/statewise_cyber_crimes_2020_2024.csv`.
-Every figure returned represents official police FIR registrations from NCRB, Crime in India.
+Every figure returned represents police FIR registrations from Crime in India series.
 
 ---
 

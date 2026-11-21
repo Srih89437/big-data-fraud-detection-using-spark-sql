@@ -1,7 +1,7 @@
 /* ==========================================================================
    INDIA CYBER CRIME INTELLIGENCE PLATFORM (ICIP)
    Design System & Master Stylesheet
-   Architecture: Obsidian/Slate Intelligence · Sovereign Restraint · Analytical Precision
+   Architecture: Obsidian/Slate Intelligence · Minimal Restraint · Analytical Precision
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -20,7 +20,7 @@
   --duration-normal: 240ms;
   --duration-slow: 380ms;
 
-  /* Sovereign National Accents */
+  /* National Accents */
   --saffron-raw: #e07a38;
   --platinum-raw: #f5f2eb;
   --green-raw: #2e8555;
@@ -63,7 +63,7 @@
   --shadow-overlay: 0 20px 40px -12px rgba(26, 31, 38, 0.14), 0 1px 3px rgba(26, 31, 38, 0.08);
 }
 
-/* Dark Theme (Deep Obsidian & Sovereign Charcoal Canvas) */
+/* Dark Theme (Deep Obsidian & Charcoal Canvas) */
 .dark {
   --surface-ground: #0A0D10;
   --surface-base: #11161C;
@@ -261,7 +261,7 @@ body {
   color: var(--text-primary);
 }
 
-.sovereign-tag {
+.national-tag {
   font-family: var(--font-mono);
   font-size: 9px;
   font-weight: 600;
@@ -6579,11 +6579,11 @@ body {
 
 
 /* ==========================================================================
-   SOVEREIGN NAVIGATION DOCK & FULL-BLEED ARCHITECTURE
+   NAVIGATION DOCK & FULL-BLEED ARCHITECTURE
    ========================================================================== */
 
-/* Header Sovereign Dock */
-.sovereign-nav-dock {
+/* Header Navigation Dock */
+.nav-dock-elevated {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6956,7 +6956,7 @@ body {
 }
 
 /* ==========================================================================
-   STATE INTELLIGENCE SOVEREIGN DOSSIER
+   STATE INTELLIGENCE DOSSIER
    ========================================================================== */
 .dossier-root-container {
   display: flex;
@@ -6964,7 +6964,7 @@ body {
   gap: 24px;
 }
 
-.dossier-sovereign-banner {
+.dossier-header-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6977,7 +6977,7 @@ body {
   color: var(--text-tertiary);
 }
 
-.sovereign-banner-left {
+.dossier-banner-left {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -7541,7 +7541,7 @@ body {
   margin-top: 10px;
 }
 
-.sovereign-donut-content {
+.donut-stat-content {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -7577,7 +7577,7 @@ body {
   color: var(--text-tertiary);
 }
 
-.sovereign-stats-column {
+.dossier-stats-column {
   width: 50%;
   display: flex;
   flex-direction: column;

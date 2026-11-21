@@ -53,7 +53,7 @@ STATUS: ALL CHECKS PASS (TypeScript, build, API, GeoJSON, 36-jurisdiction,
 -- Preserved unchanged (must not be removed) --
   app.py                  — original Streamlit prototype
   src/spark_engine.py     — original Spark SQL engine
-  data/statewise_cyber_crimes_2020_2024.csv — authoritative NCRB dataset
+  data/statewise_cyber_crimes_2020_2024.csv — primary statewise dataset
   data/india_cyber_crimes.csv — national aggregate (Table 9A, separate)
 
 ================================================================================
@@ -102,7 +102,7 @@ E2E browser suite: exit 0; zero console/page errors; all 6 sections render;
 ================================================================================
 3. FIGURES — what they are and are NOT
 
-Registered cybercrime cases (NCRB, Crime in India, MHA/PIB 21 July 2026)
+Registered cybercrime cases (Crime in India, PIB 21 July 2026)
 NOT:
   • confirmed financial fraud transactions
   • individual complaints

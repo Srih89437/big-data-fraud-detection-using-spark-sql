@@ -1,5 +1,5 @@
 // State Intelligence: Jurisdiction Intelligence Dossier.
-// Official police FIR records sourced via Apache Spark SQL backend.
+// Police FIR records sourced via Apache Spark SQL backend.
 
 import { useEffect, useMemo, useState } from 'react';
 import {
@@ -169,11 +169,11 @@ export function StateIntelligence({
 
   return (
     <div className="dossier-root-container">
-      {/* Confidential Classification Watermark Header */}
+      {/* Classification Watermark Header */}
       <div className="dossier-jurisdiction-banner">
         <div className="jurisdiction-banner-left">
           <ShieldCheck size={14} className="banner-icon" />
-          <span className="banner-classification">CONFIDENTIAL // FOR OFFICIAL USE ONLY // NCRB CRIME IN INDIA</span>
+          <span className="banner-classification">STATE DOSSIER // CRIME IN INDIA</span>
         </div>
         <div className="jurisdiction-banner-right">
           <span className="banner-engine">SPARK SQL IN-MEMORY PROFILE · JURISDICTION #{ranking?.rank ?? '—'}</span>
@@ -279,7 +279,7 @@ export function StateIntelligence({
               )}
             </div>
             <div className="tile-bottom-meta">
-              <span>Official cybercrime FIRs recorded by state police departments</span>
+              <span>Cybercrime FIRs recorded by state police departments</span>
             </div>
           </div>
         </InteractiveCard>
@@ -358,7 +358,7 @@ export function StateIntelligence({
               <TrendingUp size={16} />
               <h3>Five-Year Registration Trajectory (2020–{year})</h3>
             </div>
-            <span className="deep-header-badge">OFFICIAL MHA ANNUAL SERIES</span>
+            <span className="deep-header-badge">ANNUAL CRIME SERIES</span>
           </div>
 
           <div className="deep-card-chart-wrap">

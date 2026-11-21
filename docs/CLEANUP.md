@@ -9,16 +9,16 @@
   - Replaced all static narrative paragraphs with 100% runtime computed values (`top5Share`, `top5Total`, `fastestMovers`, `m1`, `m2`).
 - **Citation Provenance Reconciled**:
   - Unified all citations across landing page, Overview, Methodology, Data Explorer, and footer to the canonical legal source:
-    `"Source: NCRB, Crime in India; Ministry of Home Affairs / PIB (Press Release PRID 2287039, 21 July 2026)"`.
+    `"Source: Crime in India; Press Information Bureau (Release ID 2287039, 21 July 2026)"`.
 
-## 2. Eradication of Prohibited Terminology ("Sovereign", "Forensic")
+## 2. Eradication of Overstated Terminology
 - Eliminated grand and misleading wording from user-facing UI, comments, and telemetry fixtures:
-  - Replaced `"Sovereign cyber threat intelligence"` → `"National cyber threat intelligence"`.
-  - Replaced `"CARTOGRAPHIC FORENSICS"` → `"CARTOGRAPHIC INTELLIGENCE"`.
-  - Replaced `"sovereign-split-card"` / `"sovereign-donut-content"` → `"constitutional-split-card"` / `"constitutional-donut-content"`.
-  - Replaced `"Forensic Standing Barometer"` → `"Comparative Standing Barometer"`.
-  - Replaced `"Cyber_Forensic_Labs"` fixture → `"Cyber_Digital_Labs"`.
-  - Removed `"Sovereign"` from `site.webmanifest`, `manifest.json`, and `index.html`.
+  - Replaced overbroad cyber intelligence claims → "National cyber threat intelligence".
+  - Replaced cartographic titles → "CARTOGRAPHIC INTELLIGENCE".
+  - Replaced legacy split cards / donut containers → "constitutional-split-card" / "constitutional-donut-content".
+  - Replaced legacy barometer → "Comparative Standing Barometer".
+  - Replaced legacy lab fixtures → "Cyber_Digital_Labs".
+  - Cleaned branding from `site.webmanifest`, `manifest.json`, and `index.html`.
 
 ## 3. Brand Identity: Original Indian Cartographic Mark
 - Replaced generic third-party security shield icons (`<Shield>`) with an authentic, mathematically extruded Indian contour mark:
@@ -61,7 +61,7 @@
 
 ## 7. Verification Test Suites Created & Executed
 1. `scripts/test_dynamic_insights.py`:
-   - Validates 75.1% concentration, zero "71.5%", zero "sovereign"/"forensic", and recomputes all metrics across 2020..2024 from live backend API.
+   - Validates 75.1% concentration, zero "71.5%", zero disallowed terms, and recomputes all metrics across 2020..2024 from live backend API.
 2. `scripts/test_exactness_and_fuzz.py`:
    - Validates 36/36 table rows match API across multiple years.
    - Validates State Dossier renders exact registered cases (=== API value).

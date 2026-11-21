@@ -1,5 +1,5 @@
 """E2E Reconciliation & Data Integrity Tests.
-Validates all figures strictly against NCRB master datasets via Spark SQL.
+Validates all figures strictly against master datasets via Spark SQL.
 No mock metrics, no invented data.
 """
 

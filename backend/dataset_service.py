@@ -2,7 +2,7 @@
 Dataset Studio Backend Engine:
 Manages uploaded datasets, profiling, schema inference, recommendations,
 data previews, dynamic aggregations, and 3D visualization coordinate data.
-Completely isolated from the official NCRB statewise tables.
+Completely isolated from the baseline statewise tables.
 """
 
 import csv
@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CUSTOM_DIR = ROOT / "data" / "custom_datasets"
 CUSTOM_DIR.mkdir(parents=True, exist_ok=True)
 
-# 36 official Indian jurisdiction names for automatic geographic detection
+# 36 standard Indian jurisdiction names for automatic geographic detection
 INDIAN_STATES = {
     "andaman and nicobar islands", "andhra pradesh", "arunachal pradesh", "assam",
     "bihar", "chandigarh", "chhattisgarh", "dadra and nagar haveli and daman and diu",

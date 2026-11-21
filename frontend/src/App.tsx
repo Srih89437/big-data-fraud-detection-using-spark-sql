@@ -645,7 +645,7 @@ export default function App() {
                         years={years}
                         year={year}
                         loading={loading}
-                        source="NCRB, Crime in India · Ministry of Home Affairs / Press Information Bureau · 21 July 2026"
+                        source="Crime in India · Press Information Bureau (Release ID 2287039, 21 July 2026)"
                         onSelect={handleSelectState}
                         history={history}
                         matrixRows={matrixRows}
@@ -679,7 +679,7 @@ export default function App() {
                         <span>INDIA CYBER CRIME INTELLIGENCE PLATFORM</span>
                       </div>
                       <p className="footer-provenance">
-                        Official NCRB Statewise Statistics · Ministry of Home Affairs, Government of India
+                        Statewise Statistics · Government of India Data Series
                       </p>
                     </div>
                     <div className="footer-right">

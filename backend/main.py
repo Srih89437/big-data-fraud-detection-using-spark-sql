@@ -36,7 +36,7 @@ DATA = ROOT / "data" / "statewise_cyber_crimes_2020_2024.csv"
 # The validated, bundled boundary file (also served statically by Vite at
 # /geo/india-states.geojson). Keeping one canonical copy avoids drift.
 GEO_PATH = ROOT / "frontend" / "public" / "geo" / "india-states.geojson"
-SOURCE_LINE = "NCRB, Crime in India; Ministry of Home Affairs / PIB (Press Release PRID 2287039, 21 July 2026)"
+SOURCE_LINE = "Crime in India; Press Information Bureau (Release ID 2287039, 21 July 2026)"
 
 
 @asynccontextmanager

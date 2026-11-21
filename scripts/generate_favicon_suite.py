@@ -212,7 +212,7 @@ def make_og_html():
     <div>
       <div class="og-badge">
         <span class="badge-dot"></span>
-        OFFICIAL NCRB OBSERVATORY · APACHE SPARK SQL 3.5
+        NATIONAL OBSERVATORY · APACHE SPARK SQL 3.5
       </div>
       <h1 class="og-title">India Cyber Crime Intelligence Platform</h1>
       <p class="og-desc">

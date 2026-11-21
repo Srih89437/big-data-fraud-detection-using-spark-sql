@@ -1,4 +1,4 @@
-// Methodology: Official Technical Documentation & Provenance Standards.
+// Methodology: Technical Documentation & Provenance Standards.
 // Details exact administrative data sources, Survey of India / DataMeet cartographic provenance,
 // statistical definitions, compute engine architecture, and strict limitations.
 
@@ -87,7 +87,7 @@ export function Methodology() {
           index="§ 14"
           icon={Database}
           title="Case Statistics Provenance"
-          subtitle="National Crime Records Bureau (NCRB) Statewise Dataset"
+          subtitle="Statewise Cybercrime Dataset"
           action={
             <a
               href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287039&lang=1&reg=3"
@@ -101,15 +101,15 @@ export function Methodology() {
           }
         >
           <dl className="editorial-spec-list">
-            <dt>Official Source</dt>
+            <dt>Primary Source</dt>
             <dd>
-              National Crime Records Bureau (NCRB), <em>Crime in India</em> annual publications;
-              tabled by the Ministry of Home Affairs via Press Information Bureau (PIB Release ID: 2287039), 21 July 2026.
+              <em>Crime in India</em> annual publications;
+              published via Press Information Bureau (PIB Release ID: 2287039), 21 July 2026.
             </dd>
 
             <dt>Underlying Dataset</dt>
             <dd>
-              <code>data/statewise_cyber_crimes_2020_2024.csv</code> — Official longitudinal series recording registered
+              <code>data/statewise_cyber_crimes_2020_2024.csv</code> — Longitudinal series recording registered
               cases across all 28 states and 8 Union Territories (36 administrative jurisdictions) for calendar years 2020 through 2024.
             </dd>
 
@@ -219,7 +219,7 @@ export function Methodology() {
           index="§ 17"
           icon={Scale}
           title="Dataset Separation & Governance"
-          subtitle="Clear delineation between official records and diagnostic prototypes"
+          subtitle="Clear delineation between baseline records and diagnostic prototypes"
           action={
             <span className="panel-stat-pill">
               <Scale size={13} />
@@ -228,9 +228,9 @@ export function Methodology() {
           }
         >
           <dl className="editorial-spec-list">
-            <dt>Official Statistics</dt>
+            <dt>Baseline Statistics</dt>
             <dd>
-              <code>data/statewise_cyber_crimes_2020_2024.csv</code> is the authoritative single source of truth
+              <code>data/statewise_cyber_crimes_2020_2024.csv</code> is the verified single source of truth
               for this observatory.
             </dd>
 
@@ -254,7 +254,7 @@ export function Methodology() {
       <Reveal delay={0.2} className="method-compliance-strip">
         <div className="compliance-item">
           <ShieldCheck size={16} />
-          <span>Official NCRB data only — no synthetic or interpolated figures</span>
+          <span>Verified data only — no synthetic or interpolated figures</span>
         </div>
         <div className="compliance-item">
           <BookOpen size={16} />

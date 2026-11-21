@@ -131,7 +131,7 @@ export function CommandPalette({
         id: 'page-methodology',
         category: 'Pages',
         label: 'Methodology',
-        subLabel: 'Provenance, NCRB Gazette & Spark Pipeline',
+        subLabel: 'Provenance, Primary Source & Spark Pipeline',
         shortcut: '7',
         icon: <FileText size={16} />,
         action: () => onNavigate('methodology', '/app/method'),

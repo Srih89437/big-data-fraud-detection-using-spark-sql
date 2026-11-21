@@ -1,6 +1,6 @@
 """
 Reconciliation & Data Integrity Verification Script
-Checks official NCRB source dataset, Spark SQL queries, and API endpoints.
+Checks source dataset, Spark SQL queries, and API endpoints.
 """
 import csv
 import sys

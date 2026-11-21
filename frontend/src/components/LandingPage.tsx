@@ -124,7 +124,7 @@ export function LandingPage({
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `ncrb_cybercrime_matrix_2020_2024.csv`);
+    link.setAttribute('download', `cybercrime_matrix_2020_2024.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -206,7 +206,7 @@ export function LandingPage({
           <div className="hero-copy-column">
             <div className="hero-pill-badge">
               <span className="pill-dot" />
-              <span>OFFICIAL NCRB OBSERVATORY · APACHE SPARK SQL 3.5</span>
+              <span>NATIONAL OBSERVATORY · APACHE SPARK SQL 3.5</span>
             </div>
 
             <h1 className="hero-headline">
@@ -214,8 +214,8 @@ export function LandingPage({
             </h1>
 
             <p className="hero-subhead">
-              Authoritative First Information Reports (FIRs) structured into an
-              evidentiary 3D national observatory. Zero synthetic figures. Strict
+              First Information Reports (FIRs) structured into a
+              3D national observatory. No synthetic figures. Strict
               per-jurisdiction accounting across 2020–2024.
             </p>
 
@@ -509,7 +509,7 @@ export function LandingPage({
         <div className="section-container">
           <div className="section-headline-wrap">
             <span className="section-kicker">INDIVIDUAL JURISDICTION INTELLIGENCE</span>
-            <h2 className="section-title">Confidential dossier per jurisdiction.</h2>
+            <h2 className="section-title">Detailed dossier per jurisdiction.</h2>
             <p className="section-desc">
               Select any of the 36 states and Union Territories to view five-year case momentum,
               national share, and comparative rank.
@@ -558,7 +558,7 @@ export function LandingPage({
                 <div className="state-live-dossier-card">
                   <div className="dossier-card-header">
                     <div className="dossier-title-area">
-                      <span className="dossier-watermark">CONFIDENTIAL // LEA OBSERVATORY</span>
+                      <span className="dossier-watermark">SECURITY INTELLIGENCE OBSERVATORY</span>
                       <h3 className="dossier-name">{activeStateRow.state_ut}</h3>
                       <span className="dossier-subtitle">
                         {activeStateRow.category} · Constitutional Jurisdiction Code: {activeStateRow.code}
@@ -1022,7 +1022,7 @@ export function LandingPage({
           {/* Animated 6-Stage Pipeline Diagram */}
           <div className="pipeline-diagram-track">
             {[
-              { step: '01', title: 'NCRB Source', desc: 'Table 9A Gazette PRID 2287039' },
+              { step: '01', title: 'Primary Source', desc: 'Table 9A Gazette PRID 2287039' },
               { step: '02', title: 'FastAPI Ingest', desc: 'Validated CSV parsing & schema checks' },
               { step: '03', title: 'PySpark Normalisation', desc: 'Diacritic NFD strip & alias reconciliation' },
               { step: '04', title: 'Spark SQL Cache', desc: 'In-memory temp views & aggregations' },
@@ -1069,7 +1069,7 @@ ORDER BY cases DESC;`}</code>
               <span className="caveats-heading">STATUTORY INTERPRETATION NOTICE</span>
               <ul className="caveats-list">
                 <li>
-                  <strong>Statutory Scope:</strong> Statistics reflect First Information Reports (FIRs) officially booked under the Information Technology Act (2000) and related cyber provisions of the Indian Penal Code.
+                  <strong>Statutory Scope:</strong> Statistics reflect First Information Reports (FIRs) booked under the Information Technology Act (2000) and related cyber provisions of the Indian Penal Code.
                 </li>
                 <li>
                   <strong>Evidentiary Fidelity:</strong> Non-reporting or differences in public reporting rates across jurisdictions are not synthetically smoothed or interpolated.
@@ -1140,7 +1140,7 @@ ORDER BY cases DESC;`}</code>
 
           <div className="footer-bottom-row">
             <span className="footer-legal">
-              Official data sourced from National Crime Records Bureau (NCRB), Ministry of Home Affairs, Government of India.
+              Data sourced from Crime in India series, Government of India.
               Boundaries CC BY 2.5 IN.
             </span>
             <a

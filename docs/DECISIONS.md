@@ -31,7 +31,7 @@ This log records architectural, algorithmic, visual, and data integrity decision
 
 ## Decision 4: Zero Spatial Smoothing or Interpolation
 - **Context**: State borders represent administrative legal jurisdictions. Any kriging, inverse-distance weighting, or blur between states represents false data.
-- **Decision**: Each state geometry is extruded as a distinct, flat-topped prism whose height and color derive strictly from its own official police FIR count for the selected year. Borders remain crisp with inset LineSegments.
+- **Decision**: Each state geometry is extruded as a distinct, flat-topped prism whose height and color derive strictly from its own police FIR count for the selected year. Borders remain crisp with inset LineSegments.
 
 ---
 

@@ -1,7 +1,7 @@
 // Overview: Cyber Crime Observatory Executive Command Center.
 // Asymmetric command layout: High-contrast telemetry hero, live 3D geospatial radar,
 // longitudinal velocity & volume trajectory console, and tactical jurisdiction hotspots.
-// Strictly derived from official NCRB figures via Apache Spark SQL backend.
+// Strictly derived from dataset figures via Apache Spark SQL backend.
 
 import { useMemo, useState, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -133,7 +133,7 @@ export function Overview({
           <div className="telemetry-tag-row">
             <span className="live-pulse-badge">
               <span className="pulse-dot" />
-              <span>OFFICIAL NCRB OBSERVATORY</span>
+              <span>NATIONAL OBSERVATORY</span>
             </span>
             <span className="telemetry-separator">/</span>
             <span className="telemetry-meta">MHA CRIME IN INDIA DATASET</span>
@@ -146,7 +146,7 @@ export function Overview({
             <span className="hero-gradient-text"> Architecture.</span>
           </h1>
           <p className="hero-lead">
-            Distributed intelligence synthesized from official police-registered First Information Reports (FIRs)
+            Distributed intelligence synthesized from police-registered First Information Reports (FIRs)
             across all 36 constitutional states and Union Territories.
           </p>
         </div>
