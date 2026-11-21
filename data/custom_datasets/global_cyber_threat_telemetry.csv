@@ -1,0 +1,1441 @@
+Date,Country,Threat_Type,Industry_Sector,Incident_Severity_Score,Attacks_Detected,Mean_Time_To_Detect_Min,Financial_Loss_USD_K,Containment_Status
+2022-01-15,India,Ransomware,E-Commerce,4.8,4646,74,1878,Investigating
+2022-01-15,India,Credential Phishing,E-Commerce,4.8,1564,163,3506,Mitigated
+2022-01-15,India,Distributed Denial of Service,Financial Services,4.7,3951,141,267,Investigating
+2022-01-15,India,Supply Chain Malware,E-Commerce,7.8,7013,68,3729,Contained
+2022-01-15,United States,Ransomware,Financial Services,8.4,2755,190,3512,Contained
+2022-01-15,United States,Credential Phishing,Healthcare,5.1,5654,38,809,Escalated
+2022-01-15,United States,Distributed Denial of Service,Financial Services,6.2,5775,166,2216,Mitigated
+2022-01-15,United States,Supply Chain Malware,E-Commerce,6.8,2185,108,695,Contained
+2022-01-15,United Kingdom,Ransomware,E-Commerce,7.7,6065,159,1625,Mitigated
+2022-01-15,United Kingdom,Credential Phishing,Financial Services,7.9,4881,32,1957,Mitigated
+2022-01-15,United Kingdom,Distributed Denial of Service,Government Defense,5.8,6117,53,3082,Contained
+2022-01-15,United Kingdom,Supply Chain Malware,Critical Infrastructure,8.0,1309,167,1451,Investigating
+2022-01-15,Germany,Ransomware,Critical Infrastructure,6.8,4562,175,1849,Contained
+2022-01-15,Germany,Credential Phishing,Financial Services,5.5,665,218,2634,Escalated
+2022-01-15,Germany,Distributed Denial of Service,Healthcare,4.6,5295,66,4139,Escalated
+2022-01-15,Germany,Supply Chain Malware,E-Commerce,6.8,4479,47,2070,Contained
+2022-01-15,Singapore,Ransomware,E-Commerce,7.5,6683,104,1846,Investigating
+2022-01-15,Singapore,Credential Phishing,Telecommunications,7.0,911,232,948,Investigating
+2022-01-15,Singapore,Distributed Denial of Service,E-Commerce,5.1,7056,164,570,Escalated
+2022-01-15,Singapore,Supply Chain Malware,Government Defense,7.5,7808,147,2109,Mitigated
+2022-01-15,Australia,Ransomware,E-Commerce,8.2,4511,208,2836,Mitigated
+2022-01-15,Australia,Credential Phishing,Healthcare,6.6,7573,12,2207,Investigating
+2022-01-15,Australia,Distributed Denial of Service,Telecommunications,9.3,5029,227,1679,Investigating
+2022-01-15,Australia,Supply Chain Malware,Healthcare,8.5,8829,12,2705,Escalated
+2022-01-15,Japan,Ransomware,Financial Services,4.8,6087,236,2569,Investigating
+2022-01-15,Japan,Credential Phishing,Financial Services,5.5,1430,33,4031,Mitigated
+2022-01-15,Japan,Distributed Denial of Service,Telecommunications,8.5,2243,180,3943,Investigating
+2022-01-15,Japan,Supply Chain Malware,Healthcare,7.2,7072,66,1697,Contained
+2022-01-15,Brazil,Ransomware,Government Defense,9.8,6258,124,3748,Mitigated
+2022-01-15,Brazil,Credential Phishing,Critical Infrastructure,5.5,5679,17,1935,Investigating
+2022-01-15,Brazil,Distributed Denial of Service,Financial Services,4.6,1104,70,602,Mitigated
+2022-01-15,Brazil,Supply Chain Malware,Healthcare,4.6,4039,83,4026,Investigating
+2022-01-15,France,Ransomware,Telecommunications,4.9,7884,74,3924,Escalated
+2022-01-15,France,Credential Phishing,Critical Infrastructure,4.7,7202,102,3519,Escalated
+2022-01-15,France,Distributed Denial of Service,Government Defense,9.0,1027,184,856,Mitigated
+2022-01-15,France,Supply Chain Malware,Government Defense,8.3,1930,75,1619,Investigating
+2022-01-15,Canada,Ransomware,Telecommunications,6.7,7052,58,2331,Escalated
+2022-01-15,Canada,Credential Phishing,Critical Infrastructure,9.1,1375,125,852,Mitigated
+2022-01-15,Canada,Distributed Denial of Service,E-Commerce,9.8,381,35,1986,Investigating
+2022-01-15,Canada,Supply Chain Malware,Government Defense,6.9,3642,233,3335,Mitigated
+2022-02-15,India,Ransomware,Critical Infrastructure,6.3,6536,79,3777,Contained
+2022-02-15,India,Credential Phishing,Government Defense,8.1,8113,51,1605,Contained
+2022-02-15,India,Distributed Denial of Service,Critical Infrastructure,9.6,1138,203,2619,Mitigated
+2022-02-15,India,Supply Chain Malware,Financial Services,7.5,8378,230,1339,Mitigated
+2022-02-15,United States,Ransomware,Telecommunications,4.6,3184,29,606,Investigating
+2022-02-15,United States,Credential Phishing,Government Defense,4.9,4173,160,375,Mitigated
+2022-02-15,United States,Distributed Denial of Service,Government Defense,7.9,8705,92,2186,Investigating
+2022-02-15,United States,Supply Chain Malware,E-Commerce,8.2,4050,79,3292,Investigating
+2022-02-15,United Kingdom,Ransomware,E-Commerce,7.8,7631,92,644,Mitigated
+2022-02-15,United Kingdom,Credential Phishing,Government Defense,7.7,1778,30,1796,Contained
+2022-02-15,United Kingdom,Distributed Denial of Service,Critical Infrastructure,9.4,1267,237,2051,Contained
+2022-02-15,United Kingdom,Supply Chain Malware,Healthcare,5.1,5096,168,114,Contained
+2022-02-15,Germany,Ransomware,E-Commerce,4.8,2340,79,995,Mitigated
+2022-02-15,Germany,Credential Phishing,E-Commerce,7.3,4602,84,1775,Contained
+2022-02-15,Germany,Distributed Denial of Service,Critical Infrastructure,8.0,4465,141,4052,Contained
+2022-02-15,Germany,Supply Chain Malware,Financial Services,4.7,7079,224,2316,Mitigated
+2022-02-15,Singapore,Ransomware,Financial Services,6.1,2283,175,2195,Investigating
+2022-02-15,Singapore,Credential Phishing,E-Commerce,6.7,7147,155,129,Mitigated
+2022-02-15,Singapore,Distributed Denial of Service,Financial Services,9.5,2582,151,345,Contained
+2022-02-15,Singapore,Supply Chain Malware,Telecommunications,7.3,7181,44,392,Contained
+2022-02-15,Australia,Ransomware,Healthcare,9.2,793,103,1770,Investigating
+2022-02-15,Australia,Credential Phishing,E-Commerce,4.8,6798,170,1316,Investigating
+2022-02-15,Australia,Distributed Denial of Service,Critical Infrastructure,9.7,3040,237,3427,Mitigated
+2022-02-15,Australia,Supply Chain Malware,Critical Infrastructure,8.3,5582,212,3422,Investigating
+2022-02-15,Japan,Ransomware,Healthcare,5.1,1911,109,367,Escalated
+2022-02-15,Japan,Credential Phishing,Critical Infrastructure,5.3,7681,101,2550,Investigating
+2022-02-15,Japan,Distributed Denial of Service,Critical Infrastructure,4.3,3304,114,2739,Contained
+2022-02-15,Japan,Supply Chain Malware,Financial Services,9.6,4713,101,3324,Contained
+2022-02-15,Brazil,Ransomware,Financial Services,4.8,4419,57,2224,Mitigated
+2022-02-15,Brazil,Credential Phishing,Financial Services,7.5,5803,198,2619,Escalated
+2022-02-15,Brazil,Distributed Denial of Service,Telecommunications,9.7,2034,110,1607,Contained
+2022-02-15,Brazil,Supply Chain Malware,Financial Services,8.2,167,145,1664,Contained
+2022-02-15,France,Ransomware,Government Defense,4.6,5549,171,2621,Mitigated
+2022-02-15,France,Credential Phishing,E-Commerce,9.2,8448,91,3395,Contained
+2022-02-15,France,Distributed Denial of Service,Government Defense,8.1,2225,61,3494,Escalated
+2022-02-15,France,Supply Chain Malware,E-Commerce,8.4,2991,169,2515,Escalated
+2022-02-15,Canada,Ransomware,Telecommunications,8.9,5118,85,1771,Escalated
+2022-02-15,Canada,Credential Phishing,Telecommunications,7.6,5419,131,3669,Escalated
+2022-02-15,Canada,Distributed Denial of Service,E-Commerce,5.4,7892,215,1440,Mitigated
+2022-02-15,Canada,Supply Chain Malware,Healthcare,7.1,5631,35,1974,Contained
+2022-03-15,India,Ransomware,Critical Infrastructure,8.7,2554,18,428,Investigating
+2022-03-15,India,Credential Phishing,Government Defense,7.6,1333,128,3445,Investigating
+2022-03-15,India,Distributed Denial of Service,E-Commerce,8.1,8239,114,2048,Investigating
+2022-03-15,India,Supply Chain Malware,E-Commerce,8.1,1886,211,3532,Investigating
+2022-03-15,United States,Ransomware,Critical Infrastructure,8.7,8626,130,461,Investigating
+2022-03-15,United States,Credential Phishing,Financial Services,6.8,7752,182,2649,Escalated
+2022-03-15,United States,Distributed Denial of Service,Telecommunications,8.8,8410,121,3702,Investigating
+2022-03-15,United States,Supply Chain Malware,E-Commerce,9.0,7513,78,2075,Contained
+2022-03-15,United Kingdom,Ransomware,Telecommunications,6.9,4059,82,3653,Mitigated
+2022-03-15,United Kingdom,Credential Phishing,E-Commerce,5.8,4591,97,2669,Mitigated
+2022-03-15,United Kingdom,Distributed Denial of Service,Critical Infrastructure,5.0,6415,189,1301,Investigating
+2022-03-15,United Kingdom,Supply Chain Malware,Financial Services,6.5,5561,150,3866,Escalated
+2022-03-15,Germany,Ransomware,Financial Services,5.4,7023,111,210,Escalated
+2022-03-15,Germany,Credential Phishing,Government Defense,4.2,5903,88,3244,Escalated
+2022-03-15,Germany,Distributed Denial of Service,Telecommunications,8.4,3753,136,1847,Contained
+2022-03-15,Germany,Supply Chain Malware,Government Defense,6.9,6511,98,3362,Investigating
+2022-03-15,Singapore,Ransomware,Government Defense,9.3,8891,18,3277,Mitigated
+2022-03-15,Singapore,Credential Phishing,Financial Services,7.8,2363,233,3832,Investigating
+2022-03-15,Singapore,Distributed Denial of Service,Financial Services,5.7,5503,66,3774,Contained
+2022-03-15,Singapore,Supply Chain Malware,Healthcare,8.5,6351,83,3503,Contained
+2022-03-15,Australia,Ransomware,Financial Services,6.8,993,101,1886,Mitigated
+2022-03-15,Australia,Credential Phishing,E-Commerce,4.4,648,75,1683,Mitigated
+2022-03-15,Australia,Distributed Denial of Service,Telecommunications,5.1,2208,133,987,Investigating
+2022-03-15,Australia,Supply Chain Malware,Government Defense,8.1,6183,54,988,Investigating
+2022-03-15,Japan,Ransomware,Healthcare,4.8,560,91,3124,Escalated
+2022-03-15,Japan,Credential Phishing,E-Commerce,5.3,4118,38,2520,Mitigated
+2022-03-15,Japan,Distributed Denial of Service,Telecommunications,8.6,5828,148,3559,Contained
+2022-03-15,Japan,Supply Chain Malware,Financial Services,7.0,5730,15,3491,Escalated
+2022-03-15,Brazil,Ransomware,Financial Services,6.6,6074,174,3816,Investigating
+2022-03-15,Brazil,Credential Phishing,Government Defense,5.2,8688,178,2262,Escalated
+2022-03-15,Brazil,Distributed Denial of Service,Government Defense,6.6,4537,94,2061,Mitigated
+2022-03-15,Brazil,Supply Chain Malware,Healthcare,9.1,4135,204,3856,Escalated
+2022-03-15,France,Ransomware,Healthcare,4.4,5465,58,4044,Investigating
+2022-03-15,France,Credential Phishing,Healthcare,8.7,5716,83,2313,Mitigated
+2022-03-15,France,Distributed Denial of Service,Telecommunications,9.5,1542,73,3379,Escalated
+2022-03-15,France,Supply Chain Malware,Telecommunications,8.4,7940,177,4070,Escalated
+2022-03-15,Canada,Ransomware,Financial Services,4.7,3770,115,2043,Contained
+2022-03-15,Canada,Credential Phishing,E-Commerce,7.5,7893,153,2866,Escalated
+2022-03-15,Canada,Distributed Denial of Service,E-Commerce,7.3,5904,191,3767,Contained
+2022-03-15,Canada,Supply Chain Malware,Healthcare,5.6,2116,196,1627,Contained
+2022-04-15,India,Ransomware,Financial Services,8.4,3173,61,1822,Escalated
+2022-04-15,India,Credential Phishing,Healthcare,8.3,8735,164,2368,Mitigated
+2022-04-15,India,Distributed Denial of Service,Critical Infrastructure,5.9,6052,57,2526,Mitigated
+2022-04-15,India,Supply Chain Malware,E-Commerce,7.2,4634,23,496,Contained
+2022-04-15,United States,Ransomware,E-Commerce,9.5,8182,38,150,Contained
+2022-04-15,United States,Credential Phishing,Government Defense,6.9,5722,59,470,Contained
+2022-04-15,United States,Distributed Denial of Service,Government Defense,4.8,1210,114,4078,Mitigated
+2022-04-15,United States,Supply Chain Malware,Telecommunications,7.7,1018,50,1272,Contained
+2022-04-15,United Kingdom,Ransomware,Financial Services,9.8,2080,154,3459,Investigating
+2022-04-15,United Kingdom,Credential Phishing,Telecommunications,6.3,7393,88,3562,Contained
+2022-04-15,United Kingdom,Distributed Denial of Service,Telecommunications,7.7,1765,207,1752,Investigating
+2022-04-15,United Kingdom,Supply Chain Malware,Healthcare,7.9,2713,73,1473,Mitigated
+2022-04-15,Germany,Ransomware,Critical Infrastructure,4.2,7521,188,3899,Contained
+2022-04-15,Germany,Credential Phishing,Financial Services,5.5,4772,191,3769,Mitigated
+2022-04-15,Germany,Distributed Denial of Service,E-Commerce,5.5,4474,213,1670,Escalated
+2022-04-15,Germany,Supply Chain Malware,Financial Services,7.2,2581,80,1215,Mitigated
+2022-04-15,Singapore,Ransomware,Financial Services,5.1,5179,164,2414,Escalated
+2022-04-15,Singapore,Credential Phishing,Financial Services,6.8,5122,191,3347,Contained
+2022-04-15,Singapore,Distributed Denial of Service,Telecommunications,7.2,7312,32,376,Escalated
+2022-04-15,Singapore,Supply Chain Malware,E-Commerce,6.0,4242,18,798,Investigating
+2022-04-15,Australia,Ransomware,E-Commerce,8.9,479,207,2257,Mitigated
+2022-04-15,Australia,Credential Phishing,Critical Infrastructure,6.8,7385,83,1536,Escalated
+2022-04-15,Australia,Distributed Denial of Service,E-Commerce,8.8,1634,132,2900,Escalated
+2022-04-15,Australia,Supply Chain Malware,Healthcare,6.0,1853,231,1367,Contained
+2022-04-15,Japan,Ransomware,Government Defense,8.1,4862,181,3330,Mitigated
+2022-04-15,Japan,Credential Phishing,Government Defense,4.7,4275,94,999,Escalated
+2022-04-15,Japan,Distributed Denial of Service,Telecommunications,8.8,158,180,3834,Escalated
+2022-04-15,Japan,Supply Chain Malware,Financial Services,5.3,6067,171,4133,Escalated
+2022-04-15,Brazil,Ransomware,Financial Services,5.3,2286,85,3639,Escalated
+2022-04-15,Brazil,Credential Phishing,Financial Services,4.4,4060,193,1347,Contained
+2022-04-15,Brazil,Distributed Denial of Service,Telecommunications,4.3,6824,35,1890,Mitigated
+2022-04-15,Brazil,Supply Chain Malware,Government Defense,9.5,2662,139,2440,Contained
+2022-04-15,France,Ransomware,Government Defense,8.9,7876,74,3791,Investigating
+2022-04-15,France,Credential Phishing,Government Defense,5.3,8467,203,1168,Mitigated
+2022-04-15,France,Distributed Denial of Service,Healthcare,8.5,6938,99,2238,Mitigated
+2022-04-15,France,Supply Chain Malware,Healthcare,8.3,8162,233,1267,Escalated
+2022-04-15,Canada,Ransomware,Telecommunications,6.9,5586,153,3140,Escalated
+2022-04-15,Canada,Credential Phishing,Healthcare,9.1,4052,158,3187,Investigating
+2022-04-15,Canada,Distributed Denial of Service,Government Defense,4.4,7889,192,3173,Escalated
+2022-04-15,Canada,Supply Chain Malware,E-Commerce,8.6,2632,138,353,Investigating
+2022-05-15,India,Ransomware,Telecommunications,9.6,5579,234,872,Escalated
+2022-05-15,India,Credential Phishing,Financial Services,7.1,7626,15,1230,Escalated
+2022-05-15,India,Distributed Denial of Service,E-Commerce,9.6,1365,132,2221,Contained
+2022-05-15,India,Supply Chain Malware,Telecommunications,8.1,1455,230,2741,Escalated
+2022-05-15,United States,Ransomware,Healthcare,7.7,8134,235,344,Mitigated
+2022-05-15,United States,Credential Phishing,Critical Infrastructure,7.7,4848,70,790,Escalated
+2022-05-15,United States,Distributed Denial of Service,Financial Services,8.5,1786,125,1412,Contained
+2022-05-15,United States,Supply Chain Malware,Financial Services,4.5,1059,87,2986,Contained
+2022-05-15,United Kingdom,Ransomware,Government Defense,5.0,8842,117,1525,Investigating
+2022-05-15,United Kingdom,Credential Phishing,Critical Infrastructure,4.6,6407,170,2022,Escalated
+2022-05-15,United Kingdom,Distributed Denial of Service,Telecommunications,5.0,7695,175,2130,Escalated
+2022-05-15,United Kingdom,Supply Chain Malware,Healthcare,7.9,7762,85,1344,Mitigated
+2022-05-15,Germany,Ransomware,Government Defense,9.5,5041,175,3525,Contained
+2022-05-15,Germany,Credential Phishing,Government Defense,8.9,3403,110,4008,Mitigated
+2022-05-15,Germany,Distributed Denial of Service,Critical Infrastructure,6.3,6021,159,2473,Contained
+2022-05-15,Germany,Supply Chain Malware,Financial Services,9.7,6624,82,116,Mitigated
+2022-05-15,Singapore,Ransomware,Telecommunications,8.4,4829,210,1935,Contained
+2022-05-15,Singapore,Credential Phishing,Critical Infrastructure,7.8,4246,185,1170,Mitigated
+2022-05-15,Singapore,Distributed Denial of Service,E-Commerce,7.8,5201,213,3661,Mitigated
+2022-05-15,Singapore,Supply Chain Malware,Telecommunications,6.2,2293,35,2467,Contained
+2022-05-15,Australia,Ransomware,E-Commerce,6.5,3429,45,3047,Contained
+2022-05-15,Australia,Credential Phishing,Critical Infrastructure,5.6,8034,218,2467,Contained
+2022-05-15,Australia,Distributed Denial of Service,Financial Services,6.8,1373,48,1898,Escalated
+2022-05-15,Australia,Supply Chain Malware,Telecommunications,6.2,6604,15,2216,Mitigated
+2022-05-15,Japan,Ransomware,Government Defense,6.3,4435,161,3171,Contained
+2022-05-15,Japan,Credential Phishing,Financial Services,8.0,7864,18,2737,Investigating
+2022-05-15,Japan,Distributed Denial of Service,E-Commerce,4.6,7746,191,2525,Escalated
+2022-05-15,Japan,Supply Chain Malware,Financial Services,5.0,749,89,4085,Mitigated
+2022-05-15,Brazil,Ransomware,Financial Services,5.5,2362,111,3766,Contained
+2022-05-15,Brazil,Credential Phishing,E-Commerce,9.5,7006,162,1315,Escalated
+2022-05-15,Brazil,Distributed Denial of Service,E-Commerce,4.8,8157,169,3393,Contained
+2022-05-15,Brazil,Supply Chain Malware,Financial Services,8.1,3699,125,3692,Investigating
+2022-05-15,France,Ransomware,Healthcare,4.8,6158,151,2988,Mitigated
+2022-05-15,France,Credential Phishing,Government Defense,5.7,2141,229,3775,Mitigated
+2022-05-15,France,Distributed Denial of Service,E-Commerce,5.4,489,24,2782,Investigating
+2022-05-15,France,Supply Chain Malware,Critical Infrastructure,8.6,3502,29,1747,Investigating
+2022-05-15,Canada,Ransomware,Critical Infrastructure,6.0,2557,213,73,Contained
+2022-05-15,Canada,Credential Phishing,Critical Infrastructure,9.7,4246,216,1479,Mitigated
+2022-05-15,Canada,Distributed Denial of Service,E-Commerce,9.1,2299,15,2984,Investigating
+2022-05-15,Canada,Supply Chain Malware,Telecommunications,6.0,2994,79,479,Investigating
+2022-06-15,India,Ransomware,E-Commerce,6.6,2002,202,570,Escalated
+2022-06-15,India,Credential Phishing,Government Defense,8.6,8548,163,943,Escalated
+2022-06-15,India,Distributed Denial of Service,Telecommunications,5.4,850,198,2520,Escalated
+2022-06-15,India,Supply Chain Malware,E-Commerce,9.6,1136,134,3340,Escalated
+2022-06-15,United States,Ransomware,E-Commerce,4.8,7407,30,711,Contained
+2022-06-15,United States,Credential Phishing,Telecommunications,5.0,2207,82,2713,Escalated
+2022-06-15,United States,Distributed Denial of Service,Telecommunications,7.2,7573,141,3574,Mitigated
+2022-06-15,United States,Supply Chain Malware,E-Commerce,4.8,3662,122,3749,Investigating
+2022-06-15,United Kingdom,Ransomware,Government Defense,6.1,7570,114,3457,Mitigated
+2022-06-15,United Kingdom,Credential Phishing,Healthcare,6.6,4316,107,1300,Escalated
+2022-06-15,United Kingdom,Distributed Denial of Service,Financial Services,4.7,1538,35,3587,Mitigated
+2022-06-15,United Kingdom,Supply Chain Malware,E-Commerce,8.3,2271,154,541,Contained
+2022-06-15,Germany,Ransomware,E-Commerce,4.9,5933,235,3514,Mitigated
+2022-06-15,Germany,Credential Phishing,Healthcare,7.6,5901,38,1792,Investigating
+2022-06-15,Germany,Distributed Denial of Service,E-Commerce,6.9,1913,101,3061,Mitigated
+2022-06-15,Germany,Supply Chain Malware,Healthcare,7.4,7170,228,265,Contained
+2022-06-15,Singapore,Ransomware,Financial Services,5.2,5202,98,2925,Mitigated
+2022-06-15,Singapore,Credential Phishing,Critical Infrastructure,9.1,6706,29,1212,Mitigated
+2022-06-15,Singapore,Distributed Denial of Service,Financial Services,8.4,3664,108,3489,Escalated
+2022-06-15,Singapore,Supply Chain Malware,Healthcare,5.1,5245,196,2707,Mitigated
+2022-06-15,Australia,Ransomware,Financial Services,5.1,955,184,718,Contained
+2022-06-15,Australia,Credential Phishing,Government Defense,7.9,8097,167,3671,Escalated
+2022-06-15,Australia,Distributed Denial of Service,Healthcare,5.4,8534,41,2877,Escalated
+2022-06-15,Australia,Supply Chain Malware,Financial Services,5.8,8112,146,2576,Mitigated
+2022-06-15,Japan,Ransomware,Critical Infrastructure,6.4,1037,13,1724,Contained
+2022-06-15,Japan,Credential Phishing,Critical Infrastructure,8.5,4326,86,2737,Mitigated
+2022-06-15,Japan,Distributed Denial of Service,Financial Services,7.0,7195,56,1108,Escalated
+2022-06-15,Japan,Supply Chain Malware,Telecommunications,8.1,8336,155,2951,Mitigated
+2022-06-15,Brazil,Ransomware,Government Defense,9.0,833,123,203,Escalated
+2022-06-15,Brazil,Credential Phishing,Financial Services,9.0,7173,158,3363,Escalated
+2022-06-15,Brazil,Distributed Denial of Service,Healthcare,4.8,481,95,1457,Escalated
+2022-06-15,Brazil,Supply Chain Malware,E-Commerce,9.4,1583,123,917,Investigating
+2022-06-15,France,Ransomware,Government Defense,7.5,8724,32,3292,Contained
+2022-06-15,France,Credential Phishing,E-Commerce,6.1,5596,211,1427,Mitigated
+2022-06-15,France,Distributed Denial of Service,Telecommunications,7.7,8833,142,1638,Contained
+2022-06-15,France,Supply Chain Malware,Healthcare,8.3,2559,72,892,Investigating
+2022-06-15,Canada,Ransomware,Healthcare,5.3,2644,206,667,Investigating
+2022-06-15,Canada,Credential Phishing,E-Commerce,7.0,7494,186,2697,Contained
+2022-06-15,Canada,Distributed Denial of Service,Critical Infrastructure,6.7,7822,125,2530,Contained
+2022-06-15,Canada,Supply Chain Malware,Telecommunications,4.5,8452,30,2592,Escalated
+2022-07-15,India,Ransomware,Government Defense,4.4,6181,224,2401,Mitigated
+2022-07-15,India,Credential Phishing,E-Commerce,9.0,1619,169,3199,Escalated
+2022-07-15,India,Distributed Denial of Service,Telecommunications,7.3,812,127,1592,Contained
+2022-07-15,India,Supply Chain Malware,Telecommunications,6.9,2611,27,3740,Mitigated
+2022-07-15,United States,Ransomware,Healthcare,9.7,1521,141,1463,Mitigated
+2022-07-15,United States,Credential Phishing,Critical Infrastructure,8.2,7339,146,1350,Contained
+2022-07-15,United States,Distributed Denial of Service,Healthcare,9.3,6487,116,2821,Mitigated
+2022-07-15,United States,Supply Chain Malware,E-Commerce,7.8,1219,96,824,Escalated
+2022-07-15,United Kingdom,Ransomware,Healthcare,5.6,2603,97,717,Investigating
+2022-07-15,United Kingdom,Credential Phishing,Healthcare,5.9,6561,45,744,Contained
+2022-07-15,United Kingdom,Distributed Denial of Service,Telecommunications,6.3,5521,220,1096,Mitigated
+2022-07-15,United Kingdom,Supply Chain Malware,E-Commerce,8.0,8471,104,199,Contained
+2022-07-15,Germany,Ransomware,Healthcare,5.2,3649,99,4033,Investigating
+2022-07-15,Germany,Credential Phishing,Critical Infrastructure,9.8,2678,31,2473,Mitigated
+2022-07-15,Germany,Distributed Denial of Service,Telecommunications,8.5,8766,21,2808,Investigating
+2022-07-15,Germany,Supply Chain Malware,Telecommunications,6.3,2798,58,1406,Escalated
+2022-07-15,Singapore,Ransomware,Financial Services,6.5,4031,125,2384,Escalated
+2022-07-15,Singapore,Credential Phishing,Critical Infrastructure,7.2,5210,219,3892,Investigating
+2022-07-15,Singapore,Distributed Denial of Service,Healthcare,8.0,7358,130,2358,Escalated
+2022-07-15,Singapore,Supply Chain Malware,Telecommunications,7.2,2795,221,1685,Investigating
+2022-07-15,Australia,Ransomware,Healthcare,4.5,8013,235,3090,Mitigated
+2022-07-15,Australia,Credential Phishing,E-Commerce,8.9,2182,84,737,Investigating
+2022-07-15,Australia,Distributed Denial of Service,Healthcare,6.7,8550,49,3633,Mitigated
+2022-07-15,Australia,Supply Chain Malware,Critical Infrastructure,8.8,5867,18,3448,Mitigated
+2022-07-15,Japan,Ransomware,Government Defense,7.0,4002,110,718,Contained
+2022-07-15,Japan,Credential Phishing,Critical Infrastructure,4.4,1763,226,2796,Investigating
+2022-07-15,Japan,Distributed Denial of Service,Critical Infrastructure,4.4,7880,190,1186,Escalated
+2022-07-15,Japan,Supply Chain Malware,Government Defense,7.6,1438,16,2146,Investigating
+2022-07-15,Brazil,Ransomware,Critical Infrastructure,7.3,8787,120,960,Contained
+2022-07-15,Brazil,Credential Phishing,Critical Infrastructure,5.9,922,73,3489,Escalated
+2022-07-15,Brazil,Distributed Denial of Service,Financial Services,4.8,8329,164,184,Investigating
+2022-07-15,Brazil,Supply Chain Malware,E-Commerce,5.0,7172,12,2940,Investigating
+2022-07-15,France,Ransomware,Telecommunications,6.5,1542,146,3004,Mitigated
+2022-07-15,France,Credential Phishing,Telecommunications,7.2,8456,153,216,Escalated
+2022-07-15,France,Distributed Denial of Service,Government Defense,4.4,6478,107,2127,Mitigated
+2022-07-15,France,Supply Chain Malware,Healthcare,8.6,5789,73,899,Contained
+2022-07-15,Canada,Ransomware,Critical Infrastructure,4.4,5686,220,1484,Escalated
+2022-07-15,Canada,Credential Phishing,E-Commerce,6.9,3126,219,1154,Mitigated
+2022-07-15,Canada,Distributed Denial of Service,E-Commerce,8.5,7638,21,2453,Investigating
+2022-07-15,Canada,Supply Chain Malware,Financial Services,8.6,826,92,2590,Escalated
+2022-08-15,India,Ransomware,Telecommunications,6.9,739,204,1615,Contained
+2022-08-15,India,Credential Phishing,Healthcare,9.0,923,233,2769,Contained
+2022-08-15,India,Distributed Denial of Service,Financial Services,8.7,7299,239,3326,Escalated
+2022-08-15,India,Supply Chain Malware,Government Defense,6.1,3200,139,4125,Contained
+2022-08-15,United States,Ransomware,Telecommunications,5.7,1493,198,3527,Mitigated
+2022-08-15,United States,Credential Phishing,Government Defense,7.6,3096,151,2456,Contained
+2022-08-15,United States,Distributed Denial of Service,Financial Services,4.6,4983,90,3702,Escalated
+2022-08-15,United States,Supply Chain Malware,Critical Infrastructure,8.1,5899,126,396,Contained
+2022-08-15,United Kingdom,Ransomware,Telecommunications,9.8,4638,175,519,Mitigated
+2022-08-15,United Kingdom,Credential Phishing,E-Commerce,7.8,6092,143,1360,Mitigated
+2022-08-15,United Kingdom,Distributed Denial of Service,Critical Infrastructure,9.0,7319,20,1084,Mitigated
+2022-08-15,United Kingdom,Supply Chain Malware,Critical Infrastructure,8.6,6141,104,3186,Mitigated
+2022-08-15,Germany,Ransomware,Telecommunications,5.1,7511,106,3097,Escalated
+2022-08-15,Germany,Credential Phishing,Financial Services,7.4,8814,105,3310,Contained
+2022-08-15,Germany,Distributed Denial of Service,E-Commerce,5.8,1998,18,1574,Escalated
+2022-08-15,Germany,Supply Chain Malware,Telecommunications,6.4,2069,79,2182,Escalated
+2022-08-15,Singapore,Ransomware,Critical Infrastructure,9.8,4818,189,4073,Investigating
+2022-08-15,Singapore,Credential Phishing,Financial Services,5.0,1353,127,1464,Escalated
+2022-08-15,Singapore,Distributed Denial of Service,Financial Services,8.7,5376,182,2896,Mitigated
+2022-08-15,Singapore,Supply Chain Malware,Telecommunications,7.2,5054,229,1340,Investigating
+2022-08-15,Australia,Ransomware,Healthcare,7.0,2128,63,1187,Investigating
+2022-08-15,Australia,Credential Phishing,Government Defense,4.3,6184,131,1113,Mitigated
+2022-08-15,Australia,Distributed Denial of Service,Financial Services,5.9,7982,146,3415,Escalated
+2022-08-15,Australia,Supply Chain Malware,Telecommunications,4.6,5334,176,657,Escalated
+2022-08-15,Japan,Ransomware,Government Defense,8.0,5784,44,1540,Investigating
+2022-08-15,Japan,Credential Phishing,Government Defense,7.0,1047,224,1067,Investigating
+2022-08-15,Japan,Distributed Denial of Service,Healthcare,5.1,5426,193,1897,Contained
+2022-08-15,Japan,Supply Chain Malware,Telecommunications,9.2,1432,76,1658,Contained
+2022-08-15,Brazil,Ransomware,Critical Infrastructure,7.7,8880,35,4167,Investigating
+2022-08-15,Brazil,Credential Phishing,Telecommunications,9.5,2666,55,2815,Mitigated
+2022-08-15,Brazil,Distributed Denial of Service,Financial Services,4.7,4476,178,1776,Escalated
+2022-08-15,Brazil,Supply Chain Malware,Telecommunications,7.8,8299,239,2422,Contained
+2022-08-15,France,Ransomware,Government Defense,5.6,6793,88,3765,Mitigated
+2022-08-15,France,Credential Phishing,E-Commerce,4.5,7342,118,4016,Escalated
+2022-08-15,France,Distributed Denial of Service,Critical Infrastructure,6.1,2493,92,2665,Contained
+2022-08-15,France,Supply Chain Malware,Government Defense,4.9,6210,143,919,Contained
+2022-08-15,Canada,Ransomware,Critical Infrastructure,6.8,4522,127,2080,Investigating
+2022-08-15,Canada,Credential Phishing,Financial Services,4.5,6433,233,3475,Investigating
+2022-08-15,Canada,Distributed Denial of Service,Critical Infrastructure,8.8,5263,60,1355,Escalated
+2022-08-15,Canada,Supply Chain Malware,Telecommunications,6.8,5195,139,239,Mitigated
+2022-09-15,India,Ransomware,Government Defense,7.0,4084,67,2940,Mitigated
+2022-09-15,India,Credential Phishing,Financial Services,5.8,7850,85,116,Mitigated
+2022-09-15,India,Distributed Denial of Service,Government Defense,5.0,4473,198,3046,Escalated
+2022-09-15,India,Supply Chain Malware,Healthcare,4.5,978,157,1644,Contained
+2022-09-15,United States,Ransomware,Telecommunications,5.8,6469,141,3739,Contained
+2022-09-15,United States,Credential Phishing,Telecommunications,8.0,2086,44,842,Escalated
+2022-09-15,United States,Distributed Denial of Service,Healthcare,8.7,5695,154,3045,Investigating
+2022-09-15,United States,Supply Chain Malware,Critical Infrastructure,7.6,6716,140,379,Mitigated
+2022-09-15,United Kingdom,Ransomware,Financial Services,5.0,5596,217,3930,Escalated
+2022-09-15,United Kingdom,Credential Phishing,Critical Infrastructure,7.6,8586,47,2736,Contained
+2022-09-15,United Kingdom,Distributed Denial of Service,Critical Infrastructure,6.4,5042,163,2805,Escalated
+2022-09-15,United Kingdom,Supply Chain Malware,E-Commerce,7.4,7920,220,186,Contained
+2022-09-15,Germany,Ransomware,Healthcare,8.0,6964,161,2570,Mitigated
+2022-09-15,Germany,Credential Phishing,Telecommunications,6.9,3868,196,470,Escalated
+2022-09-15,Germany,Distributed Denial of Service,Critical Infrastructure,7.1,6369,49,2034,Mitigated
+2022-09-15,Germany,Supply Chain Malware,Telecommunications,9.5,1940,60,205,Escalated
+2022-09-15,Singapore,Ransomware,Healthcare,6.5,6905,188,1720,Escalated
+2022-09-15,Singapore,Credential Phishing,Telecommunications,8.5,7866,235,560,Investigating
+2022-09-15,Singapore,Distributed Denial of Service,Telecommunications,5.4,5465,181,3968,Escalated
+2022-09-15,Singapore,Supply Chain Malware,Healthcare,9.6,7671,148,2854,Contained
+2022-09-15,Australia,Ransomware,E-Commerce,8.5,4471,168,4016,Investigating
+2022-09-15,Australia,Credential Phishing,Critical Infrastructure,5.8,5030,69,2488,Contained
+2022-09-15,Australia,Distributed Denial of Service,E-Commerce,5.4,8151,93,3980,Contained
+2022-09-15,Australia,Supply Chain Malware,Telecommunications,9.4,4620,85,1048,Escalated
+2022-09-15,Japan,Ransomware,Government Defense,8.8,2539,86,394,Contained
+2022-09-15,Japan,Credential Phishing,E-Commerce,4.6,7387,179,2150,Escalated
+2022-09-15,Japan,Distributed Denial of Service,Critical Infrastructure,5.3,4582,155,2275,Investigating
+2022-09-15,Japan,Supply Chain Malware,Financial Services,7.6,4060,74,465,Investigating
+2022-09-15,Brazil,Ransomware,E-Commerce,5.5,1781,117,2755,Escalated
+2022-09-15,Brazil,Credential Phishing,Financial Services,8.0,2392,13,1343,Escalated
+2022-09-15,Brazil,Distributed Denial of Service,E-Commerce,9.4,7933,134,1683,Contained
+2022-09-15,Brazil,Supply Chain Malware,Healthcare,5.8,1109,208,782,Investigating
+2022-09-15,France,Ransomware,Telecommunications,8.3,751,56,3473,Investigating
+2022-09-15,France,Credential Phishing,Financial Services,9.8,6644,213,4108,Investigating
+2022-09-15,France,Distributed Denial of Service,E-Commerce,9.6,4882,236,356,Mitigated
+2022-09-15,France,Supply Chain Malware,Healthcare,7.4,1898,97,2381,Escalated
+2022-09-15,Canada,Ransomware,E-Commerce,7.2,8232,239,1149,Escalated
+2022-09-15,Canada,Credential Phishing,Healthcare,5.3,1985,96,1381,Escalated
+2022-09-15,Canada,Distributed Denial of Service,E-Commerce,5.6,3190,15,2811,Contained
+2022-09-15,Canada,Supply Chain Malware,Telecommunications,8.0,3304,56,3371,Escalated
+2022-10-15,India,Ransomware,Telecommunications,6.0,6707,183,831,Investigating
+2022-10-15,India,Credential Phishing,Critical Infrastructure,6.9,4204,13,2186,Escalated
+2022-10-15,India,Distributed Denial of Service,Critical Infrastructure,6.7,4514,96,2523,Mitigated
+2022-10-15,India,Supply Chain Malware,Healthcare,7.9,4011,27,1018,Escalated
+2022-10-15,United States,Ransomware,Healthcare,5.1,8373,239,2597,Mitigated
+2022-10-15,United States,Credential Phishing,E-Commerce,9.3,4973,106,1859,Investigating
+2022-10-15,United States,Distributed Denial of Service,Critical Infrastructure,6.9,7594,203,3110,Escalated
+2022-10-15,United States,Supply Chain Malware,E-Commerce,7.3,7854,205,1839,Investigating
+2022-10-15,United Kingdom,Ransomware,E-Commerce,8.4,1481,146,3709,Contained
+2022-10-15,United Kingdom,Credential Phishing,Financial Services,9.3,1978,27,4190,Investigating
+2022-10-15,United Kingdom,Distributed Denial of Service,Telecommunications,7.2,2835,95,3669,Mitigated
+2022-10-15,United Kingdom,Supply Chain Malware,E-Commerce,5.4,8148,35,3699,Mitigated
+2022-10-15,Germany,Ransomware,Government Defense,4.9,6946,128,522,Escalated
+2022-10-15,Germany,Credential Phishing,E-Commerce,8.7,496,113,2134,Mitigated
+2022-10-15,Germany,Distributed Denial of Service,E-Commerce,5.4,1336,23,3520,Contained
+2022-10-15,Germany,Supply Chain Malware,E-Commerce,4.6,1127,240,615,Escalated
+2022-10-15,Singapore,Ransomware,Financial Services,5.8,3088,208,1159,Escalated
+2022-10-15,Singapore,Credential Phishing,Healthcare,9.8,6406,126,3142,Escalated
+2022-10-15,Singapore,Distributed Denial of Service,Financial Services,8.0,2318,179,2898,Mitigated
+2022-10-15,Singapore,Supply Chain Malware,Critical Infrastructure,9.8,6579,147,1093,Investigating
+2022-10-15,Australia,Ransomware,Financial Services,8.4,5028,130,3524,Escalated
+2022-10-15,Australia,Credential Phishing,Critical Infrastructure,5.6,5811,51,2308,Investigating
+2022-10-15,Australia,Distributed Denial of Service,E-Commerce,8.5,667,219,3484,Mitigated
+2022-10-15,Australia,Supply Chain Malware,Critical Infrastructure,5.4,1793,164,325,Escalated
+2022-10-15,Japan,Ransomware,Telecommunications,8.0,937,74,412,Escalated
+2022-10-15,Japan,Credential Phishing,Government Defense,5.5,3699,205,512,Investigating
+2022-10-15,Japan,Distributed Denial of Service,Telecommunications,9.8,3976,220,2662,Contained
+2022-10-15,Japan,Supply Chain Malware,Critical Infrastructure,5.9,2487,181,1860,Escalated
+2022-10-15,Brazil,Ransomware,Healthcare,5.7,3009,172,3549,Escalated
+2022-10-15,Brazil,Credential Phishing,Financial Services,9.6,6384,213,2661,Escalated
+2022-10-15,Brazil,Distributed Denial of Service,Government Defense,5.0,6307,59,3929,Investigating
+2022-10-15,Brazil,Supply Chain Malware,Critical Infrastructure,5.9,2505,218,3843,Mitigated
+2022-10-15,France,Ransomware,Telecommunications,6.5,6964,154,1148,Escalated
+2022-10-15,France,Credential Phishing,Critical Infrastructure,5.6,5551,177,697,Escalated
+2022-10-15,France,Distributed Denial of Service,Healthcare,4.7,3260,25,2249,Escalated
+2022-10-15,France,Supply Chain Malware,E-Commerce,7.6,787,235,646,Investigating
+2022-10-15,Canada,Ransomware,Telecommunications,8.3,3695,134,1761,Contained
+2022-10-15,Canada,Credential Phishing,Healthcare,9.6,391,66,1606,Mitigated
+2022-10-15,Canada,Distributed Denial of Service,E-Commerce,9.8,7986,74,1725,Escalated
+2022-10-15,Canada,Supply Chain Malware,Critical Infrastructure,7.3,4777,109,3869,Contained
+2022-11-15,India,Ransomware,Healthcare,5.7,8541,237,4123,Escalated
+2022-11-15,India,Credential Phishing,Financial Services,8.7,7832,206,2673,Investigating
+2022-11-15,India,Distributed Denial of Service,Healthcare,6.0,889,156,1862,Investigating
+2022-11-15,India,Supply Chain Malware,Financial Services,5.7,6981,87,1298,Investigating
+2022-11-15,United States,Ransomware,Healthcare,5.5,4166,139,2815,Contained
+2022-11-15,United States,Credential Phishing,Government Defense,9.6,8177,129,1428,Contained
+2022-11-15,United States,Distributed Denial of Service,Critical Infrastructure,5.0,8140,59,531,Mitigated
+2022-11-15,United States,Supply Chain Malware,Financial Services,9.5,934,207,102,Escalated
+2022-11-15,United Kingdom,Ransomware,Critical Infrastructure,8.9,3931,29,1287,Mitigated
+2022-11-15,United Kingdom,Credential Phishing,Critical Infrastructure,7.0,6254,27,4008,Escalated
+2022-11-15,United Kingdom,Distributed Denial of Service,Financial Services,4.2,6879,15,187,Contained
+2022-11-15,United Kingdom,Supply Chain Malware,Telecommunications,9.7,420,140,3577,Investigating
+2022-11-15,Germany,Ransomware,Financial Services,9.3,8731,50,2024,Investigating
+2022-11-15,Germany,Credential Phishing,Telecommunications,7.1,5947,80,3301,Mitigated
+2022-11-15,Germany,Distributed Denial of Service,Healthcare,9.6,7660,156,2042,Investigating
+2022-11-15,Germany,Supply Chain Malware,Healthcare,8.0,1460,179,309,Mitigated
+2022-11-15,Singapore,Ransomware,Government Defense,6.3,7938,26,127,Investigating
+2022-11-15,Singapore,Credential Phishing,Financial Services,7.0,7249,177,2763,Mitigated
+2022-11-15,Singapore,Distributed Denial of Service,Telecommunications,9.3,3904,66,3945,Contained
+2022-11-15,Singapore,Supply Chain Malware,Financial Services,9.4,4733,151,319,Investigating
+2022-11-15,Australia,Ransomware,Healthcare,4.3,3534,162,1231,Escalated
+2022-11-15,Australia,Credential Phishing,Financial Services,5.9,4079,157,3237,Contained
+2022-11-15,Australia,Distributed Denial of Service,Government Defense,8.4,2432,214,692,Contained
+2022-11-15,Australia,Supply Chain Malware,Financial Services,4.7,3943,226,672,Contained
+2022-11-15,Japan,Ransomware,Telecommunications,8.5,6639,210,2723,Mitigated
+2022-11-15,Japan,Credential Phishing,E-Commerce,5.7,7521,137,1918,Contained
+2022-11-15,Japan,Distributed Denial of Service,Telecommunications,9.5,7215,59,3163,Mitigated
+2022-11-15,Japan,Supply Chain Malware,Telecommunications,5.9,4177,194,652,Mitigated
+2022-11-15,Brazil,Ransomware,Healthcare,5.1,2667,201,3241,Contained
+2022-11-15,Brazil,Credential Phishing,Healthcare,4.8,225,90,3693,Contained
+2022-11-15,Brazil,Distributed Denial of Service,Healthcare,4.8,1570,59,3580,Escalated
+2022-11-15,Brazil,Supply Chain Malware,Telecommunications,7.3,6825,38,265,Mitigated
+2022-11-15,France,Ransomware,Healthcare,7.3,5455,233,3205,Mitigated
+2022-11-15,France,Credential Phishing,Healthcare,6.5,1527,197,2038,Investigating
+2022-11-15,France,Distributed Denial of Service,E-Commerce,6.3,2414,80,2516,Contained
+2022-11-15,France,Supply Chain Malware,Government Defense,5.0,2879,123,2310,Escalated
+2022-11-15,Canada,Ransomware,Healthcare,6.9,1400,104,2111,Investigating
+2022-11-15,Canada,Credential Phishing,E-Commerce,7.7,3343,129,926,Investigating
+2022-11-15,Canada,Distributed Denial of Service,Healthcare,4.2,6623,97,3162,Contained
+2022-11-15,Canada,Supply Chain Malware,Government Defense,6.1,2370,88,2676,Investigating
+2022-12-15,India,Ransomware,Government Defense,6.0,6664,93,2437,Escalated
+2022-12-15,India,Credential Phishing,Telecommunications,8.6,5479,108,2346,Escalated
+2022-12-15,India,Distributed Denial of Service,Healthcare,4.8,3413,163,1523,Mitigated
+2022-12-15,India,Supply Chain Malware,E-Commerce,6.8,3574,124,2436,Mitigated
+2022-12-15,United States,Ransomware,Government Defense,8.0,2420,174,2530,Investigating
+2022-12-15,United States,Credential Phishing,Healthcare,7.9,7072,214,3138,Mitigated
+2022-12-15,United States,Distributed Denial of Service,Government Defense,9.7,7991,161,3333,Escalated
+2022-12-15,United States,Supply Chain Malware,Telecommunications,4.4,6030,191,746,Mitigated
+2022-12-15,United Kingdom,Ransomware,Critical Infrastructure,7.9,5956,54,412,Escalated
+2022-12-15,United Kingdom,Credential Phishing,Healthcare,9.6,7192,39,136,Mitigated
+2022-12-15,United Kingdom,Distributed Denial of Service,Healthcare,5.4,8639,154,1860,Escalated
+2022-12-15,United Kingdom,Supply Chain Malware,Healthcare,6.4,8339,50,2875,Mitigated
+2022-12-15,Germany,Ransomware,Government Defense,4.8,6955,33,1000,Investigating
+2022-12-15,Germany,Credential Phishing,Healthcare,5.9,7600,212,1744,Escalated
+2022-12-15,Germany,Distributed Denial of Service,Healthcare,6.9,7318,196,3756,Contained
+2022-12-15,Germany,Supply Chain Malware,Financial Services,5.9,2025,17,2860,Mitigated
+2022-12-15,Singapore,Ransomware,E-Commerce,8.7,4136,144,1479,Investigating
+2022-12-15,Singapore,Credential Phishing,Healthcare,7.3,7710,71,3368,Investigating
+2022-12-15,Singapore,Distributed Denial of Service,Critical Infrastructure,7.8,7220,113,289,Investigating
+2022-12-15,Singapore,Supply Chain Malware,Government Defense,7.5,6510,13,1809,Investigating
+2022-12-15,Australia,Ransomware,Healthcare,8.4,1165,159,883,Investigating
+2022-12-15,Australia,Credential Phishing,Healthcare,6.0,7636,41,2199,Escalated
+2022-12-15,Australia,Distributed Denial of Service,Telecommunications,9.6,5274,164,3233,Escalated
+2022-12-15,Australia,Supply Chain Malware,Telecommunications,4.8,5906,228,3800,Investigating
+2022-12-15,Japan,Ransomware,E-Commerce,8.2,5013,169,744,Investigating
+2022-12-15,Japan,Credential Phishing,Healthcare,4.9,5143,41,1549,Contained
+2022-12-15,Japan,Distributed Denial of Service,E-Commerce,5.0,6504,119,1179,Escalated
+2022-12-15,Japan,Supply Chain Malware,Government Defense,5.2,2978,154,1416,Escalated
+2022-12-15,Brazil,Ransomware,Healthcare,5.0,5294,227,3744,Mitigated
+2022-12-15,Brazil,Credential Phishing,Healthcare,9.5,8079,46,1648,Escalated
+2022-12-15,Brazil,Distributed Denial of Service,Telecommunications,7.0,8249,116,4078,Escalated
+2022-12-15,Brazil,Supply Chain Malware,E-Commerce,8.9,8146,54,727,Mitigated
+2022-12-15,France,Ransomware,Critical Infrastructure,5.8,4643,69,2414,Investigating
+2022-12-15,France,Credential Phishing,Government Defense,7.4,8255,152,977,Mitigated
+2022-12-15,France,Distributed Denial of Service,Healthcare,8.5,6150,150,390,Escalated
+2022-12-15,France,Supply Chain Malware,Telecommunications,5.4,7105,38,2077,Contained
+2022-12-15,Canada,Ransomware,Financial Services,6.7,5851,232,762,Escalated
+2022-12-15,Canada,Credential Phishing,Financial Services,8.5,4022,65,2922,Escalated
+2022-12-15,Canada,Distributed Denial of Service,Critical Infrastructure,7.7,3525,220,1745,Mitigated
+2022-12-15,Canada,Supply Chain Malware,Telecommunications,6.2,4745,164,1429,Contained
+2023-01-15,India,Ransomware,E-Commerce,5.8,4520,231,830,Investigating
+2023-01-15,India,Credential Phishing,Government Defense,9.3,4683,233,1089,Investigating
+2023-01-15,India,Distributed Denial of Service,Critical Infrastructure,5.0,5417,224,2077,Escalated
+2023-01-15,India,Supply Chain Malware,Government Defense,5.0,4542,172,3443,Escalated
+2023-01-15,United States,Ransomware,Government Defense,4.6,1665,115,2329,Contained
+2023-01-15,United States,Credential Phishing,Government Defense,9.5,5502,160,70,Mitigated
+2023-01-15,United States,Distributed Denial of Service,E-Commerce,9.6,6009,229,568,Escalated
+2023-01-15,United States,Supply Chain Malware,Critical Infrastructure,9.6,3610,138,2249,Contained
+2023-01-15,United Kingdom,Ransomware,Healthcare,6.1,2279,156,4025,Contained
+2023-01-15,United Kingdom,Credential Phishing,E-Commerce,8.5,892,37,3814,Mitigated
+2023-01-15,United Kingdom,Distributed Denial of Service,Financial Services,9.4,2728,124,3789,Mitigated
+2023-01-15,United Kingdom,Supply Chain Malware,Government Defense,5.3,2301,237,2522,Investigating
+2023-01-15,Germany,Ransomware,Healthcare,4.7,6045,76,725,Contained
+2023-01-15,Germany,Credential Phishing,E-Commerce,9.3,2851,25,3296,Contained
+2023-01-15,Germany,Distributed Denial of Service,E-Commerce,8.1,3976,121,797,Mitigated
+2023-01-15,Germany,Supply Chain Malware,Financial Services,5.4,1416,45,1902,Escalated
+2023-01-15,Singapore,Ransomware,Financial Services,4.2,5769,221,1037,Escalated
+2023-01-15,Singapore,Credential Phishing,E-Commerce,4.9,1300,70,3188,Mitigated
+2023-01-15,Singapore,Distributed Denial of Service,E-Commerce,8.7,1830,92,3061,Contained
+2023-01-15,Singapore,Supply Chain Malware,Critical Infrastructure,6.3,2321,176,1220,Mitigated
+2023-01-15,Australia,Ransomware,Telecommunications,7.4,2828,124,2926,Investigating
+2023-01-15,Australia,Credential Phishing,E-Commerce,8.4,6885,169,3674,Investigating
+2023-01-15,Australia,Distributed Denial of Service,Financial Services,9.2,2433,204,1058,Escalated
+2023-01-15,Australia,Supply Chain Malware,Healthcare,9.6,5292,214,1195,Investigating
+2023-01-15,Japan,Ransomware,Healthcare,7.8,4205,153,2384,Mitigated
+2023-01-15,Japan,Credential Phishing,E-Commerce,9.1,3506,144,1595,Escalated
+2023-01-15,Japan,Distributed Denial of Service,Healthcare,7.8,4061,138,3211,Mitigated
+2023-01-15,Japan,Supply Chain Malware,Critical Infrastructure,7.0,1303,147,148,Contained
+2023-01-15,Brazil,Ransomware,Healthcare,4.9,7035,105,1465,Escalated
+2023-01-15,Brazil,Credential Phishing,Financial Services,4.3,1246,15,2197,Investigating
+2023-01-15,Brazil,Distributed Denial of Service,Financial Services,9.4,6660,141,2396,Escalated
+2023-01-15,Brazil,Supply Chain Malware,Government Defense,8.1,1490,175,1300,Contained
+2023-01-15,France,Ransomware,Financial Services,5.9,8517,64,1322,Contained
+2023-01-15,France,Credential Phishing,Government Defense,7.5,1223,91,3633,Investigating
+2023-01-15,France,Distributed Denial of Service,Financial Services,5.6,7258,41,3764,Mitigated
+2023-01-15,France,Supply Chain Malware,Healthcare,7.9,3017,42,153,Investigating
+2023-01-15,Canada,Ransomware,E-Commerce,4.3,8273,100,2173,Investigating
+2023-01-15,Canada,Credential Phishing,Healthcare,4.9,4543,199,1017,Mitigated
+2023-01-15,Canada,Distributed Denial of Service,Healthcare,8.7,4596,146,573,Contained
+2023-01-15,Canada,Supply Chain Malware,E-Commerce,9.7,1402,139,3778,Contained
+2023-02-15,India,Ransomware,Financial Services,7.0,2874,106,1338,Contained
+2023-02-15,India,Credential Phishing,Financial Services,9.2,2029,70,71,Mitigated
+2023-02-15,India,Distributed Denial of Service,Financial Services,5.6,7869,105,3187,Investigating
+2023-02-15,India,Supply Chain Malware,Critical Infrastructure,9.4,719,153,3485,Investigating
+2023-02-15,United States,Ransomware,Healthcare,5.6,5381,81,688,Contained
+2023-02-15,United States,Credential Phishing,Financial Services,7.0,1002,57,1878,Mitigated
+2023-02-15,United States,Distributed Denial of Service,Government Defense,4.6,7760,233,2362,Contained
+2023-02-15,United States,Supply Chain Malware,Healthcare,4.7,7623,14,3072,Investigating
+2023-02-15,United Kingdom,Ransomware,Healthcare,7.4,5119,201,2037,Escalated
+2023-02-15,United Kingdom,Credential Phishing,Healthcare,7.5,8223,209,1650,Investigating
+2023-02-15,United Kingdom,Distributed Denial of Service,Critical Infrastructure,4.2,6858,18,1958,Contained
+2023-02-15,United Kingdom,Supply Chain Malware,E-Commerce,8.9,297,97,61,Escalated
+2023-02-15,Germany,Ransomware,E-Commerce,8.3,1843,64,2001,Escalated
+2023-02-15,Germany,Credential Phishing,Government Defense,9.6,2472,194,2342,Mitigated
+2023-02-15,Germany,Distributed Denial of Service,Financial Services,9.4,8655,117,3101,Escalated
+2023-02-15,Germany,Supply Chain Malware,E-Commerce,4.7,1705,141,1143,Escalated
+2023-02-15,Singapore,Ransomware,Financial Services,7.5,1160,123,1120,Investigating
+2023-02-15,Singapore,Credential Phishing,Healthcare,5.7,5301,217,3269,Contained
+2023-02-15,Singapore,Distributed Denial of Service,Healthcare,6.7,3967,31,1710,Investigating
+2023-02-15,Singapore,Supply Chain Malware,Telecommunications,4.8,1871,54,3732,Escalated
+2023-02-15,Australia,Ransomware,Healthcare,6.5,6010,209,1750,Escalated
+2023-02-15,Australia,Credential Phishing,Healthcare,6.8,2104,35,1341,Contained
+2023-02-15,Australia,Distributed Denial of Service,E-Commerce,8.1,800,67,2735,Investigating
+2023-02-15,Australia,Supply Chain Malware,Financial Services,8.2,5968,113,451,Contained
+2023-02-15,Japan,Ransomware,Healthcare,8.8,2988,19,3362,Escalated
+2023-02-15,Japan,Credential Phishing,Telecommunications,8.4,4233,36,3835,Mitigated
+2023-02-15,Japan,Distributed Denial of Service,Critical Infrastructure,4.9,1150,224,1870,Investigating
+2023-02-15,Japan,Supply Chain Malware,Critical Infrastructure,8.8,6238,187,738,Contained
+2023-02-15,Brazil,Ransomware,Financial Services,4.3,1196,62,3682,Investigating
+2023-02-15,Brazil,Credential Phishing,Financial Services,9.3,5572,43,399,Escalated
+2023-02-15,Brazil,Distributed Denial of Service,Financial Services,5.1,7236,222,3285,Escalated
+2023-02-15,Brazil,Supply Chain Malware,Financial Services,6.3,7130,56,2949,Investigating
+2023-02-15,France,Ransomware,Critical Infrastructure,5.7,7447,238,1267,Mitigated
+2023-02-15,France,Credential Phishing,Telecommunications,7.7,4166,177,2467,Escalated
+2023-02-15,France,Distributed Denial of Service,Government Defense,9.1,7988,27,768,Contained
+2023-02-15,France,Supply Chain Malware,Government Defense,5.0,3407,176,2091,Mitigated
+2023-02-15,Canada,Ransomware,Government Defense,8.6,6023,134,4020,Contained
+2023-02-15,Canada,Credential Phishing,Telecommunications,7.0,6503,81,1523,Mitigated
+2023-02-15,Canada,Distributed Denial of Service,Healthcare,7.5,620,219,2351,Mitigated
+2023-02-15,Canada,Supply Chain Malware,Government Defense,7.2,3953,52,870,Investigating
+2023-03-15,India,Ransomware,E-Commerce,5.6,8883,220,508,Investigating
+2023-03-15,India,Credential Phishing,Telecommunications,8.9,6503,102,1473,Investigating
+2023-03-15,India,Distributed Denial of Service,Critical Infrastructure,7.5,6018,163,281,Contained
+2023-03-15,India,Supply Chain Malware,Telecommunications,7.4,3224,226,4082,Contained
+2023-03-15,United States,Ransomware,Critical Infrastructure,6.9,1618,26,1955,Investigating
+2023-03-15,United States,Credential Phishing,Financial Services,7.1,151,96,1700,Investigating
+2023-03-15,United States,Distributed Denial of Service,Healthcare,8.2,5441,27,229,Investigating
+2023-03-15,United States,Supply Chain Malware,Telecommunications,8.1,2460,210,958,Contained
+2023-03-15,United Kingdom,Ransomware,Financial Services,6.3,6621,162,877,Contained
+2023-03-15,United Kingdom,Credential Phishing,Healthcare,6.0,2720,199,3628,Escalated
+2023-03-15,United Kingdom,Distributed Denial of Service,E-Commerce,6.0,5986,69,1486,Escalated
+2023-03-15,United Kingdom,Supply Chain Malware,Healthcare,8.3,4965,44,1505,Mitigated
+2023-03-15,Germany,Ransomware,E-Commerce,9.5,6555,229,315,Investigating
+2023-03-15,Germany,Credential Phishing,Telecommunications,6.0,3759,175,902,Escalated
+2023-03-15,Germany,Distributed Denial of Service,Critical Infrastructure,6.1,1414,72,2891,Contained
+2023-03-15,Germany,Supply Chain Malware,Critical Infrastructure,7.8,1593,222,2800,Escalated
+2023-03-15,Singapore,Ransomware,Financial Services,5.7,4228,189,605,Contained
+2023-03-15,Singapore,Credential Phishing,Healthcare,8.6,160,24,3211,Escalated
+2023-03-15,Singapore,Distributed Denial of Service,E-Commerce,6.6,2865,238,3441,Escalated
+2023-03-15,Singapore,Supply Chain Malware,Government Defense,6.2,6289,37,3977,Investigating
+2023-03-15,Australia,Ransomware,Critical Infrastructure,6.7,687,87,214,Contained
+2023-03-15,Australia,Credential Phishing,Healthcare,9.5,1355,99,1443,Escalated
+2023-03-15,Australia,Distributed Denial of Service,Critical Infrastructure,8.3,1665,98,4004,Mitigated
+2023-03-15,Australia,Supply Chain Malware,Government Defense,9.5,2843,167,3606,Investigating
+2023-03-15,Japan,Ransomware,Financial Services,4.8,3507,60,3402,Contained
+2023-03-15,Japan,Credential Phishing,E-Commerce,5.8,4031,36,456,Escalated
+2023-03-15,Japan,Distributed Denial of Service,Telecommunications,7.3,8183,51,496,Contained
+2023-03-15,Japan,Supply Chain Malware,Financial Services,6.6,4965,222,3984,Investigating
+2023-03-15,Brazil,Ransomware,Financial Services,4.3,2938,175,2440,Mitigated
+2023-03-15,Brazil,Credential Phishing,Government Defense,8.9,5192,212,3306,Escalated
+2023-03-15,Brazil,Distributed Denial of Service,Government Defense,9.2,4481,35,3224,Investigating
+2023-03-15,Brazil,Supply Chain Malware,Healthcare,9.2,6192,59,3701,Mitigated
+2023-03-15,France,Ransomware,Healthcare,6.7,4455,69,2250,Mitigated
+2023-03-15,France,Credential Phishing,Critical Infrastructure,8.4,1724,33,2866,Escalated
+2023-03-15,France,Distributed Denial of Service,Telecommunications,5.5,1139,227,3221,Escalated
+2023-03-15,France,Supply Chain Malware,Telecommunications,8.0,7919,158,1980,Escalated
+2023-03-15,Canada,Ransomware,Healthcare,4.6,708,140,1257,Mitigated
+2023-03-15,Canada,Credential Phishing,Government Defense,5.2,2878,66,1628,Investigating
+2023-03-15,Canada,Distributed Denial of Service,Financial Services,6.6,7273,63,1261,Contained
+2023-03-15,Canada,Supply Chain Malware,Healthcare,9.3,1237,34,3229,Escalated
+2023-04-15,India,Ransomware,Telecommunications,6.0,4665,145,3803,Mitigated
+2023-04-15,India,Credential Phishing,E-Commerce,7.7,8701,212,3487,Mitigated
+2023-04-15,India,Distributed Denial of Service,Government Defense,5.0,1781,39,877,Contained
+2023-04-15,India,Supply Chain Malware,Telecommunications,9.1,6872,79,3187,Escalated
+2023-04-15,United States,Ransomware,Telecommunications,7.6,753,56,2306,Escalated
+2023-04-15,United States,Credential Phishing,Critical Infrastructure,7.7,6721,21,3292,Contained
+2023-04-15,United States,Distributed Denial of Service,E-Commerce,5.5,7925,80,3101,Mitigated
+2023-04-15,United States,Supply Chain Malware,Healthcare,8.8,5105,91,2346,Escalated
+2023-04-15,United Kingdom,Ransomware,E-Commerce,8.0,3874,46,2511,Escalated
+2023-04-15,United Kingdom,Credential Phishing,Healthcare,5.7,6968,166,781,Investigating
+2023-04-15,United Kingdom,Distributed Denial of Service,Government Defense,5.4,6811,201,4018,Contained
+2023-04-15,United Kingdom,Supply Chain Malware,Financial Services,7.1,2744,28,2598,Escalated
+2023-04-15,Germany,Ransomware,Critical Infrastructure,8.6,8729,237,287,Investigating
+2023-04-15,Germany,Credential Phishing,Critical Infrastructure,9.1,3428,226,522,Investigating
+2023-04-15,Germany,Distributed Denial of Service,Financial Services,6.8,6044,192,1681,Contained
+2023-04-15,Germany,Supply Chain Malware,Healthcare,8.8,8415,113,1064,Mitigated
+2023-04-15,Singapore,Ransomware,Critical Infrastructure,6.3,7448,57,3937,Contained
+2023-04-15,Singapore,Credential Phishing,Healthcare,5.1,4377,203,790,Contained
+2023-04-15,Singapore,Distributed Denial of Service,Financial Services,6.4,2809,230,1805,Investigating
+2023-04-15,Singapore,Supply Chain Malware,E-Commerce,5.5,3527,80,3404,Mitigated
+2023-04-15,Australia,Ransomware,E-Commerce,4.2,2307,177,1468,Mitigated
+2023-04-15,Australia,Credential Phishing,Critical Infrastructure,5.6,5144,194,2305,Escalated
+2023-04-15,Australia,Distributed Denial of Service,Government Defense,9.0,7660,76,1837,Escalated
+2023-04-15,Australia,Supply Chain Malware,Healthcare,8.0,6646,161,888,Mitigated
+2023-04-15,Japan,Ransomware,Telecommunications,9.8,6271,155,2365,Contained
+2023-04-15,Japan,Credential Phishing,E-Commerce,4.8,1185,98,2314,Contained
+2023-04-15,Japan,Distributed Denial of Service,Healthcare,5.7,5035,60,1278,Investigating
+2023-04-15,Japan,Supply Chain Malware,Financial Services,8.7,6760,181,2668,Investigating
+2023-04-15,Brazil,Ransomware,E-Commerce,4.3,8288,87,2175,Escalated
+2023-04-15,Brazil,Credential Phishing,Government Defense,6.4,718,161,1605,Contained
+2023-04-15,Brazil,Distributed Denial of Service,E-Commerce,8.2,8899,175,3947,Contained
+2023-04-15,Brazil,Supply Chain Malware,Telecommunications,5.9,2925,227,1533,Contained
+2023-04-15,France,Ransomware,Financial Services,6.8,4377,197,1549,Contained
+2023-04-15,France,Credential Phishing,E-Commerce,4.7,5960,69,2565,Escalated
+2023-04-15,France,Distributed Denial of Service,Healthcare,6.3,4957,130,1014,Escalated
+2023-04-15,France,Supply Chain Malware,Financial Services,9.1,1306,132,1643,Mitigated
+2023-04-15,Canada,Ransomware,E-Commerce,6.3,5028,117,492,Investigating
+2023-04-15,Canada,Credential Phishing,Critical Infrastructure,9.8,5754,116,3798,Investigating
+2023-04-15,Canada,Distributed Denial of Service,Healthcare,9.0,3094,211,712,Escalated
+2023-04-15,Canada,Supply Chain Malware,Healthcare,7.7,3037,92,525,Mitigated
+2023-05-15,India,Ransomware,Government Defense,5.7,2902,159,1347,Escalated
+2023-05-15,India,Credential Phishing,Financial Services,4.9,7245,174,3567,Escalated
+2023-05-15,India,Distributed Denial of Service,Government Defense,9.6,6420,13,359,Investigating
+2023-05-15,India,Supply Chain Malware,E-Commerce,6.3,370,240,2689,Investigating
+2023-05-15,United States,Ransomware,Financial Services,8.0,4216,69,2870,Contained
+2023-05-15,United States,Credential Phishing,Critical Infrastructure,4.8,8386,162,2557,Investigating
+2023-05-15,United States,Distributed Denial of Service,Financial Services,8.8,5025,86,3784,Contained
+2023-05-15,United States,Supply Chain Malware,Government Defense,9.2,2332,99,4065,Contained
+2023-05-15,United Kingdom,Ransomware,Critical Infrastructure,5.1,6749,16,1921,Investigating
+2023-05-15,United Kingdom,Credential Phishing,E-Commerce,9.7,3600,199,229,Investigating
+2023-05-15,United Kingdom,Distributed Denial of Service,Financial Services,6.3,752,108,2145,Mitigated
+2023-05-15,United Kingdom,Supply Chain Malware,Telecommunications,9.8,1911,179,211,Mitigated
+2023-05-15,Germany,Ransomware,E-Commerce,4.8,7419,109,1062,Contained
+2023-05-15,Germany,Credential Phishing,Government Defense,8.1,3506,189,126,Contained
+2023-05-15,Germany,Distributed Denial of Service,Government Defense,7.9,8664,81,1173,Escalated
+2023-05-15,Germany,Supply Chain Malware,Financial Services,7.1,2068,84,983,Mitigated
+2023-05-15,Singapore,Ransomware,Government Defense,5.3,3412,211,2204,Investigating
+2023-05-15,Singapore,Credential Phishing,Healthcare,8.1,4979,53,372,Escalated
+2023-05-15,Singapore,Distributed Denial of Service,Critical Infrastructure,8.1,8015,96,1971,Mitigated
+2023-05-15,Singapore,Supply Chain Malware,Financial Services,8.0,1949,225,4097,Investigating
+2023-05-15,Australia,Ransomware,Financial Services,8.6,1369,197,879,Contained
+2023-05-15,Australia,Credential Phishing,E-Commerce,5.5,4990,79,3853,Mitigated
+2023-05-15,Australia,Distributed Denial of Service,Financial Services,8.8,786,230,2430,Contained
+2023-05-15,Australia,Supply Chain Malware,E-Commerce,6.0,2038,36,425,Mitigated
+2023-05-15,Japan,Ransomware,Critical Infrastructure,7.9,2933,96,2978,Escalated
+2023-05-15,Japan,Credential Phishing,Telecommunications,5.7,1662,107,2857,Investigating
+2023-05-15,Japan,Distributed Denial of Service,Financial Services,6.4,7619,81,3209,Escalated
+2023-05-15,Japan,Supply Chain Malware,Government Defense,7.8,2872,40,1135,Mitigated
+2023-05-15,Brazil,Ransomware,Critical Infrastructure,4.8,8048,217,3639,Investigating
+2023-05-15,Brazil,Credential Phishing,Telecommunications,6.3,6015,168,286,Investigating
+2023-05-15,Brazil,Distributed Denial of Service,Government Defense,9.4,1990,239,3419,Escalated
+2023-05-15,Brazil,Supply Chain Malware,Financial Services,4.6,5288,15,1884,Contained
+2023-05-15,France,Ransomware,Telecommunications,7.1,1700,122,2086,Escalated
+2023-05-15,France,Credential Phishing,Healthcare,7.9,6445,50,497,Mitigated
+2023-05-15,France,Distributed Denial of Service,E-Commerce,9.4,8423,229,3894,Escalated
+2023-05-15,France,Supply Chain Malware,Critical Infrastructure,4.6,8195,94,2023,Contained
+2023-05-15,Canada,Ransomware,Healthcare,4.5,3788,152,3151,Escalated
+2023-05-15,Canada,Credential Phishing,Critical Infrastructure,4.6,7417,217,3720,Mitigated
+2023-05-15,Canada,Distributed Denial of Service,Government Defense,6.7,2084,139,195,Mitigated
+2023-05-15,Canada,Supply Chain Malware,Government Defense,6.5,142,223,794,Contained
+2023-06-15,India,Ransomware,Telecommunications,7.3,7614,99,3026,Mitigated
+2023-06-15,India,Credential Phishing,Critical Infrastructure,8.9,5579,155,3925,Contained
+2023-06-15,India,Distributed Denial of Service,E-Commerce,6.7,1736,206,1866,Mitigated
+2023-06-15,India,Supply Chain Malware,Healthcare,6.2,4923,152,3112,Mitigated
+2023-06-15,United States,Ransomware,Financial Services,9.2,8207,47,3402,Mitigated
+2023-06-15,United States,Credential Phishing,Healthcare,7.6,3212,42,3268,Investigating
+2023-06-15,United States,Distributed Denial of Service,Government Defense,8.8,3262,195,2818,Mitigated
+2023-06-15,United States,Supply Chain Malware,Government Defense,4.5,2158,209,3740,Escalated
+2023-06-15,United Kingdom,Ransomware,E-Commerce,7.5,8400,46,4136,Mitigated
+2023-06-15,United Kingdom,Credential Phishing,Telecommunications,8.3,7231,226,4006,Investigating
+2023-06-15,United Kingdom,Distributed Denial of Service,E-Commerce,7.4,2243,38,3223,Contained
+2023-06-15,United Kingdom,Supply Chain Malware,Telecommunications,9.1,6999,167,2083,Contained
+2023-06-15,Germany,Ransomware,Government Defense,9.6,4959,127,1142,Investigating
+2023-06-15,Germany,Credential Phishing,Government Defense,7.6,8533,88,2621,Investigating
+2023-06-15,Germany,Distributed Denial of Service,Critical Infrastructure,5.4,4900,187,2878,Investigating
+2023-06-15,Germany,Supply Chain Malware,E-Commerce,7.8,3053,140,2690,Mitigated
+2023-06-15,Singapore,Ransomware,Healthcare,7.3,6979,184,2392,Escalated
+2023-06-15,Singapore,Credential Phishing,Financial Services,7.1,554,109,1240,Mitigated
+2023-06-15,Singapore,Distributed Denial of Service,E-Commerce,4.5,4514,204,1368,Contained
+2023-06-15,Singapore,Supply Chain Malware,E-Commerce,5.6,1156,188,2467,Investigating
+2023-06-15,Australia,Ransomware,Telecommunications,4.4,7555,38,1887,Escalated
+2023-06-15,Australia,Credential Phishing,Critical Infrastructure,7.1,4852,189,434,Escalated
+2023-06-15,Australia,Distributed Denial of Service,Government Defense,6.5,5262,153,490,Mitigated
+2023-06-15,Australia,Supply Chain Malware,E-Commerce,5.6,7399,224,1897,Contained
+2023-06-15,Japan,Ransomware,Telecommunications,7.3,3358,210,1635,Contained
+2023-06-15,Japan,Credential Phishing,Government Defense,5.2,1360,59,1473,Mitigated
+2023-06-15,Japan,Distributed Denial of Service,Government Defense,4.4,4712,154,2214,Investigating
+2023-06-15,Japan,Supply Chain Malware,Critical Infrastructure,7.5,4318,13,2757,Escalated
+2023-06-15,Brazil,Ransomware,E-Commerce,9.4,794,51,2692,Mitigated
+2023-06-15,Brazil,Credential Phishing,E-Commerce,7.6,5074,137,2983,Mitigated
+2023-06-15,Brazil,Distributed Denial of Service,E-Commerce,6.0,3743,59,608,Investigating
+2023-06-15,Brazil,Supply Chain Malware,Government Defense,7.2,6749,35,2912,Investigating
+2023-06-15,France,Ransomware,Critical Infrastructure,7.9,5564,104,2454,Investigating
+2023-06-15,France,Credential Phishing,Telecommunications,7.2,284,41,2884,Escalated
+2023-06-15,France,Distributed Denial of Service,Critical Infrastructure,9.3,4134,22,2679,Escalated
+2023-06-15,France,Supply Chain Malware,Financial Services,6.4,4773,18,3121,Escalated
+2023-06-15,Canada,Ransomware,Government Defense,4.4,3294,94,724,Mitigated
+2023-06-15,Canada,Credential Phishing,Critical Infrastructure,9.6,8876,13,586,Investigating
+2023-06-15,Canada,Distributed Denial of Service,E-Commerce,7.7,3632,233,3525,Mitigated
+2023-06-15,Canada,Supply Chain Malware,Critical Infrastructure,7.2,7270,177,640,Investigating
+2023-07-15,India,Ransomware,Financial Services,6.8,5574,21,766,Mitigated
+2023-07-15,India,Credential Phishing,Financial Services,5.2,4267,154,627,Investigating
+2023-07-15,India,Distributed Denial of Service,Healthcare,6.5,7531,173,3363,Escalated
+2023-07-15,India,Supply Chain Malware,Healthcare,4.3,2078,148,98,Mitigated
+2023-07-15,United States,Ransomware,E-Commerce,7.5,1329,103,4169,Mitigated
+2023-07-15,United States,Credential Phishing,Healthcare,8.6,5077,167,758,Contained
+2023-07-15,United States,Distributed Denial of Service,Government Defense,6.3,644,133,1330,Investigating
+2023-07-15,United States,Supply Chain Malware,Critical Infrastructure,8.4,4972,174,1230,Contained
+2023-07-15,United Kingdom,Ransomware,E-Commerce,9.2,6253,14,1208,Mitigated
+2023-07-15,United Kingdom,Credential Phishing,Financial Services,4.2,6596,149,747,Contained
+2023-07-15,United Kingdom,Distributed Denial of Service,Critical Infrastructure,8.4,5773,66,3430,Investigating
+2023-07-15,United Kingdom,Supply Chain Malware,Critical Infrastructure,5.2,4280,61,988,Investigating
+2023-07-15,Germany,Ransomware,E-Commerce,8.7,1031,229,3828,Mitigated
+2023-07-15,Germany,Credential Phishing,Healthcare,8.0,4247,37,1667,Escalated
+2023-07-15,Germany,Distributed Denial of Service,Healthcare,6.2,3982,37,2385,Mitigated
+2023-07-15,Germany,Supply Chain Malware,Critical Infrastructure,6.0,7523,96,2554,Investigating
+2023-07-15,Singapore,Ransomware,Telecommunications,7.4,5322,121,1431,Mitigated
+2023-07-15,Singapore,Credential Phishing,Healthcare,5.6,3769,194,3622,Contained
+2023-07-15,Singapore,Distributed Denial of Service,Healthcare,5.0,5572,236,3981,Escalated
+2023-07-15,Singapore,Supply Chain Malware,Government Defense,6.2,5144,136,941,Investigating
+2023-07-15,Australia,Ransomware,E-Commerce,7.6,4737,231,1196,Investigating
+2023-07-15,Australia,Credential Phishing,Healthcare,8.3,1392,198,667,Mitigated
+2023-07-15,Australia,Distributed Denial of Service,Telecommunications,7.7,6777,208,1792,Mitigated
+2023-07-15,Australia,Supply Chain Malware,Telecommunications,5.7,7874,179,1267,Contained
+2023-07-15,Japan,Ransomware,Government Defense,5.5,4907,46,3856,Mitigated
+2023-07-15,Japan,Credential Phishing,Government Defense,6.2,313,181,2006,Investigating
+2023-07-15,Japan,Distributed Denial of Service,Telecommunications,5.0,2748,57,1247,Escalated
+2023-07-15,Japan,Supply Chain Malware,Healthcare,4.4,8129,71,564,Contained
+2023-07-15,Brazil,Ransomware,Healthcare,5.5,3527,144,3009,Escalated
+2023-07-15,Brazil,Credential Phishing,Government Defense,9.3,900,22,2704,Mitigated
+2023-07-15,Brazil,Distributed Denial of Service,E-Commerce,9.6,4620,225,2207,Investigating
+2023-07-15,Brazil,Supply Chain Malware,Government Defense,7.9,6125,162,687,Contained
+2023-07-15,France,Ransomware,Government Defense,9.6,3791,144,3374,Contained
+2023-07-15,France,Credential Phishing,Healthcare,6.9,8038,239,104,Investigating
+2023-07-15,France,Distributed Denial of Service,Government Defense,5.1,1403,143,2350,Investigating
+2023-07-15,France,Supply Chain Malware,Critical Infrastructure,5.2,6074,166,1019,Investigating
+2023-07-15,Canada,Ransomware,Government Defense,8.7,1996,135,3972,Escalated
+2023-07-15,Canada,Credential Phishing,Critical Infrastructure,7.5,6872,17,2046,Mitigated
+2023-07-15,Canada,Distributed Denial of Service,Critical Infrastructure,7.4,2779,46,371,Investigating
+2023-07-15,Canada,Supply Chain Malware,Financial Services,5.1,3089,144,3371,Mitigated
+2023-08-15,India,Ransomware,E-Commerce,8.3,4784,33,1824,Escalated
+2023-08-15,India,Credential Phishing,Telecommunications,9.8,8031,55,1847,Escalated
+2023-08-15,India,Distributed Denial of Service,Telecommunications,5.0,3119,171,2216,Investigating
+2023-08-15,India,Supply Chain Malware,E-Commerce,8.0,7569,164,613,Investigating
+2023-08-15,United States,Ransomware,Government Defense,6.4,1918,16,1707,Escalated
+2023-08-15,United States,Credential Phishing,Critical Infrastructure,7.6,3046,133,369,Mitigated
+2023-08-15,United States,Distributed Denial of Service,Financial Services,6.9,2275,166,59,Escalated
+2023-08-15,United States,Supply Chain Malware,Telecommunications,6.6,851,190,3564,Investigating
+2023-08-15,United Kingdom,Ransomware,Government Defense,8.6,6386,101,850,Escalated
+2023-08-15,United Kingdom,Credential Phishing,Critical Infrastructure,5.6,3949,231,736,Contained
+2023-08-15,United Kingdom,Distributed Denial of Service,Telecommunications,9.1,6835,77,1598,Mitigated
+2023-08-15,United Kingdom,Supply Chain Malware,E-Commerce,8.4,256,159,1015,Mitigated
+2023-08-15,Germany,Ransomware,Government Defense,7.9,5315,116,3017,Mitigated
+2023-08-15,Germany,Credential Phishing,Critical Infrastructure,6.6,4295,78,3519,Contained
+2023-08-15,Germany,Distributed Denial of Service,Telecommunications,5.7,6651,205,1718,Escalated
+2023-08-15,Germany,Supply Chain Malware,Telecommunications,8.6,8044,57,3082,Escalated
+2023-08-15,Singapore,Ransomware,Healthcare,9.7,5781,210,3311,Investigating
+2023-08-15,Singapore,Credential Phishing,E-Commerce,4.9,3904,126,1375,Mitigated
+2023-08-15,Singapore,Distributed Denial of Service,Critical Infrastructure,7.0,5684,217,476,Investigating
+2023-08-15,Singapore,Supply Chain Malware,Government Defense,9.6,226,217,796,Investigating
+2023-08-15,Australia,Ransomware,Government Defense,9.4,7273,34,574,Contained
+2023-08-15,Australia,Credential Phishing,Critical Infrastructure,6.3,758,197,3198,Escalated
+2023-08-15,Australia,Distributed Denial of Service,Telecommunications,7.9,4833,194,520,Investigating
+2023-08-15,Australia,Supply Chain Malware,E-Commerce,7.0,315,63,2392,Investigating
+2023-08-15,Japan,Ransomware,Financial Services,8.6,8504,144,1947,Investigating
+2023-08-15,Japan,Credential Phishing,E-Commerce,4.4,4059,179,52,Investigating
+2023-08-15,Japan,Distributed Denial of Service,Financial Services,9.8,6684,102,3287,Escalated
+2023-08-15,Japan,Supply Chain Malware,Telecommunications,5.3,391,200,612,Mitigated
+2023-08-15,Brazil,Ransomware,Telecommunications,5.8,5843,100,2315,Investigating
+2023-08-15,Brazil,Credential Phishing,Telecommunications,9.6,7590,115,88,Contained
+2023-08-15,Brazil,Distributed Denial of Service,Critical Infrastructure,6.5,1884,155,642,Contained
+2023-08-15,Brazil,Supply Chain Malware,Healthcare,9.5,8549,77,2099,Escalated
+2023-08-15,France,Ransomware,Government Defense,7.4,4125,205,2832,Escalated
+2023-08-15,France,Credential Phishing,E-Commerce,6.8,588,135,1002,Contained
+2023-08-15,France,Distributed Denial of Service,Financial Services,6.3,3750,185,1933,Contained
+2023-08-15,France,Supply Chain Malware,Government Defense,9.6,8602,149,129,Contained
+2023-08-15,Canada,Ransomware,Critical Infrastructure,5.8,6676,184,2851,Mitigated
+2023-08-15,Canada,Credential Phishing,Telecommunications,9.4,7947,92,2946,Investigating
+2023-08-15,Canada,Distributed Denial of Service,Telecommunications,5.7,3255,139,1685,Investigating
+2023-08-15,Canada,Supply Chain Malware,E-Commerce,5.6,4488,64,1927,Investigating
+2023-09-15,India,Ransomware,Critical Infrastructure,8.9,5973,51,923,Mitigated
+2023-09-15,India,Credential Phishing,Financial Services,8.0,8211,169,104,Mitigated
+2023-09-15,India,Distributed Denial of Service,Government Defense,6.3,5307,138,2300,Escalated
+2023-09-15,India,Supply Chain Malware,Critical Infrastructure,9.7,8514,83,3309,Investigating
+2023-09-15,United States,Ransomware,Telecommunications,4.9,8753,216,3516,Escalated
+2023-09-15,United States,Credential Phishing,Telecommunications,4.4,5829,112,1481,Escalated
+2023-09-15,United States,Distributed Denial of Service,Financial Services,8.1,7677,92,118,Mitigated
+2023-09-15,United States,Supply Chain Malware,E-Commerce,5.4,1790,95,3012,Contained
+2023-09-15,United Kingdom,Ransomware,Critical Infrastructure,7.3,4025,80,3911,Contained
+2023-09-15,United Kingdom,Credential Phishing,Healthcare,5.2,7085,65,3483,Contained
+2023-09-15,United Kingdom,Distributed Denial of Service,Healthcare,9.0,4721,127,1523,Investigating
+2023-09-15,United Kingdom,Supply Chain Malware,Telecommunications,8.0,1776,196,2261,Investigating
+2023-09-15,Germany,Ransomware,Telecommunications,6.6,6380,62,1244,Investigating
+2023-09-15,Germany,Credential Phishing,Government Defense,8.7,3033,119,4142,Investigating
+2023-09-15,Germany,Distributed Denial of Service,E-Commerce,7.1,5312,213,4036,Contained
+2023-09-15,Germany,Supply Chain Malware,Healthcare,7.3,921,113,860,Investigating
+2023-09-15,Singapore,Ransomware,Financial Services,5.4,4306,133,838,Escalated
+2023-09-15,Singapore,Credential Phishing,E-Commerce,6.1,6054,104,2161,Contained
+2023-09-15,Singapore,Distributed Denial of Service,Financial Services,6.5,5892,234,1679,Investigating
+2023-09-15,Singapore,Supply Chain Malware,Healthcare,6.2,8503,136,3711,Mitigated
+2023-09-15,Australia,Ransomware,Government Defense,7.6,7738,173,1236,Investigating
+2023-09-15,Australia,Credential Phishing,E-Commerce,8.7,5667,119,3365,Mitigated
+2023-09-15,Australia,Distributed Denial of Service,Financial Services,5.1,3879,92,2645,Contained
+2023-09-15,Australia,Supply Chain Malware,E-Commerce,5.7,6619,81,3694,Contained
+2023-09-15,Japan,Ransomware,E-Commerce,7.5,7517,117,1420,Investigating
+2023-09-15,Japan,Credential Phishing,Financial Services,4.9,3984,181,2111,Mitigated
+2023-09-15,Japan,Distributed Denial of Service,Critical Infrastructure,5.1,1827,36,572,Escalated
+2023-09-15,Japan,Supply Chain Malware,Telecommunications,4.5,6644,146,731,Mitigated
+2023-09-15,Brazil,Ransomware,Healthcare,7.7,1521,179,3243,Contained
+2023-09-15,Brazil,Credential Phishing,Critical Infrastructure,5.6,4795,125,1085,Investigating
+2023-09-15,Brazil,Distributed Denial of Service,Telecommunications,8.9,608,20,2973,Contained
+2023-09-15,Brazil,Supply Chain Malware,Government Defense,6.8,4603,152,3694,Investigating
+2023-09-15,France,Ransomware,E-Commerce,7.2,7620,173,3613,Contained
+2023-09-15,France,Credential Phishing,Healthcare,6.9,3861,218,783,Escalated
+2023-09-15,France,Distributed Denial of Service,Healthcare,6.2,4396,51,2536,Mitigated
+2023-09-15,France,Supply Chain Malware,Financial Services,7.1,2373,100,2399,Escalated
+2023-09-15,Canada,Ransomware,Telecommunications,4.2,8199,205,3958,Contained
+2023-09-15,Canada,Credential Phishing,Financial Services,8.5,4939,164,1944,Mitigated
+2023-09-15,Canada,Distributed Denial of Service,Telecommunications,6.3,6885,237,3630,Escalated
+2023-09-15,Canada,Supply Chain Malware,Critical Infrastructure,5.1,6525,224,3149,Investigating
+2023-10-15,India,Ransomware,Healthcare,4.6,4064,144,2277,Contained
+2023-10-15,India,Credential Phishing,E-Commerce,8.4,4544,117,1590,Mitigated
+2023-10-15,India,Distributed Denial of Service,Critical Infrastructure,5.0,1948,175,3780,Escalated
+2023-10-15,India,Supply Chain Malware,Healthcare,8.1,8200,60,2676,Mitigated
+2023-10-15,United States,Ransomware,Critical Infrastructure,4.5,502,59,887,Contained
+2023-10-15,United States,Credential Phishing,Healthcare,4.9,7323,198,117,Investigating
+2023-10-15,United States,Distributed Denial of Service,Financial Services,5.0,8226,67,2850,Escalated
+2023-10-15,United States,Supply Chain Malware,Healthcare,8.6,8305,107,3848,Mitigated
+2023-10-15,United Kingdom,Ransomware,Healthcare,4.6,2533,26,2233,Escalated
+2023-10-15,United Kingdom,Credential Phishing,Financial Services,7.2,3115,61,2098,Escalated
+2023-10-15,United Kingdom,Distributed Denial of Service,Financial Services,4.9,4218,110,3678,Investigating
+2023-10-15,United Kingdom,Supply Chain Malware,E-Commerce,9.8,3403,129,819,Investigating
+2023-10-15,Germany,Ransomware,Government Defense,6.4,5253,94,1349,Mitigated
+2023-10-15,Germany,Credential Phishing,E-Commerce,9.4,8674,43,2125,Escalated
+2023-10-15,Germany,Distributed Denial of Service,E-Commerce,5.9,6045,239,476,Investigating
+2023-10-15,Germany,Supply Chain Malware,Financial Services,5.5,7253,95,173,Investigating
+2023-10-15,Singapore,Ransomware,Healthcare,7.5,6624,214,2041,Mitigated
+2023-10-15,Singapore,Credential Phishing,Financial Services,7.5,7926,188,1319,Contained
+2023-10-15,Singapore,Distributed Denial of Service,Financial Services,5.6,8330,35,2822,Mitigated
+2023-10-15,Singapore,Supply Chain Malware,Financial Services,6.2,2661,191,929,Investigating
+2023-10-15,Australia,Ransomware,Government Defense,5.5,5830,218,3643,Investigating
+2023-10-15,Australia,Credential Phishing,Financial Services,8.1,6008,197,1153,Contained
+2023-10-15,Australia,Distributed Denial of Service,Financial Services,6.9,7308,155,2464,Escalated
+2023-10-15,Australia,Supply Chain Malware,Critical Infrastructure,7.4,5836,94,3887,Contained
+2023-10-15,Japan,Ransomware,Telecommunications,9.3,2767,29,1319,Escalated
+2023-10-15,Japan,Credential Phishing,Healthcare,8.8,6154,128,55,Escalated
+2023-10-15,Japan,Distributed Denial of Service,E-Commerce,5.2,446,170,3032,Investigating
+2023-10-15,Japan,Supply Chain Malware,Healthcare,8.2,6488,60,4125,Investigating
+2023-10-15,Brazil,Ransomware,Telecommunications,5.8,6854,176,2688,Mitigated
+2023-10-15,Brazil,Credential Phishing,Financial Services,7.1,1232,23,1113,Investigating
+2023-10-15,Brazil,Distributed Denial of Service,Financial Services,5.3,8092,61,858,Mitigated
+2023-10-15,Brazil,Supply Chain Malware,Telecommunications,7.8,6506,180,4063,Contained
+2023-10-15,France,Ransomware,Financial Services,6.3,1301,15,1759,Escalated
+2023-10-15,France,Credential Phishing,Financial Services,6.8,1134,104,3457,Contained
+2023-10-15,France,Distributed Denial of Service,E-Commerce,4.5,4495,147,383,Mitigated
+2023-10-15,France,Supply Chain Malware,Healthcare,4.6,3677,144,845,Mitigated
+2023-10-15,Canada,Ransomware,E-Commerce,5.5,6453,60,1632,Investigating
+2023-10-15,Canada,Credential Phishing,Telecommunications,7.7,3071,154,3451,Mitigated
+2023-10-15,Canada,Distributed Denial of Service,E-Commerce,7.4,7655,191,3548,Mitigated
+2023-10-15,Canada,Supply Chain Malware,Critical Infrastructure,8.6,6719,141,2814,Investigating
+2023-11-15,India,Ransomware,Telecommunications,9.8,7398,102,2631,Contained
+2023-11-15,India,Credential Phishing,Healthcare,6.5,7194,223,2699,Investigating
+2023-11-15,India,Distributed Denial of Service,Telecommunications,7.3,6285,208,2131,Contained
+2023-11-15,India,Supply Chain Malware,Government Defense,6.7,6645,12,333,Contained
+2023-11-15,United States,Ransomware,Telecommunications,4.3,2353,239,2522,Mitigated
+2023-11-15,United States,Credential Phishing,Healthcare,9.7,3659,231,2629,Mitigated
+2023-11-15,United States,Distributed Denial of Service,E-Commerce,8.8,8516,154,1317,Mitigated
+2023-11-15,United States,Supply Chain Malware,Financial Services,6.8,2697,47,2220,Contained
+2023-11-15,United Kingdom,Ransomware,Telecommunications,5.6,4338,219,2510,Mitigated
+2023-11-15,United Kingdom,Credential Phishing,Telecommunications,6.4,3702,199,682,Contained
+2023-11-15,United Kingdom,Distributed Denial of Service,Government Defense,5.2,1702,164,2510,Mitigated
+2023-11-15,United Kingdom,Supply Chain Malware,E-Commerce,8.7,6391,32,508,Contained
+2023-11-15,Germany,Ransomware,Healthcare,9.1,7255,118,1037,Investigating
+2023-11-15,Germany,Credential Phishing,E-Commerce,7.9,327,174,3183,Mitigated
+2023-11-15,Germany,Distributed Denial of Service,Healthcare,7.1,5371,150,1275,Contained
+2023-11-15,Germany,Supply Chain Malware,Telecommunications,8.1,2649,24,3268,Escalated
+2023-11-15,Singapore,Ransomware,Telecommunications,7.4,1615,68,3588,Contained
+2023-11-15,Singapore,Credential Phishing,Government Defense,5.0,5647,33,3948,Mitigated
+2023-11-15,Singapore,Distributed Denial of Service,Telecommunications,6.4,1533,114,4160,Escalated
+2023-11-15,Singapore,Supply Chain Malware,E-Commerce,4.9,2349,135,1672,Escalated
+2023-11-15,Australia,Ransomware,Government Defense,7.9,3352,155,2067,Investigating
+2023-11-15,Australia,Credential Phishing,Financial Services,5.7,7186,94,783,Mitigated
+2023-11-15,Australia,Distributed Denial of Service,E-Commerce,6.5,6124,101,1610,Contained
+2023-11-15,Australia,Supply Chain Malware,Healthcare,7.5,536,209,2547,Investigating
+2023-11-15,Japan,Ransomware,Healthcare,7.7,7385,171,1244,Escalated
+2023-11-15,Japan,Credential Phishing,Financial Services,9.4,3965,63,3112,Investigating
+2023-11-15,Japan,Distributed Denial of Service,E-Commerce,9.0,1981,201,496,Investigating
+2023-11-15,Japan,Supply Chain Malware,Telecommunications,9.4,4853,15,2862,Mitigated
+2023-11-15,Brazil,Ransomware,Healthcare,6.7,512,96,1762,Investigating
+2023-11-15,Brazil,Credential Phishing,Critical Infrastructure,7.3,4377,152,4006,Investigating
+2023-11-15,Brazil,Distributed Denial of Service,E-Commerce,8.1,441,108,406,Contained
+2023-11-15,Brazil,Supply Chain Malware,Critical Infrastructure,4.5,3428,214,2272,Mitigated
+2023-11-15,France,Ransomware,Government Defense,7.9,276,29,3233,Contained
+2023-11-15,France,Credential Phishing,E-Commerce,9.0,6041,233,933,Mitigated
+2023-11-15,France,Distributed Denial of Service,Healthcare,9.1,6472,71,3168,Mitigated
+2023-11-15,France,Supply Chain Malware,Healthcare,6.9,8849,34,1577,Investigating
+2023-11-15,Canada,Ransomware,Telecommunications,9.6,492,22,2076,Contained
+2023-11-15,Canada,Credential Phishing,Healthcare,6.9,2712,16,2890,Contained
+2023-11-15,Canada,Distributed Denial of Service,Healthcare,7.7,4009,140,2309,Mitigated
+2023-11-15,Canada,Supply Chain Malware,E-Commerce,5.6,6483,239,291,Contained
+2023-12-15,India,Ransomware,Critical Infrastructure,5.0,6576,180,1174,Mitigated
+2023-12-15,India,Credential Phishing,E-Commerce,6.3,3866,118,2019,Investigating
+2023-12-15,India,Distributed Denial of Service,Government Defense,9.6,5535,126,1129,Investigating
+2023-12-15,India,Supply Chain Malware,E-Commerce,5.0,3454,232,1181,Contained
+2023-12-15,United States,Ransomware,E-Commerce,8.1,8722,46,3573,Investigating
+2023-12-15,United States,Credential Phishing,E-Commerce,9.4,2729,93,605,Mitigated
+2023-12-15,United States,Distributed Denial of Service,Critical Infrastructure,6.0,2524,198,291,Contained
+2023-12-15,United States,Supply Chain Malware,Government Defense,9.6,5110,125,2292,Investigating
+2023-12-15,United Kingdom,Ransomware,Critical Infrastructure,4.8,3166,18,2236,Investigating
+2023-12-15,United Kingdom,Credential Phishing,Telecommunications,5.5,567,103,701,Escalated
+2023-12-15,United Kingdom,Distributed Denial of Service,Critical Infrastructure,7.0,7820,194,3113,Investigating
+2023-12-15,United Kingdom,Supply Chain Malware,Government Defense,7.0,2393,53,1633,Investigating
+2023-12-15,Germany,Ransomware,Financial Services,6.5,385,81,3433,Investigating
+2023-12-15,Germany,Credential Phishing,E-Commerce,8.0,3463,205,1725,Mitigated
+2023-12-15,Germany,Distributed Denial of Service,Critical Infrastructure,9.4,7337,233,4063,Contained
+2023-12-15,Germany,Supply Chain Malware,Government Defense,9.2,7145,115,392,Escalated
+2023-12-15,Singapore,Ransomware,E-Commerce,6.0,8745,176,365,Mitigated
+2023-12-15,Singapore,Credential Phishing,Government Defense,6.8,834,236,2062,Escalated
+2023-12-15,Singapore,Distributed Denial of Service,E-Commerce,4.4,6487,144,453,Investigating
+2023-12-15,Singapore,Supply Chain Malware,Healthcare,6.7,5129,210,2392,Escalated
+2023-12-15,Australia,Ransomware,Critical Infrastructure,6.6,1033,188,1215,Escalated
+2023-12-15,Australia,Credential Phishing,E-Commerce,6.7,8342,40,1522,Investigating
+2023-12-15,Australia,Distributed Denial of Service,Government Defense,6.5,7527,18,1515,Escalated
+2023-12-15,Australia,Supply Chain Malware,Telecommunications,9.2,3448,237,3774,Mitigated
+2023-12-15,Japan,Ransomware,Healthcare,6.0,2826,195,1062,Mitigated
+2023-12-15,Japan,Credential Phishing,Financial Services,8.2,6086,33,3196,Investigating
+2023-12-15,Japan,Distributed Denial of Service,Government Defense,7.3,859,208,1449,Contained
+2023-12-15,Japan,Supply Chain Malware,Telecommunications,9.1,2599,53,1234,Investigating
+2023-12-15,Brazil,Ransomware,E-Commerce,4.5,5187,91,3705,Contained
+2023-12-15,Brazil,Credential Phishing,E-Commerce,5.2,2295,63,78,Contained
+2023-12-15,Brazil,Distributed Denial of Service,Financial Services,6.8,8309,151,97,Escalated
+2023-12-15,Brazil,Supply Chain Malware,Critical Infrastructure,5.4,7934,128,3409,Escalated
+2023-12-15,France,Ransomware,Financial Services,7.6,247,74,2328,Investigating
+2023-12-15,France,Credential Phishing,Financial Services,5.2,1042,179,2909,Mitigated
+2023-12-15,France,Distributed Denial of Service,Critical Infrastructure,9.0,5029,96,768,Mitigated
+2023-12-15,France,Supply Chain Malware,Financial Services,6.5,3060,53,2379,Investigating
+2023-12-15,Canada,Ransomware,Government Defense,8.4,6041,21,812,Contained
+2023-12-15,Canada,Credential Phishing,Healthcare,6.3,6348,221,604,Escalated
+2023-12-15,Canada,Distributed Denial of Service,Telecommunications,4.6,7853,46,1049,Contained
+2023-12-15,Canada,Supply Chain Malware,Healthcare,7.2,8735,65,1762,Mitigated
+2024-01-15,India,Ransomware,Financial Services,7.4,8806,34,4012,Contained
+2024-01-15,India,Credential Phishing,Government Defense,7.6,5325,78,2948,Investigating
+2024-01-15,India,Distributed Denial of Service,Telecommunications,7.4,8654,198,4127,Escalated
+2024-01-15,India,Supply Chain Malware,Critical Infrastructure,9.1,3952,193,2429,Investigating
+2024-01-15,United States,Ransomware,Financial Services,4.9,7756,172,1016,Investigating
+2024-01-15,United States,Credential Phishing,Telecommunications,9.8,6923,23,2784,Contained
+2024-01-15,United States,Distributed Denial of Service,Telecommunications,8.7,3618,14,1698,Contained
+2024-01-15,United States,Supply Chain Malware,Healthcare,8.6,5182,88,4200,Contained
+2024-01-15,United Kingdom,Ransomware,Financial Services,4.8,5600,99,3294,Mitigated
+2024-01-15,United Kingdom,Credential Phishing,Critical Infrastructure,5.3,5676,184,3974,Escalated
+2024-01-15,United Kingdom,Distributed Denial of Service,Financial Services,7.8,8028,51,3823,Contained
+2024-01-15,United Kingdom,Supply Chain Malware,Government Defense,8.6,6922,202,508,Contained
+2024-01-15,Germany,Ransomware,Telecommunications,8.3,5309,154,203,Investigating
+2024-01-15,Germany,Credential Phishing,Telecommunications,8.0,5933,28,1273,Contained
+2024-01-15,Germany,Distributed Denial of Service,Financial Services,6.1,6287,172,1409,Escalated
+2024-01-15,Germany,Supply Chain Malware,Critical Infrastructure,7.5,5190,192,2626,Mitigated
+2024-01-15,Singapore,Ransomware,Healthcare,6.5,8283,236,1996,Contained
+2024-01-15,Singapore,Credential Phishing,Government Defense,8.8,5098,67,2526,Investigating
+2024-01-15,Singapore,Distributed Denial of Service,Financial Services,6.3,752,211,1705,Mitigated
+2024-01-15,Singapore,Supply Chain Malware,Government Defense,7.0,8047,140,1312,Investigating
+2024-01-15,Australia,Ransomware,Healthcare,9.4,8719,91,2731,Investigating
+2024-01-15,Australia,Credential Phishing,Financial Services,8.8,8596,185,1137,Investigating
+2024-01-15,Australia,Distributed Denial of Service,E-Commerce,4.4,6490,194,998,Mitigated
+2024-01-15,Australia,Supply Chain Malware,Healthcare,9.4,1566,97,3874,Mitigated
+2024-01-15,Japan,Ransomware,Financial Services,7.1,5259,17,2607,Investigating
+2024-01-15,Japan,Credential Phishing,Healthcare,5.3,4835,82,2664,Escalated
+2024-01-15,Japan,Distributed Denial of Service,E-Commerce,4.9,2586,52,2291,Mitigated
+2024-01-15,Japan,Supply Chain Malware,Financial Services,9.6,8562,38,1742,Contained
+2024-01-15,Brazil,Ransomware,Telecommunications,6.0,2459,192,2370,Investigating
+2024-01-15,Brazil,Credential Phishing,Critical Infrastructure,4.6,5689,150,3684,Mitigated
+2024-01-15,Brazil,Distributed Denial of Service,Critical Infrastructure,4.4,966,39,3192,Mitigated
+2024-01-15,Brazil,Supply Chain Malware,Financial Services,6.6,3072,192,3702,Contained
+2024-01-15,France,Ransomware,Healthcare,6.1,3386,194,693,Escalated
+2024-01-15,France,Credential Phishing,Telecommunications,4.9,7812,36,3782,Contained
+2024-01-15,France,Distributed Denial of Service,E-Commerce,7.8,7765,132,1948,Investigating
+2024-01-15,France,Supply Chain Malware,Critical Infrastructure,9.0,4367,105,3261,Investigating
+2024-01-15,Canada,Ransomware,E-Commerce,9.3,5552,213,2710,Escalated
+2024-01-15,Canada,Credential Phishing,Government Defense,4.4,7927,40,2929,Escalated
+2024-01-15,Canada,Distributed Denial of Service,Government Defense,8.9,4764,208,2905,Investigating
+2024-01-15,Canada,Supply Chain Malware,Telecommunications,4.8,1892,95,631,Contained
+2024-02-15,India,Ransomware,Telecommunications,6.8,6913,73,2046,Investigating
+2024-02-15,India,Credential Phishing,Government Defense,6.3,5722,65,3581,Escalated
+2024-02-15,India,Distributed Denial of Service,Telecommunications,8.6,4009,56,688,Escalated
+2024-02-15,India,Supply Chain Malware,Financial Services,7.5,7724,95,849,Escalated
+2024-02-15,United States,Ransomware,Critical Infrastructure,5.9,6788,29,940,Escalated
+2024-02-15,United States,Credential Phishing,Healthcare,7.0,1147,35,1832,Investigating
+2024-02-15,United States,Distributed Denial of Service,Telecommunications,9.3,143,205,1251,Investigating
+2024-02-15,United States,Supply Chain Malware,Government Defense,7.2,6529,169,3713,Investigating
+2024-02-15,United Kingdom,Ransomware,Critical Infrastructure,8.0,5327,88,2544,Escalated
+2024-02-15,United Kingdom,Credential Phishing,E-Commerce,9.7,5780,34,116,Escalated
+2024-02-15,United Kingdom,Distributed Denial of Service,Critical Infrastructure,9.0,1162,106,485,Mitigated
+2024-02-15,United Kingdom,Supply Chain Malware,E-Commerce,7.3,6025,40,2361,Mitigated
+2024-02-15,Germany,Ransomware,Critical Infrastructure,6.6,6599,172,2656,Escalated
+2024-02-15,Germany,Credential Phishing,Government Defense,6.3,3600,181,1470,Escalated
+2024-02-15,Germany,Distributed Denial of Service,Critical Infrastructure,5.3,6441,227,3001,Escalated
+2024-02-15,Germany,Supply Chain Malware,Critical Infrastructure,5.8,2196,46,145,Mitigated
+2024-02-15,Singapore,Ransomware,E-Commerce,4.3,8114,180,3627,Investigating
+2024-02-15,Singapore,Credential Phishing,Financial Services,5.0,6953,232,3785,Escalated
+2024-02-15,Singapore,Distributed Denial of Service,Telecommunications,5.2,8486,120,3736,Escalated
+2024-02-15,Singapore,Supply Chain Malware,Healthcare,5.5,7099,166,110,Escalated
+2024-02-15,Australia,Ransomware,E-Commerce,5.5,8360,80,3415,Contained
+2024-02-15,Australia,Credential Phishing,Financial Services,9.7,8057,192,3069,Mitigated
+2024-02-15,Australia,Distributed Denial of Service,Telecommunications,6.9,1451,48,2339,Escalated
+2024-02-15,Australia,Supply Chain Malware,Telecommunications,4.6,1589,74,3920,Mitigated
+2024-02-15,Japan,Ransomware,E-Commerce,7.7,5259,168,482,Contained
+2024-02-15,Japan,Credential Phishing,Telecommunications,8.6,7821,128,3893,Contained
+2024-02-15,Japan,Distributed Denial of Service,Government Defense,6.2,4967,86,1422,Mitigated
+2024-02-15,Japan,Supply Chain Malware,E-Commerce,9.4,5121,198,2183,Mitigated
+2024-02-15,Brazil,Ransomware,E-Commerce,6.8,2910,158,472,Contained
+2024-02-15,Brazil,Credential Phishing,E-Commerce,7.7,4839,136,725,Investigating
+2024-02-15,Brazil,Distributed Denial of Service,Telecommunications,4.6,4692,76,1135,Contained
+2024-02-15,Brazil,Supply Chain Malware,Healthcare,9.0,372,201,963,Investigating
+2024-02-15,France,Ransomware,Telecommunications,8.3,7457,106,1486,Contained
+2024-02-15,France,Credential Phishing,E-Commerce,5.5,3102,216,321,Contained
+2024-02-15,France,Distributed Denial of Service,Financial Services,9.6,2665,226,4112,Escalated
+2024-02-15,France,Supply Chain Malware,Government Defense,5.5,7351,197,1420,Investigating
+2024-02-15,Canada,Ransomware,Telecommunications,8.3,5793,25,2215,Mitigated
+2024-02-15,Canada,Credential Phishing,Financial Services,5.1,6673,133,2518,Escalated
+2024-02-15,Canada,Distributed Denial of Service,E-Commerce,9.5,8864,71,3161,Escalated
+2024-02-15,Canada,Supply Chain Malware,Government Defense,5.7,8830,234,3611,Mitigated
+2024-03-15,India,Ransomware,Healthcare,9.4,7493,109,2636,Mitigated
+2024-03-15,India,Credential Phishing,Financial Services,9.3,5937,228,3587,Contained
+2024-03-15,India,Distributed Denial of Service,Healthcare,5.7,1750,77,3254,Escalated
+2024-03-15,India,Supply Chain Malware,E-Commerce,8.4,3333,145,2814,Investigating
+2024-03-15,United States,Ransomware,Healthcare,7.3,278,224,606,Mitigated
+2024-03-15,United States,Credential Phishing,Government Defense,4.7,1842,187,3703,Contained
+2024-03-15,United States,Distributed Denial of Service,Critical Infrastructure,8.3,4267,61,328,Mitigated
+2024-03-15,United States,Supply Chain Malware,Telecommunications,4.7,3692,165,1047,Mitigated
+2024-03-15,United Kingdom,Ransomware,Financial Services,9.0,2268,108,1563,Mitigated
+2024-03-15,United Kingdom,Credential Phishing,E-Commerce,5.2,4966,131,670,Escalated
+2024-03-15,United Kingdom,Distributed Denial of Service,Healthcare,8.5,5438,77,1376,Mitigated
+2024-03-15,United Kingdom,Supply Chain Malware,Healthcare,8.6,6411,111,2775,Mitigated
+2024-03-15,Germany,Ransomware,Healthcare,9.6,4476,57,3659,Mitigated
+2024-03-15,Germany,Credential Phishing,Government Defense,9.7,3427,168,3266,Investigating
+2024-03-15,Germany,Distributed Denial of Service,E-Commerce,7.0,2497,150,3582,Investigating
+2024-03-15,Germany,Supply Chain Malware,Telecommunications,7.8,7374,195,2171,Mitigated
+2024-03-15,Singapore,Ransomware,Financial Services,4.6,4245,210,3702,Mitigated
+2024-03-15,Singapore,Credential Phishing,Government Defense,5.0,154,21,3248,Contained
+2024-03-15,Singapore,Distributed Denial of Service,Critical Infrastructure,8.1,6551,159,80,Escalated
+2024-03-15,Singapore,Supply Chain Malware,Government Defense,6.6,1288,150,1900,Mitigated
+2024-03-15,Australia,Ransomware,Government Defense,9.5,8038,43,2990,Contained
+2024-03-15,Australia,Credential Phishing,E-Commerce,5.9,1044,173,792,Contained
+2024-03-15,Australia,Distributed Denial of Service,Telecommunications,9.0,5711,32,3815,Contained
+2024-03-15,Australia,Supply Chain Malware,E-Commerce,5.3,784,110,1614,Contained
+2024-03-15,Japan,Ransomware,E-Commerce,6.4,1889,173,2993,Escalated
+2024-03-15,Japan,Credential Phishing,Financial Services,9.2,7315,200,1602,Investigating
+2024-03-15,Japan,Distributed Denial of Service,Financial Services,5.3,4047,137,3234,Mitigated
+2024-03-15,Japan,Supply Chain Malware,Telecommunications,7.8,8326,148,3730,Mitigated
+2024-03-15,Brazil,Ransomware,Financial Services,6.1,5673,213,400,Escalated
+2024-03-15,Brazil,Credential Phishing,Financial Services,5.4,8710,129,1270,Investigating
+2024-03-15,Brazil,Distributed Denial of Service,Financial Services,4.4,2459,137,206,Escalated
+2024-03-15,Brazil,Supply Chain Malware,Telecommunications,4.5,2278,15,1461,Mitigated
+2024-03-15,France,Ransomware,Healthcare,8.8,1734,128,1448,Mitigated
+2024-03-15,France,Credential Phishing,Financial Services,4.8,3753,28,1710,Escalated
+2024-03-15,France,Distributed Denial of Service,Healthcare,8.7,6726,95,1039,Investigating
+2024-03-15,France,Supply Chain Malware,Healthcare,8.9,3633,207,423,Investigating
+2024-03-15,Canada,Ransomware,Healthcare,4.6,4627,48,3450,Investigating
+2024-03-15,Canada,Credential Phishing,E-Commerce,6.3,2843,124,2045,Mitigated
+2024-03-15,Canada,Distributed Denial of Service,Critical Infrastructure,4.8,6302,211,1342,Mitigated
+2024-03-15,Canada,Supply Chain Malware,Government Defense,4.7,258,57,780,Contained
+2024-04-15,India,Ransomware,Government Defense,8.1,7938,189,1089,Investigating
+2024-04-15,India,Credential Phishing,Critical Infrastructure,7.8,8710,127,3425,Investigating
+2024-04-15,India,Distributed Denial of Service,Critical Infrastructure,7.6,756,164,1524,Escalated
+2024-04-15,India,Supply Chain Malware,Telecommunications,9.5,5074,101,3480,Mitigated
+2024-04-15,United States,Ransomware,Telecommunications,5.5,2065,147,833,Contained
+2024-04-15,United States,Credential Phishing,Telecommunications,7.0,7745,209,1754,Contained
+2024-04-15,United States,Distributed Denial of Service,Financial Services,5.3,2584,187,3936,Escalated
+2024-04-15,United States,Supply Chain Malware,Critical Infrastructure,5.1,846,25,3033,Contained
+2024-04-15,United Kingdom,Ransomware,Critical Infrastructure,6.6,5617,169,3762,Mitigated
+2024-04-15,United Kingdom,Credential Phishing,Financial Services,8.3,3021,52,288,Escalated
+2024-04-15,United Kingdom,Distributed Denial of Service,Telecommunications,4.8,3995,196,3693,Contained
+2024-04-15,United Kingdom,Supply Chain Malware,Government Defense,5.3,5476,70,952,Contained
+2024-04-15,Germany,Ransomware,Critical Infrastructure,4.7,6899,234,1688,Escalated
+2024-04-15,Germany,Credential Phishing,Critical Infrastructure,4.6,8076,25,3620,Investigating
+2024-04-15,Germany,Distributed Denial of Service,Critical Infrastructure,9.4,7594,57,3223,Contained
+2024-04-15,Germany,Supply Chain Malware,Critical Infrastructure,6.8,3321,173,2987,Contained
+2024-04-15,Singapore,Ransomware,Critical Infrastructure,6.1,665,189,538,Contained
+2024-04-15,Singapore,Credential Phishing,Critical Infrastructure,4.8,7767,129,3476,Investigating
+2024-04-15,Singapore,Distributed Denial of Service,Healthcare,5.4,4975,166,1334,Investigating
+2024-04-15,Singapore,Supply Chain Malware,Telecommunications,9.6,3903,34,3422,Escalated
+2024-04-15,Australia,Ransomware,Critical Infrastructure,7.5,7721,83,168,Escalated
+2024-04-15,Australia,Credential Phishing,E-Commerce,9.1,4200,95,3607,Investigating
+2024-04-15,Australia,Distributed Denial of Service,Telecommunications,9.5,223,118,412,Mitigated
+2024-04-15,Australia,Supply Chain Malware,Government Defense,8.3,8401,20,3537,Escalated
+2024-04-15,Japan,Ransomware,Government Defense,8.7,1745,127,4107,Investigating
+2024-04-15,Japan,Credential Phishing,Financial Services,7.3,343,189,3381,Investigating
+2024-04-15,Japan,Distributed Denial of Service,Critical Infrastructure,6.2,4056,177,793,Mitigated
+2024-04-15,Japan,Supply Chain Malware,Government Defense,7.9,2790,192,3812,Mitigated
+2024-04-15,Brazil,Ransomware,Government Defense,6.8,2411,235,3370,Investigating
+2024-04-15,Brazil,Credential Phishing,Healthcare,7.7,162,232,629,Escalated
+2024-04-15,Brazil,Distributed Denial of Service,E-Commerce,6.1,675,87,3538,Contained
+2024-04-15,Brazil,Supply Chain Malware,E-Commerce,9.5,3533,213,713,Contained
+2024-04-15,France,Ransomware,E-Commerce,9.4,8573,184,3031,Mitigated
+2024-04-15,France,Credential Phishing,Financial Services,6.3,7764,170,384,Contained
+2024-04-15,France,Distributed Denial of Service,Healthcare,5.2,1237,155,1727,Investigating
+2024-04-15,France,Supply Chain Malware,Healthcare,5.5,2000,178,3969,Investigating
+2024-04-15,Canada,Ransomware,E-Commerce,8.5,5390,102,2240,Escalated
+2024-04-15,Canada,Credential Phishing,Healthcare,4.5,6248,100,3756,Escalated
+2024-04-15,Canada,Distributed Denial of Service,Telecommunications,7.1,2150,132,2444,Escalated
+2024-04-15,Canada,Supply Chain Malware,Telecommunications,6.3,1215,60,3800,Mitigated
+2024-05-15,India,Ransomware,Financial Services,6.4,3069,85,680,Mitigated
+2024-05-15,India,Credential Phishing,Critical Infrastructure,5.7,2564,139,1282,Investigating
+2024-05-15,India,Distributed Denial of Service,Telecommunications,9.5,511,87,3462,Investigating
+2024-05-15,India,Supply Chain Malware,Government Defense,6.1,7412,200,225,Contained
+2024-05-15,United States,Ransomware,Critical Infrastructure,4.6,3946,225,2801,Escalated
+2024-05-15,United States,Credential Phishing,Telecommunications,6.1,5486,136,3697,Escalated
+2024-05-15,United States,Distributed Denial of Service,Healthcare,7.4,5161,55,2179,Investigating
+2024-05-15,United States,Supply Chain Malware,Government Defense,6.3,4860,209,437,Investigating
+2024-05-15,United Kingdom,Ransomware,Healthcare,5.8,2865,170,1367,Contained
+2024-05-15,United Kingdom,Credential Phishing,Critical Infrastructure,9.6,2654,53,1998,Mitigated
+2024-05-15,United Kingdom,Distributed Denial of Service,Financial Services,9.8,2212,124,2183,Contained
+2024-05-15,United Kingdom,Supply Chain Malware,Critical Infrastructure,5.3,708,182,2646,Contained
+2024-05-15,Germany,Ransomware,Critical Infrastructure,6.3,2803,148,2520,Mitigated
+2024-05-15,Germany,Credential Phishing,Financial Services,6.5,8322,208,1240,Escalated
+2024-05-15,Germany,Distributed Denial of Service,Healthcare,5.1,8453,96,2471,Escalated
+2024-05-15,Germany,Supply Chain Malware,Healthcare,9.6,2549,216,3671,Contained
+2024-05-15,Singapore,Ransomware,E-Commerce,4.8,7987,22,1192,Mitigated
+2024-05-15,Singapore,Credential Phishing,Healthcare,4.3,3750,126,2977,Mitigated
+2024-05-15,Singapore,Distributed Denial of Service,Healthcare,4.5,3337,161,1869,Contained
+2024-05-15,Singapore,Supply Chain Malware,Critical Infrastructure,4.3,7438,185,765,Escalated
+2024-05-15,Australia,Ransomware,Critical Infrastructure,6.9,8521,26,3007,Escalated
+2024-05-15,Australia,Credential Phishing,Critical Infrastructure,8.2,7146,106,3213,Contained
+2024-05-15,Australia,Distributed Denial of Service,Financial Services,5.8,5896,90,3700,Mitigated
+2024-05-15,Australia,Supply Chain Malware,Critical Infrastructure,8.3,7418,201,3454,Escalated
+2024-05-15,Japan,Ransomware,Healthcare,5.1,7084,198,3443,Investigating
+2024-05-15,Japan,Credential Phishing,Telecommunications,7.5,2493,65,2534,Escalated
+2024-05-15,Japan,Distributed Denial of Service,Telecommunications,9.7,1223,163,3128,Mitigated
+2024-05-15,Japan,Supply Chain Malware,Financial Services,6.5,4618,118,1482,Escalated
+2024-05-15,Brazil,Ransomware,E-Commerce,7.4,2383,63,1573,Escalated
+2024-05-15,Brazil,Credential Phishing,Healthcare,7.3,831,222,2523,Contained
+2024-05-15,Brazil,Distributed Denial of Service,Government Defense,7.3,7733,69,269,Mitigated
+2024-05-15,Brazil,Supply Chain Malware,Critical Infrastructure,5.7,7882,43,2406,Escalated
+2024-05-15,France,Ransomware,Critical Infrastructure,7.0,4149,19,1027,Contained
+2024-05-15,France,Credential Phishing,Government Defense,9.8,1233,165,3013,Escalated
+2024-05-15,France,Distributed Denial of Service,Telecommunications,6.6,4365,172,3949,Mitigated
+2024-05-15,France,Supply Chain Malware,Healthcare,7.1,427,228,2176,Investigating
+2024-05-15,Canada,Ransomware,Telecommunications,4.5,5377,130,1159,Contained
+2024-05-15,Canada,Credential Phishing,Critical Infrastructure,4.5,6057,119,2966,Mitigated
+2024-05-15,Canada,Distributed Denial of Service,Healthcare,5.8,1398,143,1637,Investigating
+2024-05-15,Canada,Supply Chain Malware,Financial Services,7.6,2878,151,2692,Contained
+2024-06-15,India,Ransomware,E-Commerce,8.7,4587,187,3019,Mitigated
+2024-06-15,India,Credential Phishing,Telecommunications,7.4,2494,15,1171,Contained
+2024-06-15,India,Distributed Denial of Service,Healthcare,8.6,6890,99,1385,Mitigated
+2024-06-15,India,Supply Chain Malware,Critical Infrastructure,5.1,3762,224,1593,Mitigated
+2024-06-15,United States,Ransomware,Government Defense,6.8,1391,41,1125,Mitigated
+2024-06-15,United States,Credential Phishing,Government Defense,6.1,6080,47,3670,Contained
+2024-06-15,United States,Distributed Denial of Service,Critical Infrastructure,8.2,611,202,1021,Investigating
+2024-06-15,United States,Supply Chain Malware,Critical Infrastructure,9.0,2472,188,1906,Contained
+2024-06-15,United Kingdom,Ransomware,Critical Infrastructure,5.4,1427,120,965,Mitigated
+2024-06-15,United Kingdom,Credential Phishing,Financial Services,8.5,7205,22,1658,Mitigated
+2024-06-15,United Kingdom,Distributed Denial of Service,Financial Services,8.6,8552,163,535,Escalated
+2024-06-15,United Kingdom,Supply Chain Malware,Financial Services,9.3,849,28,2521,Mitigated
+2024-06-15,Germany,Ransomware,Financial Services,8.6,3505,162,1688,Investigating
+2024-06-15,Germany,Credential Phishing,E-Commerce,6.2,1627,49,2322,Contained
+2024-06-15,Germany,Distributed Denial of Service,Healthcare,5.1,8342,211,2031,Mitigated
+2024-06-15,Germany,Supply Chain Malware,Financial Services,8.8,369,147,1827,Investigating
+2024-06-15,Singapore,Ransomware,Healthcare,5.2,210,197,858,Investigating
+2024-06-15,Singapore,Credential Phishing,Telecommunications,9.0,7917,105,1566,Escalated
+2024-06-15,Singapore,Distributed Denial of Service,E-Commerce,9.6,3103,225,2956,Escalated
+2024-06-15,Singapore,Supply Chain Malware,Government Defense,5.4,3868,116,974,Contained
+2024-06-15,Australia,Ransomware,Financial Services,6.8,8655,46,4111,Contained
+2024-06-15,Australia,Credential Phishing,E-Commerce,5.8,805,33,2737,Escalated
+2024-06-15,Australia,Distributed Denial of Service,Financial Services,6.4,7626,165,2605,Escalated
+2024-06-15,Australia,Supply Chain Malware,Critical Infrastructure,7.3,4901,230,3555,Investigating
+2024-06-15,Japan,Ransomware,Financial Services,9.2,7933,185,3060,Investigating
+2024-06-15,Japan,Credential Phishing,Financial Services,9.8,8195,184,911,Escalated
+2024-06-15,Japan,Distributed Denial of Service,Government Defense,7.1,1532,42,1224,Escalated
+2024-06-15,Japan,Supply Chain Malware,Government Defense,8.1,1806,201,1432,Mitigated
+2024-06-15,Brazil,Ransomware,Healthcare,9.7,5688,63,3361,Mitigated
+2024-06-15,Brazil,Credential Phishing,Critical Infrastructure,8.9,8317,83,2286,Escalated
+2024-06-15,Brazil,Distributed Denial of Service,Healthcare,6.9,6766,136,2334,Investigating
+2024-06-15,Brazil,Supply Chain Malware,Government Defense,4.8,4247,137,4123,Investigating
+2024-06-15,France,Ransomware,E-Commerce,9.5,626,37,482,Mitigated
+2024-06-15,France,Credential Phishing,Government Defense,8.0,3074,109,2728,Investigating
+2024-06-15,France,Distributed Denial of Service,Healthcare,7.7,1718,206,676,Escalated
+2024-06-15,France,Supply Chain Malware,Government Defense,5.3,8297,137,4185,Contained
+2024-06-15,Canada,Ransomware,Telecommunications,6.1,429,207,308,Escalated
+2024-06-15,Canada,Credential Phishing,Financial Services,6.3,5293,230,3132,Escalated
+2024-06-15,Canada,Distributed Denial of Service,Government Defense,4.4,3037,154,2532,Investigating
+2024-06-15,Canada,Supply Chain Malware,Government Defense,6.6,5259,195,3237,Escalated
+2024-07-15,India,Ransomware,Financial Services,7.4,8177,180,3898,Escalated
+2024-07-15,India,Credential Phishing,Telecommunications,9.0,8441,26,3256,Contained
+2024-07-15,India,Distributed Denial of Service,Government Defense,7.5,6329,169,2939,Contained
+2024-07-15,India,Supply Chain Malware,Healthcare,4.5,879,44,3051,Contained
+2024-07-15,United States,Ransomware,E-Commerce,7.5,5731,109,847,Escalated
+2024-07-15,United States,Credential Phishing,Healthcare,9.8,6889,101,512,Investigating
+2024-07-15,United States,Distributed Denial of Service,Critical Infrastructure,5.5,5253,163,745,Mitigated
+2024-07-15,United States,Supply Chain Malware,Healthcare,4.8,2921,17,2721,Mitigated
+2024-07-15,United Kingdom,Ransomware,Government Defense,7.9,7061,157,3500,Contained
+2024-07-15,United Kingdom,Credential Phishing,Financial Services,8.1,504,93,3144,Escalated
+2024-07-15,United Kingdom,Distributed Denial of Service,Healthcare,7.4,8141,37,1736,Contained
+2024-07-15,United Kingdom,Supply Chain Malware,Government Defense,7.0,5703,54,2503,Contained
+2024-07-15,Germany,Ransomware,Government Defense,5.3,1374,227,1803,Contained
+2024-07-15,Germany,Credential Phishing,Healthcare,4.5,6726,217,1900,Mitigated
+2024-07-15,Germany,Distributed Denial of Service,E-Commerce,8.9,1692,163,2809,Contained
+2024-07-15,Germany,Supply Chain Malware,Financial Services,7.4,8840,133,3548,Investigating
+2024-07-15,Singapore,Ransomware,Healthcare,8.7,5085,141,2506,Escalated
+2024-07-15,Singapore,Credential Phishing,E-Commerce,7.2,3418,118,3345,Contained
+2024-07-15,Singapore,Distributed Denial of Service,Telecommunications,7.1,3098,237,202,Investigating
+2024-07-15,Singapore,Supply Chain Malware,Telecommunications,7.0,7796,80,3603,Mitigated
+2024-07-15,Australia,Ransomware,Telecommunications,5.3,7717,49,2019,Investigating
+2024-07-15,Australia,Credential Phishing,E-Commerce,8.0,5059,228,3616,Escalated
+2024-07-15,Australia,Distributed Denial of Service,Healthcare,9.0,1195,174,1717,Escalated
+2024-07-15,Australia,Supply Chain Malware,Healthcare,8.8,2771,77,1984,Escalated
+2024-07-15,Japan,Ransomware,Critical Infrastructure,4.8,3284,19,2061,Contained
+2024-07-15,Japan,Credential Phishing,Government Defense,6.9,7285,120,353,Investigating
+2024-07-15,Japan,Distributed Denial of Service,Critical Infrastructure,5.7,617,78,2325,Investigating
+2024-07-15,Japan,Supply Chain Malware,E-Commerce,9.0,8100,212,213,Mitigated
+2024-07-15,Brazil,Ransomware,Financial Services,6.0,5022,233,570,Escalated
+2024-07-15,Brazil,Credential Phishing,Healthcare,8.0,1619,113,1201,Investigating
+2024-07-15,Brazil,Distributed Denial of Service,Financial Services,7.4,8336,42,2112,Escalated
+2024-07-15,Brazil,Supply Chain Malware,Financial Services,5.5,2143,209,2617,Contained
+2024-07-15,France,Ransomware,Telecommunications,8.3,4005,120,1835,Investigating
+2024-07-15,France,Credential Phishing,Financial Services,5.2,4638,124,3395,Contained
+2024-07-15,France,Distributed Denial of Service,Telecommunications,4.5,8880,107,975,Contained
+2024-07-15,France,Supply Chain Malware,Telecommunications,6.6,4176,83,1237,Contained
+2024-07-15,Canada,Ransomware,Government Defense,8.2,5189,17,335,Mitigated
+2024-07-15,Canada,Credential Phishing,E-Commerce,9.3,4066,76,3201,Contained
+2024-07-15,Canada,Distributed Denial of Service,E-Commerce,9.6,6085,219,1049,Investigating
+2024-07-15,Canada,Supply Chain Malware,Government Defense,6.4,6578,77,2514,Mitigated
+2024-08-15,India,Ransomware,Critical Infrastructure,5.9,2765,124,2648,Escalated
+2024-08-15,India,Credential Phishing,Financial Services,5.7,1452,222,4077,Escalated
+2024-08-15,India,Distributed Denial of Service,E-Commerce,6.5,5591,195,3510,Mitigated
+2024-08-15,India,Supply Chain Malware,Critical Infrastructure,8.1,8435,28,2932,Escalated
+2024-08-15,United States,Ransomware,Telecommunications,8.3,5493,128,274,Mitigated
+2024-08-15,United States,Credential Phishing,E-Commerce,7.8,7404,214,1164,Mitigated
+2024-08-15,United States,Distributed Denial of Service,Government Defense,5.3,5146,92,723,Mitigated
+2024-08-15,United States,Supply Chain Malware,Critical Infrastructure,5.6,2271,228,3411,Contained
+2024-08-15,United Kingdom,Ransomware,Government Defense,6.9,2327,78,1471,Contained
+2024-08-15,United Kingdom,Credential Phishing,Healthcare,5.3,6931,106,1540,Escalated
+2024-08-15,United Kingdom,Distributed Denial of Service,Government Defense,9.5,3817,17,238,Investigating
+2024-08-15,United Kingdom,Supply Chain Malware,Financial Services,9.7,3388,79,1432,Mitigated
+2024-08-15,Germany,Ransomware,Government Defense,7.7,4402,50,779,Contained
+2024-08-15,Germany,Credential Phishing,Critical Infrastructure,9.5,2062,15,3614,Escalated
+2024-08-15,Germany,Distributed Denial of Service,E-Commerce,7.0,3817,194,1714,Investigating
+2024-08-15,Germany,Supply Chain Malware,Healthcare,5.8,8236,109,1116,Escalated
+2024-08-15,Singapore,Ransomware,Critical Infrastructure,7.6,4776,198,1601,Escalated
+2024-08-15,Singapore,Credential Phishing,Critical Infrastructure,6.5,2531,19,2427,Contained
+2024-08-15,Singapore,Distributed Denial of Service,Critical Infrastructure,7.7,4208,106,3803,Mitigated
+2024-08-15,Singapore,Supply Chain Malware,Financial Services,6.8,5436,189,3306,Investigating
+2024-08-15,Australia,Ransomware,E-Commerce,6.3,7075,200,2149,Mitigated
+2024-08-15,Australia,Credential Phishing,Financial Services,7.3,993,97,1973,Escalated
+2024-08-15,Australia,Distributed Denial of Service,Healthcare,9.8,885,13,2127,Escalated
+2024-08-15,Australia,Supply Chain Malware,Healthcare,9.7,6216,45,386,Investigating
+2024-08-15,Japan,Ransomware,Healthcare,5.2,8214,98,3884,Investigating
+2024-08-15,Japan,Credential Phishing,Financial Services,6.0,8830,122,1211,Contained
+2024-08-15,Japan,Distributed Denial of Service,Financial Services,6.0,2235,139,2351,Contained
+2024-08-15,Japan,Supply Chain Malware,Government Defense,5.8,4452,168,2210,Contained
+2024-08-15,Brazil,Ransomware,Government Defense,9.2,5309,200,4074,Investigating
+2024-08-15,Brazil,Credential Phishing,Telecommunications,9.0,7348,25,1597,Investigating
+2024-08-15,Brazil,Distributed Denial of Service,Financial Services,5.5,727,132,2181,Investigating
+2024-08-15,Brazil,Supply Chain Malware,E-Commerce,6.8,2040,138,384,Escalated
+2024-08-15,France,Ransomware,Healthcare,9.7,8089,129,4088,Mitigated
+2024-08-15,France,Credential Phishing,E-Commerce,9.1,2165,101,816,Investigating
+2024-08-15,France,Distributed Denial of Service,Healthcare,5.2,2897,203,2284,Investigating
+2024-08-15,France,Supply Chain Malware,Telecommunications,9.8,207,146,1529,Escalated
+2024-08-15,Canada,Ransomware,Financial Services,5.6,8301,185,822,Contained
+2024-08-15,Canada,Credential Phishing,Financial Services,5.8,2138,112,3110,Mitigated
+2024-08-15,Canada,Distributed Denial of Service,Healthcare,5.1,1468,129,3980,Escalated
+2024-08-15,Canada,Supply Chain Malware,E-Commerce,9.5,235,96,409,Escalated
+2024-09-15,India,Ransomware,Healthcare,9.5,2258,66,448,Contained
+2024-09-15,India,Credential Phishing,Healthcare,8.7,1298,152,3174,Mitigated
+2024-09-15,India,Distributed Denial of Service,Government Defense,5.6,4073,209,3317,Mitigated
+2024-09-15,India,Supply Chain Malware,Financial Services,9.0,2809,111,3346,Contained
+2024-09-15,United States,Ransomware,E-Commerce,8.4,2665,42,2495,Escalated
+2024-09-15,United States,Credential Phishing,Government Defense,8.3,5220,187,1125,Contained
+2024-09-15,United States,Distributed Denial of Service,E-Commerce,4.7,6160,143,1687,Escalated
+2024-09-15,United States,Supply Chain Malware,Government Defense,9.2,7945,80,3515,Mitigated
+2024-09-15,United Kingdom,Ransomware,Government Defense,8.7,3193,123,3539,Mitigated
+2024-09-15,United Kingdom,Credential Phishing,Financial Services,7.1,7734,185,1886,Investigating
+2024-09-15,United Kingdom,Distributed Denial of Service,Government Defense,7.2,8736,33,2431,Escalated
+2024-09-15,United Kingdom,Supply Chain Malware,Government Defense,4.6,7965,88,1267,Investigating
+2024-09-15,Germany,Ransomware,E-Commerce,9.3,4213,145,3553,Contained
+2024-09-15,Germany,Credential Phishing,Telecommunications,4.5,1393,23,931,Escalated
+2024-09-15,Germany,Distributed Denial of Service,Government Defense,4.7,4291,102,2137,Mitigated
+2024-09-15,Germany,Supply Chain Malware,Telecommunications,4.3,7723,57,1542,Escalated
+2024-09-15,Singapore,Ransomware,Financial Services,4.7,5016,92,3777,Escalated
+2024-09-15,Singapore,Credential Phishing,Telecommunications,8.7,5732,235,1583,Investigating
+2024-09-15,Singapore,Distributed Denial of Service,Critical Infrastructure,4.6,4388,235,921,Escalated
+2024-09-15,Singapore,Supply Chain Malware,Telecommunications,4.3,6610,41,158,Investigating
+2024-09-15,Australia,Ransomware,E-Commerce,6.9,6777,234,4037,Contained
+2024-09-15,Australia,Credential Phishing,Telecommunications,8.8,6050,188,3285,Contained
+2024-09-15,Australia,Distributed Denial of Service,Financial Services,4.9,367,60,966,Mitigated
+2024-09-15,Australia,Supply Chain Malware,E-Commerce,9.6,579,65,3991,Investigating
+2024-09-15,Japan,Ransomware,E-Commerce,5.6,3267,34,2515,Escalated
+2024-09-15,Japan,Credential Phishing,Critical Infrastructure,6.9,497,41,1410,Investigating
+2024-09-15,Japan,Distributed Denial of Service,E-Commerce,8.1,8087,132,210,Escalated
+2024-09-15,Japan,Supply Chain Malware,Telecommunications,5.6,4970,157,3259,Mitigated
+2024-09-15,Brazil,Ransomware,Healthcare,4.2,7214,118,4110,Contained
+2024-09-15,Brazil,Credential Phishing,Financial Services,6.9,8104,143,4046,Investigating
+2024-09-15,Brazil,Distributed Denial of Service,E-Commerce,4.5,451,120,2637,Mitigated
+2024-09-15,Brazil,Supply Chain Malware,Healthcare,9.2,6974,239,3927,Mitigated
+2024-09-15,France,Ransomware,Government Defense,7.7,5821,126,3623,Mitigated
+2024-09-15,France,Credential Phishing,Critical Infrastructure,5.8,3289,132,2866,Escalated
+2024-09-15,France,Distributed Denial of Service,Critical Infrastructure,7.0,5696,166,3887,Investigating
+2024-09-15,France,Supply Chain Malware,Healthcare,8.2,6535,118,3001,Escalated
+2024-09-15,Canada,Ransomware,Critical Infrastructure,7.7,4767,188,756,Escalated
+2024-09-15,Canada,Credential Phishing,Critical Infrastructure,5.2,2701,167,4081,Mitigated
+2024-09-15,Canada,Distributed Denial of Service,Government Defense,9.5,8229,89,1972,Investigating
+2024-09-15,Canada,Supply Chain Malware,Telecommunications,4.5,437,103,2186,Contained
+2024-10-15,India,Ransomware,E-Commerce,5.1,8388,20,571,Contained
+2024-10-15,India,Credential Phishing,Government Defense,4.8,3854,42,1885,Escalated
+2024-10-15,India,Distributed Denial of Service,Healthcare,9.8,5960,208,432,Contained
+2024-10-15,India,Supply Chain Malware,Critical Infrastructure,9.0,8584,166,903,Mitigated
+2024-10-15,United States,Ransomware,Government Defense,8.7,1957,39,884,Mitigated
+2024-10-15,United States,Credential Phishing,Telecommunications,4.8,2074,234,1732,Contained
+2024-10-15,United States,Distributed Denial of Service,Critical Infrastructure,8.3,7373,207,4194,Escalated
+2024-10-15,United States,Supply Chain Malware,E-Commerce,9.1,2667,177,3029,Contained
+2024-10-15,United Kingdom,Ransomware,Critical Infrastructure,4.9,3447,124,3455,Mitigated
+2024-10-15,United Kingdom,Credential Phishing,Critical Infrastructure,8.9,7900,99,2399,Investigating
+2024-10-15,United Kingdom,Distributed Denial of Service,Financial Services,5.7,6939,104,2060,Investigating
+2024-10-15,United Kingdom,Supply Chain Malware,Telecommunications,6.6,3878,47,3562,Escalated
+2024-10-15,Germany,Ransomware,Government Defense,9.2,8596,215,3013,Mitigated
+2024-10-15,Germany,Credential Phishing,Government Defense,5.0,302,195,620,Mitigated
+2024-10-15,Germany,Distributed Denial of Service,Healthcare,6.0,2832,123,553,Escalated
+2024-10-15,Germany,Supply Chain Malware,Financial Services,7.9,2613,159,523,Contained
+2024-10-15,Singapore,Ransomware,Government Defense,6.5,5126,196,2619,Contained
+2024-10-15,Singapore,Credential Phishing,Financial Services,8.8,8787,168,1253,Escalated
+2024-10-15,Singapore,Distributed Denial of Service,Government Defense,7.8,7384,190,2878,Escalated
+2024-10-15,Singapore,Supply Chain Malware,Critical Infrastructure,9.1,1520,21,2790,Escalated
+2024-10-15,Australia,Ransomware,E-Commerce,8.2,2204,145,2375,Investigating
+2024-10-15,Australia,Credential Phishing,Financial Services,7.1,5255,145,2841,Investigating
+2024-10-15,Australia,Distributed Denial of Service,Financial Services,4.4,4378,73,2539,Escalated
+2024-10-15,Australia,Supply Chain Malware,Telecommunications,4.8,1122,227,3105,Contained
+2024-10-15,Japan,Ransomware,E-Commerce,7.0,2168,24,1071,Escalated
+2024-10-15,Japan,Credential Phishing,Healthcare,7.4,225,128,2826,Investigating
+2024-10-15,Japan,Distributed Denial of Service,E-Commerce,9.7,8877,228,1965,Contained
+2024-10-15,Japan,Supply Chain Malware,Healthcare,5.8,2433,194,3143,Investigating
+2024-10-15,Brazil,Ransomware,Financial Services,6.0,3294,222,3009,Escalated
+2024-10-15,Brazil,Credential Phishing,Financial Services,5.0,7114,224,3425,Mitigated
+2024-10-15,Brazil,Distributed Denial of Service,Financial Services,4.5,2270,133,1809,Escalated
+2024-10-15,Brazil,Supply Chain Malware,Financial Services,6.3,8762,115,3284,Contained
+2024-10-15,France,Ransomware,Telecommunications,7.0,7077,124,4060,Escalated
+2024-10-15,France,Credential Phishing,Critical Infrastructure,5.0,2222,136,3799,Investigating
+2024-10-15,France,Distributed Denial of Service,E-Commerce,7.1,8809,42,1791,Escalated
+2024-10-15,France,Supply Chain Malware,Government Defense,4.4,2709,155,3075,Mitigated
+2024-10-15,Canada,Ransomware,Telecommunications,9.0,1947,42,3077,Contained
+2024-10-15,Canada,Credential Phishing,Financial Services,7.1,2069,107,2547,Contained
+2024-10-15,Canada,Distributed Denial of Service,Healthcare,5.8,598,214,1220,Investigating
+2024-10-15,Canada,Supply Chain Malware,Telecommunications,6.6,5139,239,2372,Investigating
+2024-11-15,India,Ransomware,Critical Infrastructure,8.8,8148,12,1052,Contained
+2024-11-15,India,Credential Phishing,Financial Services,9.1,6981,135,2587,Escalated
+2024-11-15,India,Distributed Denial of Service,Healthcare,8.6,7926,225,1137,Investigating
+2024-11-15,India,Supply Chain Malware,Telecommunications,7.8,7511,182,3728,Investigating
+2024-11-15,United States,Ransomware,E-Commerce,6.0,6851,111,1957,Escalated
+2024-11-15,United States,Credential Phishing,Healthcare,7.2,7399,200,2322,Mitigated
+2024-11-15,United States,Distributed Denial of Service,Critical Infrastructure,8.2,5200,155,1064,Mitigated
+2024-11-15,United States,Supply Chain Malware,Critical Infrastructure,9.5,1006,157,1601,Escalated
+2024-11-15,United Kingdom,Ransomware,Telecommunications,9.2,2110,180,1522,Mitigated
+2024-11-15,United Kingdom,Credential Phishing,Healthcare,8.6,4158,224,3689,Mitigated
+2024-11-15,United Kingdom,Distributed Denial of Service,Telecommunications,7.6,6723,162,418,Escalated
+2024-11-15,United Kingdom,Supply Chain Malware,Financial Services,6.1,3097,118,247,Contained
+2024-11-15,Germany,Ransomware,Government Defense,5.6,2018,37,1427,Contained
+2024-11-15,Germany,Credential Phishing,Critical Infrastructure,5.2,1608,51,2563,Escalated
+2024-11-15,Germany,Distributed Denial of Service,E-Commerce,5.1,5469,58,272,Mitigated
+2024-11-15,Germany,Supply Chain Malware,Healthcare,6.4,5383,48,3431,Contained
+2024-11-15,Singapore,Ransomware,Healthcare,6.3,2121,25,1709,Investigating
+2024-11-15,Singapore,Credential Phishing,Telecommunications,7.5,8216,142,4182,Escalated
+2024-11-15,Singapore,Distributed Denial of Service,Financial Services,5.7,5355,130,3384,Mitigated
+2024-11-15,Singapore,Supply Chain Malware,Government Defense,4.4,3969,238,202,Contained
+2024-11-15,Australia,Ransomware,Telecommunications,9.6,1803,75,1078,Contained
+2024-11-15,Australia,Credential Phishing,Telecommunications,6.5,1514,228,4149,Investigating
+2024-11-15,Australia,Distributed Denial of Service,Critical Infrastructure,6.3,2895,212,2058,Escalated
+2024-11-15,Australia,Supply Chain Malware,Telecommunications,6.7,156,220,3856,Contained
+2024-11-15,Japan,Ransomware,E-Commerce,9.6,148,27,4000,Contained
+2024-11-15,Japan,Credential Phishing,Telecommunications,5.6,6368,101,1792,Contained
+2024-11-15,Japan,Distributed Denial of Service,Financial Services,5.1,8890,156,622,Contained
+2024-11-15,Japan,Supply Chain Malware,Financial Services,6.4,2154,224,1194,Contained
+2024-11-15,Brazil,Ransomware,Government Defense,5.4,8410,217,2657,Contained
+2024-11-15,Brazil,Credential Phishing,E-Commerce,5.7,7557,81,2064,Contained
+2024-11-15,Brazil,Distributed Denial of Service,Healthcare,5.4,5521,16,1145,Mitigated
+2024-11-15,Brazil,Supply Chain Malware,Telecommunications,6.9,296,184,1471,Escalated
+2024-11-15,France,Ransomware,Telecommunications,9.2,8151,207,3267,Mitigated
+2024-11-15,France,Credential Phishing,E-Commerce,7.8,647,240,3696,Mitigated
+2024-11-15,France,Distributed Denial of Service,Healthcare,9.6,6306,223,2982,Escalated
+2024-11-15,France,Supply Chain Malware,Critical Infrastructure,8.9,278,43,3840,Contained
+2024-11-15,Canada,Ransomware,Critical Infrastructure,6.7,3769,202,212,Contained
+2024-11-15,Canada,Credential Phishing,E-Commerce,9.4,6002,61,787,Contained
+2024-11-15,Canada,Distributed Denial of Service,E-Commerce,5.4,8230,104,351,Contained
+2024-11-15,Canada,Supply Chain Malware,Government Defense,9.3,3565,13,1656,Escalated
+2024-12-15,India,Ransomware,Financial Services,9.1,8337,138,1446,Investigating
+2024-12-15,India,Credential Phishing,E-Commerce,8.3,3015,28,1100,Mitigated
+2024-12-15,India,Distributed Denial of Service,Critical Infrastructure,5.7,3874,237,2297,Investigating
+2024-12-15,India,Supply Chain Malware,E-Commerce,4.3,8871,169,2121,Escalated
+2024-12-15,United States,Ransomware,Financial Services,9.5,989,230,2696,Escalated
+2024-12-15,United States,Credential Phishing,Government Defense,5.7,8631,131,4109,Contained
+2024-12-15,United States,Distributed Denial of Service,Telecommunications,8.5,3818,24,2326,Escalated
+2024-12-15,United States,Supply Chain Malware,Telecommunications,6.7,224,112,1644,Contained
+2024-12-15,United Kingdom,Ransomware,Financial Services,9.1,555,200,1898,Escalated
+2024-12-15,United Kingdom,Credential Phishing,Financial Services,9.3,3365,54,2747,Contained
+2024-12-15,United Kingdom,Distributed Denial of Service,Financial Services,7.7,1724,19,3981,Escalated
+2024-12-15,United Kingdom,Supply Chain Malware,Financial Services,7.5,5617,227,2101,Investigating
+2024-12-15,Germany,Ransomware,Financial Services,6.9,5723,225,495,Contained
+2024-12-15,Germany,Credential Phishing,Telecommunications,8.6,1334,210,3642,Mitigated
+2024-12-15,Germany,Distributed Denial of Service,E-Commerce,6.7,2185,33,547,Mitigated
+2024-12-15,Germany,Supply Chain Malware,Government Defense,6.0,1205,212,1094,Mitigated
+2024-12-15,Singapore,Ransomware,Government Defense,4.5,7215,28,884,Mitigated
+2024-12-15,Singapore,Credential Phishing,Telecommunications,4.5,6389,114,835,Escalated
+2024-12-15,Singapore,Distributed Denial of Service,Critical Infrastructure,9.0,313,128,3195,Escalated
+2024-12-15,Singapore,Supply Chain Malware,Government Defense,9.1,1799,98,262,Escalated
+2024-12-15,Australia,Ransomware,Telecommunications,6.0,3293,39,891,Mitigated
+2024-12-15,Australia,Credential Phishing,Telecommunications,8.2,3312,158,1082,Contained
+2024-12-15,Australia,Distributed Denial of Service,Healthcare,6.6,7424,59,2041,Investigating
+2024-12-15,Australia,Supply Chain Malware,Financial Services,4.5,5246,161,3620,Contained
+2024-12-15,Japan,Ransomware,Healthcare,7.5,2525,49,3896,Contained
+2024-12-15,Japan,Credential Phishing,Telecommunications,6.1,6182,14,1234,Mitigated
+2024-12-15,Japan,Distributed Denial of Service,Critical Infrastructure,7.0,1034,120,2866,Investigating
+2024-12-15,Japan,Supply Chain Malware,Critical Infrastructure,7.8,3437,213,610,Contained
+2024-12-15,Brazil,Ransomware,Critical Infrastructure,7.9,7797,165,2762,Contained
+2024-12-15,Brazil,Credential Phishing,Telecommunications,5.9,5524,53,908,Escalated
+2024-12-15,Brazil,Distributed Denial of Service,Financial Services,7.0,200,175,1877,Investigating
+2024-12-15,Brazil,Supply Chain Malware,Government Defense,7.7,4056,135,2765,Escalated
+2024-12-15,France,Ransomware,Critical Infrastructure,6.4,250,104,131,Mitigated
+2024-12-15,France,Credential Phishing,Healthcare,4.4,2027,48,2430,Escalated
+2024-12-15,France,Distributed Denial of Service,Critical Infrastructure,7.7,6036,23,293,Investigating
+2024-12-15,France,Supply Chain Malware,Critical Infrastructure,5.8,3727,238,2196,Investigating
+2024-12-15,Canada,Ransomware,Healthcare,8.9,4169,57,1655,Mitigated
+2024-12-15,Canada,Credential Phishing,Critical Infrastructure,8.9,1797,17,1174,Escalated
+2024-12-15,Canada,Distributed Denial of Service,E-Commerce,8.6,1958,98,1772,Contained
+2024-12-15,Canada,Supply Chain Malware,Government Defense,5.5,6240,181,1453,Escalated

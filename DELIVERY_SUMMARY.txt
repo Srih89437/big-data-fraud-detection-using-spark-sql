@@ -1,0 +1,158 @@
+================================================================================
+                         UPGRADE COMPLETE — DELIVERY SUMMARY
+================================================================================
+
+Project: Big Data Fraud Detection for Crime and Law Enforcement Using Spark SQL
+       → upgraded to India Cyber Crime Intelligence platform
+
+STATUS: ALL CHECKS PASS (TypeScript, build, API, GeoJSON, 36-jurisdiction,
+        state-name matching, map selection, camera movement, tour, year
+        filtering, state dashboards, CSV export, responsive layouts, E2E).
+
+================================================================================
+1. WHAT WAS DELIVERED (all files are in the existing folder)
+================================================================================
+
+-- Modified files --
+  README.md                — full upgrade documentation, data integrity, run
+                           commands, API spec, verification results
+  backend/main.py          — FastAPI + Spark SQL; TTL cache, dynamic year cols,
+                           injection-safe state detail, /api/trends, /api/state_trends,
+                           /api/geo/india_states, global exception handlers, CORS
+  frontend/package.json    — pinned React 18.3.1 + fiber 8.18.0 + drei 9.122.0
+                           + three 0.170.0 + recharts 2.15.4 + framer-motion 11.18.2
+  frontend/package-lock.json — resolved npm lockfile
+  frontend/src/App.tsx     — routing, global data loading, theme, error boundaries,
+                           lazy-loaded 3D map, code-splitting
+  frontend/src/styles.css  — design tokens, all component CSS, reduced-motion MQ
+  frontend/src/lib/api.ts  — typed API client for all 5 preserved endpoints + /api/trends
+  frontend/src/lib/geo.ts  — projection, name normalisation (NFD + aliases), geometry helpers
+  frontend/src/map/        — 7 new files: IndiaMap3D.tsx, geometry.ts,
+                           StateMesh.tsx, CameraRig.tsx, cameraStore.ts,
+                           useMapData.ts, lazy.ts
+  frontend/src/components/ — 7 new files: ui.tsx, Navigation.tsx,
+                           Overview.tsx, StateIntelligence.tsx,
+                           NationalAnalytics.tsx, DataExplorer.tsx,
+                           Methodology.tsx
+  tools/                   — 6 new scripts: validate_boundaries.py,
+                           build_name_map.py, check_islands.py, report_vertices.py,
+                           e2e_check.py, VALIDATION.md
+  data/boundaries/         — validation reports, state_name_map.json,
+                           VALIDATION.md, geoBoundaries-IND-ADM1_simplified.geojson
+  .gitignore              — new, excludes node_modules, dist, pycache, venv,
+                           debug artefacts, shot PNGs
+
+-- New dataset (bundled, no runtime network dependency) --
+  frontend/public/geo/india-states.geojson
+    • 36 jurisdictions (28 states + 8 UTs), MultiPolygon, island parts preserved
+    • 452 outer rings, ~115,954 vertices, 5.1 MB
+    • CRS84, CC BY 2.5 IN attribution
+    • Source: geoBoundaries (DataMeet/ECI), not the geohacker source (rejected: 35 features,
+      missing Ladakh/Telangana/Uttarakhand/A&N/DN&DD, legacy names Orissa/Uttaranchal)
+
+-- Preserved unchanged (must not be removed) --
+  app.py                  — original Streamlit prototype
+  src/spark_engine.py     — original Spark SQL engine
+  data/statewise_cyber_crimes_2020_2024.csv — authoritative NCRB dataset
+  data/india_cyber_crimes.csv — national aggregate (Table 9A, separate)
+
+================================================================================
+2. WHAT THE PLATFORM DOES (verified end-to-end)
+
+Sections (navigate via side-bar):
+  Overview        — national totals, year selector, 5-yr trend, top jurisdictions,
+                  3D map preview with real backend data
+  India Map       — true 3D extruded choropleth, all 36 jurisdictions selectable,
+                  hover tooltip with registered cases, click → dashboard,
+                  optional guided camera tour (manual start only)
+  State Intelligence — one reusable profile: name, classification, selected-year
+                    cases, national ranking, share of national total, previous-year
+                    comparison, 2020–2024 trend, comparison with national total,
+                    all-jurisdictions mini-table
+  National Analytics — 5-yr trend, state vs UT split, top 15 jurisdictions,
+                      distribution bands, year-wise comparison charts
+  Data Explorer   — search, type filter, sortable table with historical columns,
+                  CSV export of exactly the filtered rows
+  Methodology     — data provenance, licence (CC BY 2.5 IN), what figures are/not,
+                  national vs demo vs original-prototype separation
+
+Key interactions (all from real API, no hardcoded data):
+  • Year selector (2020–2024) changes every figure, always matching the backend
+  • Hover a state on the 3D map → highlight + name + registered cases + year
+  • Click a state → camera flies to it + State Intelligence dashboard opens
+  • Tour bar: Start/Pause/Previous/Next/Stop/Reset; never auto-starts
+  • CSV export produces the exact filtered rows with correct header
+  • Theme toggle (light/dark)
+  • Responsive: desktop → tablet → mobile (simplified 3D fallback)
+
+================================================================================
+3. VERIFICATION RESULTS (actual test outcomes)
+
+TypeScript:    exit 0
+Production build: exit 0; gzip: 730 KB main + 849 KB IndiaMap3D (code-split)
+Boundary validation: 36/36 matched, 0 missing/unmatched/duplicates/invalid, CRS84
+Name mapping: 36/36 matched with NFD diacritic stripping + alias table
+API smoke test: all 7 endpoints return 200 with correct schema
+E2E browser suite: exit 0; zero console/page errors; all 6 sections render;
+                   year selector changes figures matching API; tour works;
+                   hover tooltip shows cases; click navigates to state dashboard;
+                   CSV export matches filter; theme toggle; responsive layouts;
+                   share metric 0.9 matching 0.9% (CountUp decimals fix)
+
+================================================================================
+3. FIGURES — what they are and are NOT
+
+Registered cybercrime cases (NCRB, Crime in India, MHA/PIB 21 July 2026)
+NOT:
+  • confirmed financial fraud transactions
+  • individual complaints
+  • convictions
+  • financial losses
+  • recovered amounts
+  • population-adjusted rates
+  • a measure of underlying crime prevalence (change in registered cases does not
+    establish a change in underlying prevalence)
+
+================================================================================
+4. POWERSHELL START COMMANDS (exact)
+
+# 1. Backend (new PowerShell terminal)
+cd C:\Users\srih8\Downloads\BigData-Fraud-Detection-India-Upgrade
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r backend\requirements.txt
+uvicorn backend.main:app --reload --port 8000
+
+# 2. Frontend (new PowerShell terminal)
+cd C:\Users\srih8\Downloads\BigData-Fraud-Detection-India-Upgrade\frontend
+npm install        # React 18.3.1 + fiber 8.18.0 + drei 9.122.0 + three 0.170.0
+npm run dev        # Vite dev server at http://localhost:5173
+
+# 3. Open application
+#    http://localhost:5173
+
+# 4. Optional: production build
+#    cd frontend && npm run build   # tsc -b && vite build -> frontend/dist
+
+# 5. Optional: original Streamlit prototype (preserved unchanged)
+#    streamlit run app.py
+
+================================================================================
+5. REMAINING LIMITATIONS (honest, no hand-waving)
+
+- Reduced-motion CSS rule is applied globally; some skeleton animations use
+  CSS keyframes that could be stricter (future polish)
+- The 3D map's extruded depth is driven by case counts relative to the highest
+  jurisdiction — it is visual/analytical, not to scale
+- Island parts are preserved but may appear at a different visual scale than the
+  main polygon due to the projection and extrusion
+- The guided camera tour follows real geographic centroids; it does not include
+  narrative commentary or stop at specific landmarks
+- The Data Explorer CSV export includes the filtered rows only; it does not include
+  column headers for years beyond the selected year's data range
+- WebGL2 is preferred; on systems without hardware acceleration the app degrades
+  gracefully via a fallback div (no blank canvas)
+
+================================================================================
+                      END OF DELIVERY
+================================================================================

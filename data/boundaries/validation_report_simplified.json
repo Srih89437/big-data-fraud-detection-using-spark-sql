@@ -1,0 +1,410 @@
+{
+  "file": "data\\boundaries\\geoBoundaries-IND-ADM1_simplified.geojson",
+  "crs": "urn:ogc:def:crs:OGC:1.3:CRS84",
+  "feature_count": 36,
+  "csv_jurisdictions": 36,
+  "matched_count": 36,
+  "matched": [
+    {
+      "geojson_name": "Puducherry",
+      "csv_name": "Puducherry",
+      "bbox": [
+        75.5266,
+        10.8274,
+        82.3443,
+        16.7607
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Mah\u0101r\u0101shtra",
+      "csv_name": "maharashtra",
+      "bbox": [
+        72.6546,
+        15.6061,
+        80.8984,
+        22.0338
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "N\u0101g\u0101land",
+      "csv_name": "nagaland",
+      "bbox": [
+        93.3269,
+        25.1986,
+        95.2425,
+        27.036
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Lakshadweep",
+      "csv_name": "Lakshadweep",
+      "bbox": [
+        72.1648,
+        8.264,
+        73.7018,
+        11.7039
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Uttar Pradesh",
+      "csv_name": "Uttar Pradesh",
+      "bbox": [
+        77.0839,
+        23.8701,
+        84.6347,
+        30.4063
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Tamil N\u0101du",
+      "csv_name": "tamil nadu",
+      "bbox": [
+        76.2334,
+        8.0766,
+        80.3468,
+        13.5653
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Chhatt\u012bsgarh",
+      "csv_name": "chhattisgarh",
+      "bbox": [
+        80.2443,
+        17.7824,
+        84.3964,
+        24.106
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Gujar\u0101t",
+      "csv_name": "gujarat",
+      "bbox": [
+        68.0935,
+        20.1195,
+        74.4766,
+        24.712
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Delhi",
+      "csv_name": "Delhi",
+      "bbox": [
+        76.8389,
+        28.4047,
+        77.3474,
+        28.8838
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Sikkim",
+      "csv_name": "Sikkim",
+      "bbox": [
+        88.0135,
+        27.0794,
+        88.9198,
+        28.1289
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Tripura",
+      "csv_name": "Tripura",
+      "bbox": [
+        91.1497,
+        22.9392,
+        92.332,
+        24.5276
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "West Bengal",
+      "csv_name": "West Bengal",
+      "bbox": [
+        85.8197,
+        21.4837,
+        89.8742,
+        27.2211
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Odisha",
+      "csv_name": "Odisha",
+      "bbox": [
+        81.3884,
+        17.8127,
+        87.4862,
+        22.5675
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Bih\u0101r",
+      "csv_name": "bihar",
+      "bbox": [
+        83.3202,
+        24.2863,
+        88.3004,
+        27.5216
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Lad\u0101kh",
+      "csv_name": "ladakh",
+      "bbox": [
+        72.5288,
+        32.3378,
+        80.327,
+        37.0775
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "R\u0101jasth\u0101n",
+      "csv_name": "rajasthan",
+      "bbox": [
+        69.4842,
+        23.0612,
+        78.2723,
+        30.1981
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Telang\u0101na",
+      "csv_name": "telangana",
+      "bbox": [
+        77.2359,
+        15.836,
+        81.3226,
+        19.9163
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Andhra Pradesh",
+      "csv_name": "Andhra Pradesh",
+      "bbox": [
+        76.7606,
+        12.6241,
+        84.7647,
+        19.1677
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Mizoram",
+      "csv_name": "Mizoram",
+      "bbox": [
+        92.257,
+        21.9414,
+        93.4362,
+        24.5212
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Arun\u0101chal Pradesh",
+      "csv_name": "arunachal pradesh",
+      "bbox": [
+        91.5465,
+        26.6508,
+        97.4115,
+        29.4617
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Megh\u0101laya",
+      "csv_name": "meghalaya",
+      "bbox": [
+        89.814,
+        25.0292,
+        92.8027,
+        26.1195
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Jh\u0101rkhand",
+      "csv_name": "jharkhand",
+      "bbox": [
+        83.3299,
+        21.9703,
+        87.9623,
+        25.3495
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Assam",
+      "csv_name": "Assam",
+      "bbox": [
+        89.6986,
+        24.1363,
+        96.0178,
+        27.9716
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Manipur",
+      "csv_name": "Manipur",
+      "bbox": [
+        92.971,
+        23.8329,
+        94.7447,
+        25.6918
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Karn\u0101taka",
+      "csv_name": "karnataka",
+      "bbox": [
+        74.0857,
+        11.5946,
+        78.5876,
+        18.4588
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Uttar\u0101khand",
+      "csv_name": "uttarakhand",
+      "bbox": [
+        77.5726,
+        28.7229,
+        81.0452,
+        31.4561
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "D\u0101dra and Nagar Haveli and Dam\u0101n and Diu",
+      "csv_name": "dadra and nagar haveli and daman and diu",
+      "bbox": [
+        70.8761,
+        20.0471,
+        73.2185,
+        20.7428
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Madhya Pradesh",
+      "csv_name": "Madhya Pradesh",
+      "bbox": [
+        74.0297,
+        21.0699,
+        82.8103,
+        26.8691
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Goa",
+      "csv_name": "Goa",
+      "bbox": [
+        73.6754,
+        14.9006,
+        74.3365,
+        15.8008
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Kerala",
+      "csv_name": "Kerala",
+      "bbox": [
+        74.8677,
+        8.2925,
+        77.4123,
+        12.7956
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Chand\u012bgarh",
+      "csv_name": "chandigarh",
+      "bbox": [
+        76.7052,
+        30.6664,
+        76.8494,
+        30.7953
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Andaman and Nicobar Islands",
+      "csv_name": "Andaman and Nicobar Islands",
+      "bbox": [
+        92.2039,
+        6.7544,
+        93.9429,
+        13.6727
+      ],
+      "geometry": "MultiPolygon"
+    },
+    {
+      "geojson_name": "Him\u0101chal Pradesh",
+      "csv_name": "himachal pradesh",
+      "bbox": [
+        75.5942,
+        30.3777,
+        79.0089,
+        33.2569
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Jammu and Kashm\u012br",
+      "csv_name": "jammu and kashmir",
+      "bbox": [
+        73.3901,
+        32.2762,
+        76.7797,
+        35.1181
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Punjab",
+      "csv_name": "Punjab",
+      "bbox": [
+        73.8798,
+        29.5421,
+        76.9394,
+        32.5127
+      ],
+      "geometry": "Polygon"
+    },
+    {
+      "geojson_name": "Hary\u0101na",
+      "csv_name": "haryana",
+      "bbox": [
+        74.4737,
+        27.6526,
+        77.6043,
+        30.9286
+      ],
+      "geometry": "Polygon"
+    }
+  ],
+  "missing_in_geojson": [],
+  "unmatched_in_csv": [],
+  "duplicate_names": {},
+  "invalid_geometry_issues": [],
+  "all_36_covered": true
+}

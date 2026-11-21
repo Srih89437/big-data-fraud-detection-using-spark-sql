@@ -1,26 +1,39 @@
 {
-  "name": "india-cyber-crime-intelligence",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-simple-maps": "^3.0.0",
-    "framer-motion": "^11.11.17",
-    "lucide-react": "^0.468.0",
-    "recharts": "^2.15.0"
-  },
-  "devDependencies": {
-    "@types/react": "latest",
-    "@types/react-dom": "latest"
-  }
+    "name": "india-cyber-crime-intelligence",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --host 0.0.0.0",
+        "build": "tsc -b && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@fontsource/geist-mono": "^5.3.0",
+        "@fontsource/geist-sans": "^5.3.0",
+        "@fontsource/instrument-serif": "^5.3.0",
+        "@react-three/drei": "9.122.0",
+        "@react-three/fiber": "8.18.0",
+        "@tanstack/react-table": "^9.3.1",
+        "@tanstack/react-virtual": "^3.14.26",
+        "@types/d3-geo": "^3.1.1",
+        "@types/earcut": "^3.0.0",
+        "d3-geo": "^3.1.2",
+        "earcut": "^3.2.4",
+        "framer-motion": "11.18.2",
+        "gsap": "^3.15.1",
+        "lucide-react": "0.468.0",
+        "polylabel": "^2.1.0",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "recharts": "2.15.4",
+        "three": "0.170.0"
+    },
+    "devDependencies": {
+        "@types/react": "18.3.12",
+        "@types/react-dom": "18.3.1",
+        "@vitejs/plugin-react": "6.3.0",
+        "typescript": "7.0.2",
+        "vite": "8.3.8"
+    }
 }

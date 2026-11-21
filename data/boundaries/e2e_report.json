@@ -1,0 +1,89 @@
+{
+  "overview_metrics": 4,
+  "overview_contains_total": true,
+  "api_total_2024": 101928,
+  "jurisdictions_from_api": 36,
+  "overview_text_sample": "TOTAL REGISTERED CASES | ⓘ | 1,01,928 | 2024 ·  | +17.9% vs 2023 | STATE CASE TOTAL | 1,01,118 | 28 state jurisdictions | UNION TERRITORY CASE TOTAL | 810 | 8 Union Territory jurisdictions | JURISDICTIONS | 36 | 36 jurisdictions with full national coverage",
+  "year_2022_changes_figures": true,
+  "year_2022_total_matches_api": true,
+  "api_total_2022": 65893,
+  "trend_svg_present": true,
+  "trend_years_present": false,
+  "trend_svg_text_sample": [
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "map_canvas_count": 1,
+  "map_labels_visible": true,
+  "sections": {
+    "Map": "ok",
+    "State": "ok",
+    "Analytics": "ok",
+    "Explorer": "ok",
+    "Method": "ok",
+    "Overview": "ok"
+  },
+  "full_map_canvas": true,
+  "tour_controls": 5,
+  "tour_status": "Tour idle — press Start to explore",
+  "tour_after_start": "Stop 1 / 9 · National overview",
+  "tour_playing": true,
+  "tour_did_not_navigate": true,
+  "tour_paused_label": true,
+  "tour_next": "Stop 3 / 9 · Karnataka",
+  "tour_next_changed": true,
+  "tour_prev": "Stop 2 / 9 · Telangana",
+  "tour_stopped": true,
+  "tour_speed": "2",
+  "reset_camera_ok": true,
+  "hover_tooltip": true,
+  "tooltip_text": "REGISTERED CASES",
+  "tooltip_has_year": false,
+  "tooltip_has_category": false,
+  "tooltip_has_count": false,
+  "click_navigates_to_state": true,
+  "selected_state": "Punjab",
+  "state_metrics": "REGISTERED CASES | ⓘ | 888 | Registered in 2024 | NATIONAL RANKING | 15 | of 36 jurisdictions by registered cases | SHARE OF NATIONAL TOTAL | 0.9 | 0.9% of 1,01,928 national cases | YEAR-ON-YEAR CHANGE | 73.8 | 888 vs 511 in 2023",
+  "share_metric": {
+    "value": "0.9",
+    "sub": "0.9% of 1,01,928 national cases"
+  },
+  "share_matches_sub": true,
+  "state_api_cases_2024": 888,
+  "state_cases_match_ui": true,
+  "state_bar_chart": true,
+  "state_compare_rows": 3,
+  "state_table_rows": 36,
+  "explorer": {
+    "all": 36,
+    "search_karn": 1
+  },
+  "explorer_search_ok": true,
+  "explorer_uts": 8,
+  "sort_first_after_asc": "Andaman and Nicobar Islands",
+  "csv_download": "india-cyber-crimes-2024-filtered.csv",
+  "csv_header": "state_ut,category,year,registered_cases,2020,2021,2022,2023,2024",
+  "csv_rows_match_filter": true,
+  "analytics_svgs": 5,
+  "analytics_panels": 4,
+  "year_compare_rows": 5,
+  "theme_toggle": {
+    "before": "app light",
+    "after": "app dark",
+    "changed": true
+  },
+  "responsive_tablet": {
+    "nav_visible": true,
+    "main_visible": true,
+    "no_h_scroll": true
+  },
+  "responsive_mobile": {
+    "nav_visible": true,
+    "main_visible": true,
+    "no_h_scroll": true
+  },
+  "console_errors": [],
+  "page_errors": []
+}
