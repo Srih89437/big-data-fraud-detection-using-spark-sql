@@ -16,10 +16,18 @@ build/
 frontend/dist/
 frontend/tsconfig.tsbuildinfo
 
-# Large video files & media
+# Large video files & baseline media
 *.mp4
 *.webm
 qa/video/
+qa/baseline/
+
+# Internal reports and delivery notes
+DELIVERY_SUMMARY.txt
+_DELIVERY_NOTE.md
+data/boundaries/validation_report*.json
+data/boundaries/e2e_report.json
+tools/*.ps1
 
 # Scratch & Temporary work
 scratch/

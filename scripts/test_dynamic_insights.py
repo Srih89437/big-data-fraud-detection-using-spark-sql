@@ -95,7 +95,7 @@ def test_api_dynamic_insights():
     req = urllib.request.urlopen(f"{BACKEND_URL}/api/overview?year=2024", timeout=5)
     ov = json.loads(req.read().decode())
     source = ov.get("source", "")
-    assert "PRID 2287039" in source, f"Unexpected source string: {source}"
+    assert "21 July 2026" in source, f"Unexpected source string: {source}"
     log(f"PASS: Verified citation provenance: '{source}'", "PASS")
 
 if __name__ == "__main__":

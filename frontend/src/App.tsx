@@ -645,7 +645,7 @@ export default function App() {
                         years={years}
                         year={year}
                         loading={loading}
-                        source="Crime in India · Press Information Bureau (Release ID 2287039, 21 July 2026)"
+                        source="Crime in India; Press Information Bureau, 21 July 2026"
                         onSelect={handleSelectState}
                         history={history}
                         matrixRows={matrixRows}
