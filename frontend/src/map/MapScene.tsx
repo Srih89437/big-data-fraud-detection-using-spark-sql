@@ -29,6 +29,7 @@ export interface MapSceneProps {
   dark: boolean;
   showBorders?: boolean;
   showLabels?: boolean;
+  renderMode?: 'prism' | 'column' | 'bubble' | 'bar_matrix' | 'relief' | 'choropleth';
 }
 
 /** Ground plane with subtle cartographic concentric rings. */
@@ -298,6 +299,7 @@ export function MapScene({
   dark,
   showBorders = true,
   showLabels = true,
+  renderMode = 'prism',
 }: MapSceneProps) {
   const hoveredFeature = hovered ? ordered.find((f) => f.name === hovered) ?? null : null;
   const selectedFeature = selected ? ordered.find((f) => f.name === selected) ?? null : null;
@@ -342,6 +344,120 @@ export function MapScene({
           />
         );
       })}
+
+      {/* 3D Column Mode: Vertical Cylindrical Pillars at Centroids */}
+      {renderMode === 'column' &&
+        ordered.map((f) => {
+          const [x, z] = toScene(f.centroid[0], f.centroid[1], frame);
+          const d = depths?.get(f.name) ?? 0.1;
+          const colHeight = Math.max(0.1, d * 3.2);
+          const isSel = selected === f.name;
+          const isHov = hovered === f.name;
+          return (
+            <mesh
+              key={`col-${f.name}`}
+              position={[x, colHeight / 2, z]}
+              castShadow
+              onClick={(e) => {
+                e.stopPropagation();
+                onSelect(f.name);
+              }}
+              onPointerOver={(e) => {
+                e.stopPropagation();
+                onHover(f.name);
+              }}
+              onPointerOut={(e) => {
+                e.stopPropagation();
+                onHover(null);
+              }}
+            >
+              <cylinderGeometry args={[0.08, 0.08, colHeight, 16]} />
+              <meshStandardMaterial
+                color={isSel ? '#fbbf24' : isHov ? '#f59e0b' : '#e07a38'}
+                emissive={isSel ? '#d97706' : isHov ? '#b45309' : '#000000'}
+                roughness={0.25}
+                metalness={0.6}
+              />
+            </mesh>
+          );
+        })}
+
+      {/* 3D Bubble Cluster Mode: Floating Glowing Spheres at Centroids */}
+      {renderMode === 'bubble' &&
+        ordered.map((f) => {
+          const [x, z] = toScene(f.centroid[0], f.centroid[1], frame);
+          const count = cases.get(f.name) ?? 0;
+          const maxCases = Math.max(...Array.from(cases.values()), 1);
+          const radius = 0.08 + Math.sqrt(count / maxCases) * 0.35;
+          const isSel = selected === f.name;
+          const isHov = hovered === f.name;
+          return (
+            <mesh
+              key={`bubble-${f.name}`}
+              position={[x, radius + 0.12, z]}
+              castShadow
+              onClick={(e) => {
+                e.stopPropagation();
+                onSelect(f.name);
+              }}
+              onPointerOver={(e) => {
+                e.stopPropagation();
+                onHover(f.name);
+              }}
+              onPointerOut={(e) => {
+                e.stopPropagation();
+                onHover(null);
+              }}
+            >
+              <sphereGeometry args={[radius, 24, 24]} />
+              <meshStandardMaterial
+                color={isSel ? '#fbbf24' : isHov ? '#f59e0b' : '#e07a38'}
+                emissive={isSel ? '#d97706' : '#c25e20'}
+                emissiveIntensity={isSel ? 0.6 : 0.25}
+                roughness={0.15}
+                metalness={0.4}
+                transparent
+                opacity={0.88}
+              />
+            </mesh>
+          );
+        })}
+
+      {/* 3D Bar Matrix Mode: Precision Rectangular Towers at Centroids */}
+      {renderMode === 'bar_matrix' &&
+        ordered.map((f) => {
+          const [x, z] = toScene(f.centroid[0], f.centroid[1], frame);
+          const d = depths?.get(f.name) ?? 0.1;
+          const barHeight = Math.max(0.12, d * 3.4);
+          const isSel = selected === f.name;
+          const isHov = hovered === f.name;
+          return (
+            <mesh
+              key={`bar-${f.name}`}
+              position={[x, barHeight / 2, z]}
+              castShadow
+              onClick={(e) => {
+                e.stopPropagation();
+                onSelect(f.name);
+              }}
+              onPointerOver={(e) => {
+                e.stopPropagation();
+                onHover(f.name);
+              }}
+              onPointerOut={(e) => {
+                e.stopPropagation();
+                onHover(null);
+              }}
+            >
+              <boxGeometry args={[0.12, barHeight, 0.12]} />
+              <meshStandardMaterial
+                color={isSel ? '#fbbf24' : isHov ? '#f59e0b' : '#d97706'}
+                roughness={0.3}
+                metalness={0.5}
+              />
+            </mesh>
+          );
+        })}
 
       {/* 3D Reticle on Selected State */}
       {selectedFeature && (

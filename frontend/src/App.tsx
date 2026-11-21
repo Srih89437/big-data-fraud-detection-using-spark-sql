@@ -15,6 +15,10 @@ import {
   Database,
   Radio,
   ExternalLink,
+  Play,
+  Pause,
+  GitCompare,
+  ArrowRight,
 } from 'lucide-react';
 import { StripeBadge } from './components/MotionPrimitives';
 import {
@@ -562,6 +566,22 @@ function MapSection({
   onOpenDossier: (name: string) => void;
 }) {
   const [activeJurisdiction, setActiveJurisdiction] = useState<string | null>(selected || 'Telangana');
+  const [isPlayingTimelapse, setIsPlayingTimelapse] = useState(false);
+  const [compareMode, setCompareMode] = useState(false);
+  const [compareTarget, setCompareTarget] = useState<string>('Karnataka');
+
+  // Play-years time-lapse runner
+  useEffect(() => {
+    if (!isPlayingTimelapse || years.length === 0) return;
+    const timer = setInterval(() => {
+      onYearChange((prevYear) => {
+        const idx = years.indexOf(prevYear);
+        const nextIdx = idx >= 0 ? (idx + 1) % years.length : 0;
+        return years[nextIdx];
+      });
+    }, 2200);
+    return () => clearInterval(timer);
+  }, [isPlayingTimelapse, years, onYearChange]);
 
   const cases = useMemo(() => {
     const m = new Map<string, number>();
@@ -577,6 +597,10 @@ function MapSection({
     return states.find((s) => s.state_ut === activeJurisdiction) || null;
   }, [states, activeJurisdiction]);
 
+  const compareRow = useMemo(() => {
+    return states.find((s) => s.state_ut === compareTarget) || null;
+  }, [states, compareTarget]);
+
   const nationalTotal = useMemo(() => {
     return states.reduce((acc, s) => acc + s.cases, 0);
   }, [states]);
@@ -587,7 +611,14 @@ function MapSection({
     return idx >= 0 ? idx + 1 : 0;
   }, [sortedStates, activeJurisdiction]);
 
+  const compareRank = useMemo(() => {
+    if (!compareTarget) return 0;
+    const idx = sortedStates.findIndex((s) => s.state_ut === compareTarget);
+    return idx >= 0 ? idx + 1 : 0;
+  }, [sortedStates, compareTarget]);
+
   const share = activeRow && nationalTotal > 0 ? ((activeRow.cases / nationalTotal) * 100).toFixed(1) : '0';
+  const compareShare = compareRow && nationalTotal > 0 ? ((compareRow.cases / nationalTotal) * 100).toFixed(1) : '0';
 
   return (
     <div className="map-cockpit-root">
@@ -603,8 +634,12 @@ function MapSection({
               year={year}
               dark={dark}
               onSelect={(name) => {
-                setActiveJurisdiction(name);
-                onSelect(name);
+                if (compareMode && activeJurisdiction && activeJurisdiction !== name) {
+                  setCompareTarget(name);
+                } else {
+                  setActiveJurisdiction(name);
+                  onSelect(name);
+                }
               }}
             />
           </Suspense>
@@ -627,6 +662,75 @@ function MapSection({
             Critical Hotspot: <strong>{sortedStates[0].state_ut}</strong> ({sortedStates[0].cases.toLocaleString('en-IN')} cases)
           </p>
         )}
+
+        {/* Play-Years Time-Lapse Scrubber */}
+        <div className="timelapse-dock-wrap" style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
+          <button
+            className={`timelapse-play-btn ${isPlayingTimelapse ? 'playing' : ''}`}
+            onClick={() => setIsPlayingTimelapse((p) => !p)}
+            title={isPlayingTimelapse ? 'Pause Time-Lapse' : 'Play 5-Year Time-Lapse (2020-2024)'}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 5,
+              padding: '4px 10px',
+              borderRadius: 6,
+              background: isPlayingTimelapse ? '#e07a38' : 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(224,122,56,0.4)',
+              color: '#fff',
+              fontSize: 11,
+              fontWeight: 600,
+              cursor: 'pointer',
+            }}
+          >
+            {isPlayingTimelapse ? <Pause size={12} /> : <Play size={12} />}
+            <span>{isPlayingTimelapse ? 'PAUSE' : 'PLAY 5-YR'}</span>
+          </button>
+
+          <div style={{ display: 'flex', gap: 3 }}>
+            {years.map((y) => (
+              <button
+                key={y}
+                onClick={() => onYearChange(y)}
+                style={{
+                  padding: '3px 7px',
+                  borderRadius: 4,
+                  fontSize: 10,
+                  fontFamily: 'var(--font-mono)',
+                  background: year === y ? '#e07a38' : 'rgba(255,255,255,0.05)',
+                  border: year === y ? '1px solid #e07a38' : '1px solid rgba(255,255,255,0.08)',
+                  color: year === y ? '#fff' : '#94a3b8',
+                  cursor: 'pointer',
+                  fontWeight: year === y ? 700 : 500,
+                }}
+              >
+                {y}
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => setCompareMode((c) => !c)}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4,
+              padding: '3px 8px',
+              borderRadius: 4,
+              fontSize: 10,
+              fontFamily: 'var(--font-mono)',
+              background: compareMode ? '#d97706' : 'rgba(255,255,255,0.05)',
+              border: compareMode ? '1px solid #f59e0b' : '1px solid rgba(255,255,255,0.08)',
+              color: compareMode ? '#fff' : '#94a3b8',
+              cursor: 'pointer',
+              fontWeight: 600,
+            }}
+            title="Toggle Side-by-Side Jurisdiction Comparison Mode"
+          >
+            <GitCompare size={11} />
+            <span>COMPARE</span>
+          </button>
+        </div>
       </div>
 
       {/* Floating Tactical HUD: Bottom-Left Dynamic Spectrum */}
@@ -646,14 +750,15 @@ function MapSection({
         </div>
       </div>
 
-      {/* Floating Tactical HUD: Bottom-Right Selected Jurisdiction Dossier Card */}
+      {/* Floating Tactical HUD: Bottom-Right Selected Jurisdiction Dossier Drawer */}
       {activeRow && (
         <motion.div
           className="hud-panel hud-bottom-right-dossier"
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.95 }}
+          initial={{ opacity: 0, x: 20, scale: 0.96 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          exit={{ opacity: 0, x: 20, scale: 0.96 }}
           transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+          style={{ maxWidth: compareMode ? 460 : 340 }}
         >
           <div className="dossier-card-header">
             <div className="dossier-card-title">
@@ -671,22 +776,54 @@ function MapSection({
             </button>
           </div>
 
-          <div className="dossier-kpi-grid">
-            <div className="dossier-kpi-cell">
-              <span className="kpi-label">REGISTERED FIRs ({year})</span>
-              <strong className="kpi-number">{activeRow.cases.toLocaleString('en-IN')}</strong>
+          {!compareMode ? (
+            <div className="dossier-kpi-grid">
+              <div className="dossier-kpi-cell">
+                <span className="kpi-label">REGISTERED FIRs ({year})</span>
+                <strong className="kpi-number">{activeRow.cases.toLocaleString('en-IN')}</strong>
+              </div>
+              <div className="dossier-kpi-cell">
+                <span className="kpi-label">NATIONAL SHARE</span>
+                <strong className="kpi-number">{share}%</strong>
+              </div>
+              <div className="dossier-kpi-cell">
+                <span className="kpi-label">ALL-INDIA RANK</span>
+                <strong className="kpi-number">
+                  #{rank} <small>of 36</small>
+                </strong>
+              </div>
             </div>
-            <div className="dossier-kpi-cell">
-              <span className="kpi-label">NATIONAL SHARE</span>
-              <strong className="kpi-number">{share}%</strong>
+          ) : (
+            <div className="dossier-compare-deck" style={{ padding: '8px 0' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 8 }}>
+                <div style={{ background: 'rgba(255,255,255,0.04)', padding: 8, borderRadius: 6 }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: '#e07a38' }}>{activeRow.state_ut}</div>
+                  <div style={{ fontSize: 16, fontWeight: 800, fontFamily: 'var(--font-mono)' }}>
+                    {activeRow.cases.toLocaleString('en-IN')}
+                  </div>
+                  <div style={{ fontSize: 10, color: '#94a3b8' }}>Rank #{rank} · {share}% share</div>
+                </div>
+
+                {compareRow && (
+                  <div style={{ background: 'rgba(255,255,255,0.04)', padding: 8, borderRadius: 6 }}>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: '#38bdf8' }}>{compareRow.state_ut}</div>
+                    <div style={{ fontSize: 16, fontWeight: 800, fontFamily: 'var(--font-mono)' }}>
+                      {compareRow.cases.toLocaleString('en-IN')}
+                    </div>
+                    <div style={{ fontSize: 10, color: '#94a3b8' }}>Rank #{compareRank} · {compareShare}% share</div>
+                  </div>
+                )}
+              </div>
+
+              {compareRow && (
+                <div style={{ fontSize: 11, color: '#94a3b8', textAlign: 'center', padding: '4px 0' }}>
+                  Delta: <strong style={{ color: activeRow.cases >= compareRow.cases ? '#e07a38' : '#38bdf8' }}>
+                    {Math.abs(activeRow.cases - compareRow.cases).toLocaleString('en-IN')} cases
+                  </strong> ({activeRow.cases >= compareRow.cases ? `${activeRow.state_ut} higher` : `${compareRow.state_ut} higher`})
+                </div>
+              )}
             </div>
-            <div className="dossier-kpi-cell">
-              <span className="kpi-label">ALL-INDIA RANK</span>
-              <strong className="kpi-number">
-                #{rank} <small>of 36</small>
-              </strong>
-            </div>
-          </div>
+          )}
 
           <button
             className="dossier-open-btn stripe-glow-btn"

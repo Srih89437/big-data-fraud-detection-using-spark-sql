@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { loadIndiaGeoJSON, projectAll, unionBBox, type ProjectedFeature } from '../lib/geo';
 import { buildStateGeometry, computeFrame, toScene, type Frame } from './geometry';
 
-export type RenderMode3D = 'prism' | 'relief' | 'choropleth' | 'column' | 'bubble';
+export type RenderMode3D = 'prism' | 'column' | 'bubble' | 'bar_matrix' | 'relief' | 'choropleth';
 
 export interface MapData {
   features: Map<string, ProjectedFeature>;

@@ -296,6 +296,7 @@ export function IndiaMap3D({
               year={year}
               showBorders={showBorders}
               showLabels={showLabels}
+              renderMode={renderMode}
               onHover={(n) => {
                 setHovered(n);
                 onHover?.(n);
@@ -349,16 +350,30 @@ export function IndiaMap3D({
               <button
                 className={`map-render-mode-btn ${renderMode === 'prism' ? 'active' : ''}`}
                 onClick={() => setRenderMode('prism')}
-                title="3D Extruded Prism Columns"
+                title="3D Extruded Boundary Prisms"
               >
-                3D Prism
+                Prism
               </button>
               <button
-                className={`map-render-mode-btn ${renderMode === 'relief' ? 'active' : ''}`}
-                onClick={() => setRenderMode('relief')}
-                title="2.5D Topographic Elevation Relief"
+                className={`map-render-mode-btn ${renderMode === 'column' ? 'active' : ''}`}
+                onClick={() => setRenderMode('column')}
+                title="3D Vertical Cylindrical Columns"
               >
-                2.5D Relief
+                Column
+              </button>
+              <button
+                className={`map-render-mode-btn ${renderMode === 'bubble' ? 'active' : ''}`}
+                onClick={() => setRenderMode('bubble')}
+                title="3D Floating Spherical Bubble Clusters"
+              >
+                Bubble
+              </button>
+              <button
+                className={`map-render-mode-btn ${renderMode === 'bar_matrix' ? 'active' : ''}`}
+                onClick={() => setRenderMode('bar_matrix')}
+                title="3D Rectangular Bar Matrix Towers"
+              >
+                Bar Matrix
               </button>
               <button
                 className={`map-render-mode-btn ${renderMode === 'choropleth' ? 'active' : ''}`}
