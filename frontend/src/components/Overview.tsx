@@ -1,7 +1,4 @@
-// Overview: Cyber Crime Observatory Executive Command Center.
-// Asymmetric command layout: High-contrast telemetry hero, live 3D geospatial radar,
-// longitudinal velocity & volume trajectory console, and tactical jurisdiction hotspots.
-// Strictly derived from dataset figures via Apache Spark SQL backend.
+// Overview of statewise cybercrime registrations and national trends.
 
 import { useMemo, useState, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -133,21 +130,20 @@ export function Overview({
           <div className="telemetry-tag-row">
             <span className="live-pulse-badge">
               <span className="pulse-dot" />
-              <span>NATIONAL OBSERVATORY</span>
+              <span>INDIA · 2020–2024</span>
             </span>
             <span className="telemetry-separator">/</span>
-            <span className="telemetry-meta">MHA CRIME IN INDIA DATASET</span>
+            <span className="telemetry-meta">STATEWISE CASE DATA</span>
             <span className="telemetry-separator">/</span>
             <span className="telemetry-meta">ANNUAL CYCLE {year}</span>
           </div>
 
           <h1 className="hero-headline">
-            National Cyber Threat
-            <span className="hero-gradient-text"> Architecture.</span>
+            Cybercrime registrations
+            <span className="hero-gradient-text"> across India.</span>
           </h1>
           <p className="hero-lead">
-            Distributed intelligence synthesized from police-registered First Information Reports (FIRs)
-            across all 36 constitutional states and Union Territories.
+            Explore recorded cases by state and union territory, compare years, and inspect the underlying dataset.
           </p>
         </div>
 
@@ -375,21 +371,13 @@ export function Overview({
             <div className="radar-header-bar">
               <div className="radar-status-pill">
                 <span className="live-ping" />
-                <span className="radar-status-text">LIVE 3D GEOSPATIAL RADAR</span>
+                <span className="radar-status-text">INDIA 3D MAP</span>
               </div>
               <span className="radar-meta-badge">36 BOUNDARIES EXTRACTED</span>
             </div>
 
             {/* 3D Map Viewport Frame */}
             <div className="radar-viewport-stage">
-              <div className="radar-reticle tl" />
-              <div className="radar-reticle tr" />
-              <div className="radar-reticle bl" />
-              <div className="radar-reticle br" />
-              <div className="radar-center-mark">
-                <Compass size={18} />
-              </div>
-
               <Suspense
                 fallback={
                   <div className="map-loading-stage">
@@ -410,17 +398,8 @@ export function Overview({
 
               {/* Viewport Floating Footer */}
               <div className="radar-floating-footer">
-                <div className="density-spectrum-strip">
-                  <span className="spectrum-label">LOW</span>
-                  <div className="spectrum-dots">
-                    <span className="dot d1" />
-                    <span className="dot d2" />
-                    <span className="dot d3" />
-                    <span className="dot d4" />
-                  </div>
-                  <span className="spectrum-label">MAX ({fmt(highestCases)})</span>
-                </div>
-                <span className="radar-instruction">Click any state to launch dossier</span>
+                <span>Case range: 0–{fmt(highestCases)}</span>
+                <span className="radar-instruction">Select a state to open its dossier</span>
               </div>
             </div>
 
@@ -443,7 +422,7 @@ export function Overview({
       <section className="hotspots-section">
         <div className="section-title-row">
           <div>
-            <h2 className="section-title">Critical Severity Hotspots</h2>
+            <h2 className="section-title">Highest case counts</h2>
             <p className="section-sub">Highest reported police-registered incident volumes for reporting cycle {year}</p>
           </div>
           <span className="section-count-badge">Top {topJurisdictions.length} of 36</span>

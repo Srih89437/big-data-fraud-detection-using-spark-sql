@@ -2,10 +2,10 @@
 // high-precision hover tooltips, concentric cartographic ground rings,
 // 3D selected jurisdiction beacon, and adaptive labels.
 
-import { useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { Html } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import type { ProjectedFeature } from '../lib/geo';
 import { toScene, type Frame } from './geometry';
 import { StateMesh } from './StateMesh';
@@ -288,6 +288,21 @@ function HoverTooltip({
   );
 }
 
+function AdaptiveCameraFov() {
+  const { camera, size } = useThree();
+
+  useEffect(() => {
+    if (!(camera instanceof THREE.PerspectiveCamera) || size.width === 0 || size.height === 0) return;
+    const horizontalFov = THREE.MathUtils.degToRad(50);
+    const aspect = size.width / size.height;
+    const verticalFov = 2 * Math.atan(Math.tan(horizontalFov / 2) / aspect);
+    camera.fov = THREE.MathUtils.radToDeg(Math.max(THREE.MathUtils.degToRad(40), Math.min(1.45, verticalFov)));
+    camera.updateProjectionMatrix();
+  }, [camera, size.width, size.height]);
+
+  return null;
+}
+
 export function MapScene({
   ordered,
   frame,
@@ -311,6 +326,7 @@ export function MapScene({
 
   return (
     <>
+      <AdaptiveCameraFov />
       <CameraRig />
 
       {/* Balanced Precision Lighting */}

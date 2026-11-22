@@ -39,7 +39,7 @@ All figures shown in the interface are computed from the backend API at runtime.
 - **State Dossier:** per-jurisdiction profile with five-year trend, national share, rank, and year-on-year change.
 - **National Analytics:** long-term trajectory, distribution between states and union territories, and rank movement across years.
 - **Data Explorer:** sortable table of all jurisdictions with CSV export.
-- **Dataset Studio:** upload CSV, Excel, or JSON files, preview and profile the columns, map them to 3D charts, and export the result.
+- **Dataset Studio:** upload CSV, TSV, JSON, or JSONL files, preview and profile the columns, map them to 3D charts, and export the result.
 - **Methodology:** description of the data, the processing steps, and the limitations.
 - **Command palette (Ctrl+K / ⌘K):** jump to any page, state, or year.
 - **Keyboard navigation:** keys 1 to 7 switch between the main pages.
@@ -102,29 +102,16 @@ git clone https://github.com/Srih89437/big-data-fraud-detection-using-spark-sql.
 cd big-data-fraud-detection-using-spark-sql
 ```
 
-### 2. Set up the backend
+### Install dependencies and run
 
 ```bash
-cd backend
-python -m venv venv
-source venv/bin/activate        # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
-```
-
-The API will be available at `http://127.0.0.1:8000`. Check that it is running by opening `http://127.0.0.1:8000/api/health`.
-
-### 3. Set up the frontend
-
-Open a new terminal window:
-
-```bash
-cd frontend
+python -m pip install -r backend/requirements.txt
 npm install
-npm run dev
+npm --prefix frontend install
+npm start
 ```
 
-The application will be available at `http://localhost:5173`.
+`npm start` launches the FastAPI backend and Vite frontend together. Open `http://localhost:5173`; the API is available at `http://127.0.0.1:8000`.
 
 ## Usage
 
@@ -144,12 +131,17 @@ Figures are shown as they appear in the source. Totals and derived values (share
 
 ## Screenshots
 
-> Add screenshots from `qa/after/` here, for example:
->
-> - Overview
-> - India 3D Map
-> - State Dossier
-> - Dataset Studio
+Screenshots are in `qa/screenshots/`. Each page is captured at 1440×900 and 390×844:
+
+| Page | 1440×900 | 390×844 |
+|---|---|---|
+| Overview | [Desktop](qa/screenshots/overview-1440x900.png) | [Mobile](qa/screenshots/overview-390x844.png) |
+| India 3D Map | [Desktop](qa/screenshots/india-3d-map-1440x900.png) | [Mobile](qa/screenshots/india-3d-map-390x844.png) |
+| State Dossier | [Desktop](qa/screenshots/state-dossier-1440x900.png) | [Mobile](qa/screenshots/state-dossier-390x844.png) |
+| National Analytics | [Desktop](qa/screenshots/national-analytics-1440x900.png) | [Mobile](qa/screenshots/national-analytics-390x844.png) |
+| Data Explorer | [Desktop](qa/screenshots/data-explorer-1440x900.png) | [Mobile](qa/screenshots/data-explorer-390x844.png) |
+| Dataset Studio | [Desktop](qa/screenshots/dataset-studio-1440x900.png) | [Mobile](qa/screenshots/dataset-studio-390x844.png) |
+| Methodology | [Desktop](qa/screenshots/methodology-1440x900.png) | [Mobile](qa/screenshots/methodology-390x844.png) |
 
 ## Limitations
 

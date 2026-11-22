@@ -1,13 +1,4 @@
-// Application Shell: Vertical Left Sidebar + Content Routing
-// Strictly adheres to Section C0 and master prompt requirements:
-// - Left vertical sidebar fixed on left (~232px, collapsible to ~64px rail)
-// - NO horizontal menu bar at the top on desktop/tablet anywhere (/ or /app/*)
-// - Content sits on the right
-// - Exact 7 sidebar items: Overview 1, India 3D Map 2, State Dossier 3,
-//   National Analytics 4, Data Explorer 5, Dataset Studio 6, Methodology 7
-// - Complete introduction website mounted at `/` (LandingPage)
-// - Application mounted at `/app/*`
-// - Dynamic URL synchronization & shareable links (?year=YYYY&state=NAME)
+// Shared application shell and route handling for the seven dashboard sections.
 
 import { Component, Suspense, useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
@@ -17,15 +8,9 @@ import {
   Command,
   ChevronRight,
   Menu,
-  Clock,
-  Radio,
-  Calendar,
-  Shield,
 } from 'lucide-react';
-import { StripeBadge } from './components/MotionPrimitives';
 import {
   clearApiCache,
-  fetchBootstrap,
   fetchMatrix,
   fetchOverview,
   fetchStateDetail,
@@ -33,27 +18,18 @@ import {
   fetchTrends,
   fetchYears,
 } from './lib/api';
-import type {
-  BootstrapResponse,
-  MatrixRow,
-  OverviewResponse,
-  StateRow,
-  TrendPoint,
-} from './lib/types';
+import type { MatrixRow, OverviewResponse, StateRow, TrendPoint } from './lib/types';
 import { Sidebar, type AppRoute } from './components/Sidebar';
-import { LandingPage } from './components/LandingPage';
 import { Overview } from './components/Overview';
 import { StateIntelligence } from './components/StateIntelligence';
 import { NationalAnalytics } from './components/NationalAnalytics';
 import { DataExplorer } from './components/DataExplorer';
 import { Methodology } from './components/Methodology';
-import { AtmosphericBackground } from './components/AtmosphericBackground';
 import { DatasetStudio } from './studio/DatasetStudio';
 import { Skeleton } from './components/ui';
 import { LazyIndiaMap3D as IndiaMap3D } from './map/lazy';
 import { CODE_TO_STATE, STATE_TO_CODE } from './lib/geo';
 import { CommandPalette } from './components/CommandPalette';
-import { IndiaPrismMark } from './components/IndiaPrismMark';
 
 function MapFallback() {
   return (
@@ -103,7 +79,7 @@ class ErrorBoundary extends Component<
 /** Parses path into application route and optional state code/name */
 function parsePathname(pathname: string): { route: AppRoute; stateArg?: string } {
   const p = pathname.replace(/\/+$/, '') || '/';
-  if (p === '' || p === '/') return { route: 'landing' };
+  if (p === '' || p === '/') return { route: 'overview' };
   if (p === '/app' || p === '/app/overview') return { route: 'overview' };
   if (p === '/app/map') return { route: 'map' };
   if (p.startsWith('/app/state')) {
@@ -114,7 +90,7 @@ function parsePathname(pathname: string): { route: AppRoute; stateArg?: string }
   if (p === '/app/data' || p === '/app/explorer') return { route: 'explorer' };
   if (p === '/app/studio') return { route: 'studio' };
   if (p === '/app/method' || p === '/app/methodology') return { route: 'methodology' };
-  return { route: 'landing' };
+  return { route: 'overview' };
 }
 
 export default function App() {
@@ -122,7 +98,7 @@ export default function App() {
     if (typeof window !== 'undefined') {
       return parsePathname(window.location.pathname).route;
     }
-    return 'landing';
+    return 'overview';
   });
 
   const [year, setYear] = useState(() => {
@@ -138,31 +114,13 @@ export default function App() {
   const [states, setStates] = useState<StateRow[]>([]);
   const [overview, setOverview] = useState<OverviewResponse | null>(null);
   const [trends, setTrends] = useState<TrendPoint[]>([]);
-  const [bootstrapData, setBootstrapData] = useState<BootstrapResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<string>('Telangana');
   const [dark, setDark] = useState(() => prefersDark());
   const [showShortcuts, setShowShortcuts] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
-  const [clockTime, setClockTime] = useState<string>('');
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-
-  // Live IST Observatory Clock
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setClockTime(
-        now.toLocaleTimeString('en-GB', {
-          hour12: false,
-          timeZone: 'Asia/Kolkata',
-        }) + ' IST',
-      );
-    };
-    updateTime();
-    const timer = setInterval(updateTime, 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   // Sync state param from URL on initial mount
   useEffect(() => {
@@ -186,9 +144,6 @@ export default function App() {
   useEffect(() => {
     const baseTitle = 'India Cyber Crime Intelligence Platform';
     switch (currentRoute) {
-      case 'landing':
-        document.title = `${baseTitle} — 3D National Observatory`;
-        break;
       case 'overview':
         document.title = `Overview (${year}) — ${baseTitle}`;
         break;
@@ -218,14 +173,12 @@ export default function App() {
     setLoading(true);
     setError(null);
     try {
-      const [boot, s, o, t, yr] = await Promise.all([
-        fetchBootstrap().catch(() => null),
+      const [s, o, t, yr] = await Promise.all([
         fetchStates(y),
         fetchOverview(y),
         fetchTrends(),
         fetchYears(),
       ]);
-      if (boot) setBootstrapData(boot);
       setStates(s.states);
       setOverview(o);
       setTrends(t.national_total);
@@ -241,7 +194,7 @@ export default function App() {
     void load(year);
   }, [year, load]);
 
-  // Historical matrix for the explorer and landing table
+  // Historical matrix used by the data explorer.
   const [history, setHistory] = useState<Map<string, Map<number, number>>>(new Map());
   const [matrixRows, setMatrixRows] = useState<MatrixRow[]>([]);
 
@@ -300,8 +253,8 @@ export default function App() {
           const code = STATE_TO_CODE[selected] || selected;
           finalPath = `/app/state/${code}`;
         }
-        // Retain year query param if not landing
-        if (route !== 'landing' && year !== 2024) {
+        // Retain the selected year in shareable section URLs.
+        if (year !== 2024) {
           finalPath += `?year=${year}`;
         }
         window.history.pushState(null, '', finalPath);
@@ -373,27 +326,10 @@ export default function App() {
     void load(year);
   }, [load, year]);
 
-  const isAppSection = currentRoute !== 'landing';
-
   return (
     <MotionConfig reducedMotion="user">
       <div className={`platform-root ${dark ? 'dark' : 'light'}`}>
-        <AtmosphericBackground section={currentRoute} dark={dark} />
-
-        {/* Precision Hairline Tricolor Bar */}
-        <div className="national-accent-bar" aria-hidden="true">
-          <span className="accent-saffron" />
-          <span className="accent-white" />
-          <span className="accent-green" />
-        </div>
-
-        {/* ===================================================================
-            TWO-COLUMN GRID LAYOUT (Section C0 Hard Requirement):
-            [Vertical Left Sidebar: 232px] [Content Column: 1fr]
-            NO horizontal top menu bar anywhere.
-            =================================================================== */}
         <div className="app-shell-layout">
-          {/* Vertical Left Sidebar */}
           <Sidebar
             currentRoute={currentRoute}
             onNavigate={(route, path) => navigateTo(route, path)}
@@ -401,120 +337,27 @@ export default function App() {
             dark={dark}
             onToggleTheme={() => setDark(!dark)}
             onOpenShortcuts={() => setShowShortcuts(true)}
-            sparkOnline={!error}
             isMobileOpen={isMobileOpen}
             onCloseMobile={() => setIsMobileOpen(false)}
           />
 
-          {/* Right Content Area */}
           <div className="app-content-column">
-            {/* Mobile Drawer Trigger for Landing Page */}
-            {!isAppSection && (
-              <button
-                className="landing-mobile-menu-btn mobile-menu-btn"
-                onClick={() => setIsMobileOpen(true)}
-                aria-label="Open navigation drawer"
-              >
-                <Menu size={18} />
-              </button>
-            )}
+            <button
+              className="mobile-menu-trigger-btn"
+              onClick={() => setIsMobileOpen(true)}
+              aria-label="Open navigation"
+            >
+              <Menu size={18} />
+            </button>
 
-            {/* Minimal In-Content Header (Only shown inside /app/*, NOT on /) */}
-            {isAppSection && (
-              <div className="content-page-subbar">
-                <div className="subbar-left">
-                  {/* Mobile Drawer Hamburger Button */}
-                  <button
-                    className="mobile-menu-trigger-btn mobile-menu-btn"
-                    onClick={() => setIsMobileOpen(true)}
-                    aria-label="Open navigation drawer"
-                  >
-                    <Menu size={18} />
-                  </button>
-
-                  <div className="subbar-breadcrumbs">
-                    <button
-                      className="subbar-crumb-link"
-                      onClick={() => navigateTo('landing', '/')}
-                    >
-                      ICIP 2026
-                    </button>
-                    <ChevronRight size={11} className="subbar-sep" />
-                    <span className="subbar-crumb-app">APP</span>
-                    <ChevronRight size={11} className="subbar-sep" />
-                    <span className="subbar-crumb-current">
-                      {currentRoute === 'overview' && 'OVERVIEW'}
-                      {currentRoute === 'map' && 'INDIA 3D MAP'}
-                      {currentRoute === 'state' && `STATE DOSSIER // ${selected.toUpperCase()}`}
-                      {currentRoute === 'analytics' && 'NATIONAL ANALYTICS'}
-                      {currentRoute === 'explorer' && 'DATA EXPLORER'}
-                      {currentRoute === 'studio' && 'DATASET STUDIO'}
-                      {currentRoute === 'methodology' && 'METHODOLOGY'}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="subbar-right">
-                  {/* Year Switcher for the Application Views */}
-                  {currentRoute !== 'studio' && currentRoute !== 'methodology' && (
-                    <div className="subbar-year-switcher">
-                      <span className="subbar-year-label">CYCLE:</span>
-                      <div className="subbar-year-pills">
-                        {years.map((y) => {
-                          const isActive = year === y;
-                          return (
-                            <button
-                              key={y}
-                              className={`subbar-year-btn ${isActive ? 'active' : ''}`}
-                              onClick={() => setYear(y)}
-                            >
-                              {isActive && (
-                                <motion.div
-                                  className="subbar-active-year-pill"
-                                  layoutId="subbarYearActivePill"
-                                  transition={{ type: 'spring', stiffness: 480, damping: 36 }}
-                                  aria-hidden="true"
-                                />
-                              )}
-                              <span className="year-btn-text">{y}</span>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* IST Clock */}
-                  {clockTime && (
-                    <div className="subbar-clock-pill" title="Indian Standard Time">
-                      <Clock size={12} className="clock-icon" />
-                      <span>{clockTime}</span>
-                    </div>
-                  )}
-
-                  {/* Command Palette Trigger */}
-                  <button
-                    className="subbar-action-icon-btn"
-                    onClick={() => setIsCommandPaletteOpen(true)}
-                    title="Command Palette (⌘K / Ctrl+K)"
-                    aria-label="Command Palette"
-                  >
-                    <Command size={14} />
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* Error Callout if Backend Service Unreachable */}
+            {/* Report API errors without hiding the rest of the dashboard. */}
             {error && (
               <div className="error-callout global-error">
                 <AlertTriangle size={18} className="error-icon" />
                 <div className="error-content">
                   <strong>Backend service unreachable</strong>
                   <p>{error}</p>
-                  <small>
-                    Run <code>uvicorn backend.main:app --port 8000</code> to reconnect the Spark SQL backend.
-                  </small>
+                  <small>Start the app with <code>npm start</code> to run the dashboard and API together.</small>
                 </div>
                 <button className="primary-btn" onClick={retry}>
                   <RefreshCw size={13} /> Reconnect
@@ -524,27 +367,9 @@ export default function App() {
 
             {/* Main Section Viewport */}
             <main
-              className={`app-main-viewport ${
-                currentRoute === 'landing'
-                  ? 'viewport-landing'
-                  : currentRoute === 'map'
-                  ? 'viewport-map-cockpit'
-                  : 'viewport-editorial'
-              }`}
+              className={`app-main-viewport ${currentRoute === 'map' ? 'viewport-map-cockpit' : 'viewport-editorial'}`}
               id="main-content"
             >
-              {/* Mobile Menu Opener on Landing Page */}
-              {!isAppSection && (
-                <button
-                  className="landing-mobile-menu-btn"
-                  onClick={() => setIsMobileOpen(true)}
-                  aria-label="Open navigation menu"
-                >
-                  <Menu size={18} />
-                  <span>Menu</span>
-                </button>
-              )}
-
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentRoute}
@@ -554,22 +379,6 @@ export default function App() {
                   exit={{ opacity: 0, y: -6 }}
                   transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  {/* 1. Introduction Website at `/` */}
-                  {currentRoute === 'landing' && (
-                    <ErrorBoundary label="Introduction Website">
-                      <LandingPage
-                        bootstrapData={bootstrapData}
-                        states={states}
-                        matrixRows={matrixRows}
-                        year={year}
-                        dark={dark}
-                        onNavigate={(r, p) => navigateTo(r as AppRoute, p)}
-                        onSelectState={handleSelectState}
-                      />
-                    </ErrorBoundary>
-                  )}
-
-                  {/* 2. Overview at `/app` */}
                   {currentRoute === 'overview' && (
                     <ErrorBoundary label="Overview">
                       <Overview
@@ -615,6 +424,7 @@ export default function App() {
                         overview={overview}
                         trends={trends}
                         loading={loading}
+                        dark={dark}
                         onOpenMap={() => navigateTo('map', '/app/map')}
                         onSelect={handleSelectState}
                       />
@@ -645,7 +455,6 @@ export default function App() {
                         years={years}
                         year={year}
                         loading={loading}
-                        source="Crime in India; Press Information Bureau, 21 July 2026"
                         onSelect={handleSelectState}
                         history={history}
                         matrixRows={matrixRows}
@@ -669,33 +478,6 @@ export default function App() {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Minimal App Footer */}
-              {isAppSection && currentRoute !== 'map' && (
-                <footer className="platform-footer">
-                  <div className="footer-content">
-                    <div className="footer-left">
-                      <div className="footer-brand">
-                        <IndiaPrismMark size={16} />
-                        <span>INDIA CYBER CRIME INTELLIGENCE PLATFORM</span>
-                      </div>
-                      <p className="footer-provenance">
-                        Statewise Statistics · Government of India Data Series
-                      </p>
-                    </div>
-                    <div className="footer-right">
-                      <span className="footer-engine">Apache Spark SQL distributed query pipeline</span>
-                      <a
-                        href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287039&lang=1&reg=3"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="footer-link"
-                      >
-                        PIB Gazette 2287039 ↗
-                      </a>
-                    </div>
-                  </div>
-                </footer>
-              )}
             </main>
           </div>
         </div>
@@ -877,25 +659,7 @@ function MapSection({
         )}
       </div>
 
-      {/* Floating Tactical HUD: Top-Left Mission Identity */}
-      <div className="hud-panel hud-top-left">
-        <div className="hud-badge-row">
-          <span className="hud-pulse-dot" />
-          <span className="hud-tag">GEOSPATIAL COCKPIT</span>
-          <span className="hud-year-pill">{year}</span>
-        </div>
-        <h2 className="hud-headline">
-          {nationalTotal > 0 ? nationalTotal.toLocaleString('en-IN') : '—'}
-          <span className="hud-headline-sub"> NATIONAL CASES</span>
-        </h2>
-        {sortedStates[0] && (
-          <p className="hud-lead-alert">
-            Critical Hotspot: <strong>{sortedStates[0].state_ut}</strong> ({sortedStates[0].cases.toLocaleString('en-IN')} cases)
-          </p>
-        )}
-      </div>
-
-      {/* Floating Tactical HUD: Top-Right Controls */}
+      {/* Map controls */}
       <div className="hud-panel hud-top-right">
         <div className="hud-ctrl-group">
           <button
@@ -916,7 +680,7 @@ function MapSection({
         </div>
       </div>
 
-      {/* Floating Bottom Intelligence Drawer (When a Jurisdiction is Selected) */}
+      {/* Selected jurisdiction details */}
       {activeRow && (
         <div className="hud-panel hud-bottom-drawer">
           <div className="drawer-main-info">

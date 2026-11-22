@@ -1,7 +1,7 @@
 // State Intelligence: Jurisdiction Intelligence Dossier.
 // Police FIR records sourced via Apache Spark SQL backend.
 
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import {
   Bar,
   BarChart,
@@ -27,8 +27,9 @@ import {
 } from 'lucide-react';
 import { fetchStateDetail } from '../lib/api';
 import type { OverviewResponse, StateDetailResponse, StateRow, TrendPoint } from '../lib/types';
-import { CountUp, Metric, Panel, Reveal, Skeleton, TrendPill } from './ui';
-import { useGsapStagger, StripeChartTooltip, InteractiveCard } from './MotionPrimitives';
+import { CountUp, Skeleton, TrendPill } from './ui';
+import { StripeChartTooltip, InteractiveCard } from './MotionPrimitives';
+import { LazyIndiaMap3D as IndiaMap3D } from '../map/lazy';
 
 export interface StateIntelProps {
   selected: string | null;
@@ -38,6 +39,7 @@ export interface StateIntelProps {
   overview: OverviewResponse | null;
   trends: TrendPoint[];
   loading: boolean;
+  dark: boolean;
   onOpenMap: () => void;
   onSelect: (name: string) => void;
 }
@@ -59,6 +61,7 @@ export function StateIntelligence({
   overview,
   trends,
   loading,
+  dark,
   onOpenMap,
   onSelect,
 }: StateIntelProps) {
@@ -67,8 +70,6 @@ export function StateIntelligence({
   const [detailLoading, setDetailLoading] = useState(false);
   const [switcherOpen, setSwitcherOpen] = useState(false);
   const [switcherQuery, setSwitcherQuery] = useState('');
-  const kpiContainerRef = useGsapStagger('.dossier-kpi-grid > div', [selected, year, detailLoading]);
-
   useEffect(() => {
     if (!selected) {
       setDetail(null);
@@ -100,6 +101,10 @@ export function StateIntelligence({
 
   const sortedStates = useMemo(
     () => [...states].sort((a, b) => b.cases - a.cases),
+    [states],
+  );
+  const caseCounts = useMemo(
+    () => new Map(states.map((state) => [state.state_ut, state.cases])),
     [states],
   );
 
@@ -263,7 +268,7 @@ export function StateIntelligence({
       )}
 
       {/* 4 Grand Tactical KPI Tiles */}
-      <div ref={kpiContainerRef} className="dossier-kpi-quad">
+      <div className="dossier-kpi-quad">
         {/* KPI 1 */}
         <InteractiveCard>
           <div className="tactical-dossier-tile highlight-tile">
@@ -397,6 +402,31 @@ export function StateIntelligence({
               </ResponsiveContainer>
             )}
           </div>
+
+          <section className="dossier-map-section">
+            <div className="dossier-map-heading">
+              <div>
+                <span className="section-kicker">STATEWISE CONTEXT</span>
+                <h2>India case map</h2>
+              </div>
+              <button className="ghost-action-btn" onClick={onOpenMap}>
+                <MapPin size={14} />
+                <span>Open full map</span>
+              </button>
+            </div>
+            <div className="dossier-map-frame">
+              <Suspense fallback={<Skeleton height="100%" />}>
+                <IndiaMap3D
+                  cases={caseCounts}
+                  selected={selected}
+                  year={year}
+                  dark={dark}
+                  onSelect={onSelect}
+                  compact
+                />
+              </Suspense>
+            </div>
+          </section>
         </div>
 
         {/* Right Column: Comparative Standing Barometer */}

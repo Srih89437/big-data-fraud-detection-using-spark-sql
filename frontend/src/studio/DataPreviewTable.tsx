@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Search, ChevronLeft, ChevronRight, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
 import type { PreviewData } from './types';
+import { API_BASE } from '../lib/api';
 
 interface DataPreviewTableProps {
   datasetId: string;
@@ -9,6 +10,7 @@ interface DataPreviewTableProps {
 export function DataPreviewTable({ datasetId }: DataPreviewTableProps) {
   const [data, setData] = useState<PreviewData | null>(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const [pageSize] = useState(25);
@@ -18,6 +20,7 @@ export function DataPreviewTable({ datasetId }: DataPreviewTableProps) {
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
+    setError(null);
 
     const params = new URLSearchParams({
       page: String(page),
@@ -27,7 +30,7 @@ export function DataPreviewTable({ datasetId }: DataPreviewTableProps) {
     if (search.trim()) params.append('search', search.trim());
     if (sortBy) params.append('sort_by', sortBy);
 
-    fetch(`http://127.0.0.1:8000/api/custom-datasets/${datasetId}/preview?${params.toString()}`)
+    fetch(`${API_BASE}/api/custom-datasets/${datasetId}/preview?${params.toString()}`)
       .then((res) => {
         if (!res.ok) throw new Error('Preview fetch failed');
         return res.json();
@@ -38,8 +41,11 @@ export function DataPreviewTable({ datasetId }: DataPreviewTableProps) {
           setLoading(false);
         }
       })
-      .catch(() => {
-        if (!cancelled) setLoading(false);
+      .catch((e: unknown) => {
+        if (!cancelled) {
+          setLoading(false);
+          setError(e instanceof Error ? e.message : String(e));
+        }
       });
 
     return () => {
@@ -59,6 +65,7 @@ export function DataPreviewTable({ datasetId }: DataPreviewTableProps) {
 
   return (
     <div className="preview-table-container">
+      {error && <div className="error-callout preview-error" role="alert">{error}</div>}
       {/* Top Search & Stats Bar */}
       <div className="preview-toolbar">
         <div className="preview-search-wrap">

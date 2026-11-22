@@ -41,11 +41,13 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
   const [datasets, setDatasets] = useState<CustomDatasetMeta[]>([]);
   const [activeDatasetId, setActiveDatasetId] = useState<string | null>(null);
   const [loadingDatasets, setLoadingDatasets] = useState(false);
+  const [datasetError, setDatasetError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'viz' | 'preview' | 'profile'>('viz');
 
   // Active dataset profile
   const [profile, setProfile] = useState<DatasetProfile | null>(null);
   const [loadingProfile, setLoadingProfile] = useState(false);
+  const [profileError, setProfileError] = useState<string | null>(null);
 
   // Visualization state
   const [vizType, setVizType] = useState<VizType>('bar_matrix_3d');
@@ -60,6 +62,7 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
   // Dynamic Query Result
   const [queryResult, setQueryResult] = useState<QueryResult | null>(null);
   const [queryLoading, setQueryLoading] = useState(false);
+  const [queryError, setQueryError] = useState<string | null>(null);
 
   // Upload state
   const [uploading, setUploading] = useState(false);
@@ -73,8 +76,12 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
 
   const fetchDatasets = useCallback(() => {
     setLoadingDatasets(true);
+    setDatasetError(null);
     fetch(`${API_BASE}/api/custom-datasets`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(`Dataset list request failed (HTTP ${res.status})`);
+        return res.json();
+      })
       .then((json) => {
         const list: CustomDatasetMeta[] = json.datasets || [];
         setDatasets(list);
@@ -86,8 +93,9 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
           setActiveDatasetId(preferred.id);
         }
       })
-      .catch(() => {
+      .catch((error: unknown) => {
         setLoadingDatasets(false);
+        setDatasetError(error instanceof Error ? error.message : String(error));
       });
   }, [activeDatasetId]);
 
@@ -99,6 +107,7 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
   useEffect(() => {
     if (!activeDatasetId) return;
     setLoadingProfile(true);
+    setProfileError(null);
     fetch(`${API_BASE}/api/custom-datasets/${activeDatasetId}/profile`)
       .then((res) => {
         if (!res.ok) throw new Error('Profile fetch failed');
@@ -117,16 +126,19 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
             setVizType('geo_map_3d');
             setXCol(geoCols[0].name);
             setYCol(numCols[0].name);
+            setAggFunc('sum');
           } else {
             setVizType('bar_matrix_3d');
             setXCol(catCols[0]?.name || data.columns[0].name);
-            setYCol(numCols[0]?.name || data.columns[0].name);
+            setYCol(numCols[0]?.name || catCols[0]?.name || data.columns[0].name);
             setZCol(numCols[1]?.name || '');
+            setAggFunc(numCols.length > 0 ? 'sum' : 'count');
           }
         }
       })
-      .catch(() => {
+      .catch((error: unknown) => {
         setLoadingProfile(false);
+        setProfileError(error instanceof Error ? error.message : String(error));
       });
   }, [activeDatasetId]);
 
@@ -134,6 +146,8 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
   useEffect(() => {
     if (!activeDatasetId || !yCol) return;
     setQueryLoading(true);
+    setQueryError(null);
+    setQueryResult(null);
 
     fetch(`${API_BASE}/api/custom-datasets/${activeDatasetId}/query`, {
       method: 'POST',
@@ -156,8 +170,13 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
         setQueryResult(data);
         setQueryLoading(false);
       })
-      .catch(() => {
+      .catch((error: unknown) => {
         setQueryLoading(false);
+        setQueryError(
+          error instanceof Error
+            ? error.message
+            : 'The selected dataset could not be queried. Check the backend connection and try again.',
+        );
       });
   }, [activeDatasetId, xCol, yCol, zCol, colorCol, sizeCol, aggFunc]);
 
@@ -197,8 +216,12 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
     fetch(`${API_BASE}/api/custom-datasets/${id}`, {
       method: 'DELETE',
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(`Dataset removal failed (HTTP ${res.status})`);
+        return res.json();
+      })
       .then(() => {
+        setDatasetError(null);
         fetchDatasets();
         if (activeDatasetId === id) {
           setActiveDatasetId(null);
@@ -206,7 +229,9 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
           setQueryResult(null);
         }
       })
-      .catch(() => {});
+      .catch((error: unknown) => {
+        setDatasetError(error instanceof Error ? error.message : String(error));
+      });
   };
 
   const toggleFullscreen = () => {
@@ -242,10 +267,10 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
           <div>
             <div className="studio-title-row">
               <h2 className="studio-title">Dataset Studio</h2>
-              <span className="studio-version-tag">ENTERPRISE INGESTION</span>
+              <span className="studio-version-tag">CSV DATA WORKSPACE</span>
             </div>
             <p className="studio-tagline">
-              Custom Big Data Ingestion · Schema Profiling · Autonomous 3D Analytical Visualizers
+              Load a dataset, review its columns, and explore it with interactive 3D charts.
             </p>
           </div>
         </div>
@@ -332,6 +357,12 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
               <span>{uploadSuccess}</span>
             </div>
           )}
+          {datasetError && (
+            <div className="studio-msg-badge error-msg" role="alert">
+              <AlertCircle size={12} />
+              <span>{datasetError}</span>
+            </div>
+          )}
 
           {/* Dataset Library Header */}
           <div className="sidebar-section-header">
@@ -344,6 +375,13 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
 
           {/* Dataset List */}
           <div className="studio-dataset-list">
+            {loadingDatasets && <div className="studio-list-state">Loading datasets…</div>}
+            {profileError && (
+              <div className="studio-msg-badge error-msg" role="alert">
+                <AlertCircle size={12} />
+                <span>{profileError}</span>
+              </div>
+            )}
             {datasets.map((d) => {
               const active = d.id === activeDatasetId;
               return (
@@ -389,6 +427,12 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
             <div className="studio-viz-layout">
               {/* 3D Visualizer Canvas */}
               <div className="studio-canvas-container">
+                {queryError && (
+                  <div className="studio-viz-error" role="alert">
+                    <AlertCircle size={16} />
+                    <span>{queryError}</span>
+                  </div>
+                )}
                 {queryLoading && (
                   <div className="studio-viz-overlay-loading">
                     <div className="map-loader-spinner" />
@@ -396,7 +440,7 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
                   </div>
                 )}
 
-                {queryResult && (queryResult.points?.length > 0 || (queryResult as any).records?.length > 0) ? (
+                {queryResult && queryResult.points.length > 0 ? (
                   <>
                     {vizType === 'bar_matrix_3d' && (
                       <BarMatrix3D data={queryResult} heightScale={heightScale} dark={dark} />
@@ -420,7 +464,11 @@ export function DatasetStudio({ dark = true }: DatasetStudioProps) {
                 ) : (
                   <div className="studio-empty-viz">
                     <Activity size={32} />
-                    <h4>Select dimensions in the inspector to render 3D analytics</h4>
+                    <h4>
+                      {activeDatasetId
+                        ? 'No chart data is available for this dataset selection.'
+                        : 'Select a dataset to render a 3D chart.'}
+                    </h4>
                   </div>
                 )}
               </div>

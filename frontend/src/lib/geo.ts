@@ -94,9 +94,13 @@ export const STATE_TO_CODE: Record<string, string> = {
   Puducherry: 'IN-PY',
 };
 
-export const CODE_TO_STATE: Record<string, string> = Object.fromEntries(
-  Object.entries(STATE_TO_CODE).map(([name, code]) => [code, name])
-);
+const codeToState: Record<string, string> = {};
+for (const [name, code] of Object.entries(STATE_TO_CODE)) {
+  codeToState[code] = name;
+  codeToState[code.slice(3)] = name;
+}
+
+export const CODE_TO_STATE = codeToState;
 
 // ---------------------------------------------------------------------------
 // Name normalisation

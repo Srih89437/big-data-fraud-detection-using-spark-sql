@@ -77,7 +77,7 @@ function frameIndia(frame: Frame, ordered: ProjectedFeature[]) {
   const h = b.maxZ - b.minZ;
   const span = Math.max(w, h);
   return {
-    position: [cx + span * 0.18, span * 1.15, cz + span * 0.78] as [number, number, number],
+    position: [cx + span * 0.12, span * 1.55, cz + span * 0.82] as [number, number, number],
     target: [cx, 0, cz] as [number, number, number],
   };
 }

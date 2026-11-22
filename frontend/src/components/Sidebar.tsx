@@ -13,7 +13,7 @@
 // - Framer Motion layoutId sliding active indicator + amber marker
 // - Bottom health pill, theme toggle, help (?), and collapse toggle
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   LayoutDashboard,
@@ -28,14 +28,12 @@ import {
   HelpCircle,
   ChevronLeft,
   ChevronRight,
-  Activity,
   X,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { IndiaPrismMark } from './IndiaPrismMark';
 
 export type AppRoute =
-  | 'landing'
   | 'overview'
   | 'map'
   | 'state'
@@ -60,7 +58,7 @@ export const NAV_ITEMS: NavItemDef[] = [
     label: 'Overview',
     shortcut: '1',
     icon: LayoutDashboard,
-    description: 'National Threat Matrix',
+    description: 'National overview',
   },
   {
     id: 'map',
@@ -68,7 +66,7 @@ export const NAV_ITEMS: NavItemDef[] = [
     label: 'India 3D Map',
     shortcut: '2',
     icon: MapIcon,
-    description: '36-Jurisdiction Choropleth',
+    description: 'Cases by jurisdiction',
   },
   {
     id: 'state',
@@ -76,7 +74,7 @@ export const NAV_ITEMS: NavItemDef[] = [
     label: 'State Dossier',
     shortcut: '3',
     icon: Compass,
-    description: 'Jurisdiction Deep-Dive',
+    description: 'Yearly state profile',
   },
   {
     id: 'analytics',
@@ -84,7 +82,7 @@ export const NAV_ITEMS: NavItemDef[] = [
     label: 'National Analytics',
     shortcut: '4',
     icon: BarChart3,
-    description: 'Longitudinal Trajectories',
+    description: 'National trends',
   },
   {
     id: 'explorer',
@@ -92,7 +90,7 @@ export const NAV_ITEMS: NavItemDef[] = [
     label: 'Data Explorer',
     shortcut: '5',
     icon: Database,
-    description: 'Multi-Year Evidence Table',
+    description: 'Search and compare cases',
   },
   {
     id: 'studio',
@@ -100,7 +98,7 @@ export const NAV_ITEMS: NavItemDef[] = [
     label: 'Dataset Studio',
     shortcut: '6',
     icon: Box,
-    description: 'Custom Telemetry & 3D Charts',
+    description: 'Explore custom datasets',
   },
   {
     id: 'methodology',
@@ -108,7 +106,7 @@ export const NAV_ITEMS: NavItemDef[] = [
     label: 'Methodology',
     shortcut: '7',
     icon: FileText,
-    description: 'Provenance & Spark Pipeline',
+    description: 'Data and processing notes',
   },
 ];
 
@@ -119,7 +117,6 @@ interface SidebarProps {
   dark: boolean;
   onToggleTheme: () => void;
   onOpenShortcuts: () => void;
-  sparkOnline: boolean;
   isMobileOpen: boolean;
   onCloseMobile: () => void;
 }
@@ -131,7 +128,6 @@ export function Sidebar({
   dark,
   onToggleTheme,
   onOpenShortcuts,
-  sparkOnline,
   isMobileOpen,
   onCloseMobile,
 }: SidebarProps) {
@@ -182,18 +178,18 @@ export function Sidebar({
           <button
             className="sidebar-brand-btn"
             onClick={() => {
-              onNavigate('landing', '/');
+              onNavigate('overview', '/app');
               onCloseMobile();
             }}
-            title="Return to Public Overview (/)"
+            title="Open overview"
           >
             <div className="sidebar-crest-mark" aria-hidden="true">
               <IndiaPrismMark size={20} />
             </div>
             {!collapsed && (
               <div className="sidebar-brand-text">
-                <span className="sidebar-brand-title">INDIA CYBER INTEL</span>
-                <span className="sidebar-brand-subtitle">SURVEY ROOM · 2026</span>
+                <span className="sidebar-brand-title">INDIA CYBER CRIME</span>
+                <span className="sidebar-brand-subtitle">STATEWISE DATA · 2020–2024</span>
               </div>
             )}
           </button>
@@ -269,22 +265,6 @@ export function Sidebar({
 
         {/* Footer Area: Health, Theme, Help, Collapse */}
         <div className="sidebar-footer-area">
-          {/* Spark Health Indicator */}
-          <div
-            className="sidebar-health-pill"
-            title={sparkOnline ? 'Apache Spark SQL 3.5 Online' : 'Backend offline'}
-          >
-            <span
-              className={`health-dot ${sparkOnline ? 'online' : 'offline'}`}
-              aria-hidden="true"
-            />
-            {!collapsed && (
-              <span className="health-label">
-                {sparkOnline ? 'SPARK 3.5 ONLINE' : 'SPARK DISCONNECTED'}
-              </span>
-            )}
-          </div>
-
           <div className="sidebar-actions-row">
             {/* Theme Toggle */}
             <button

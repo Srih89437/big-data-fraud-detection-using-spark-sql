@@ -2,9 +2,8 @@
 // Details exact administrative data sources, Survey of India / DataMeet cartographic provenance,
 // statistical definitions, compute engine architecture, and strict limitations.
 
-import { ShieldCheck, Database, MapPin, AlertCircle, Cpu, ExternalLink, Scale, CheckCircle2, BookOpen } from 'lucide-react';
+import { Database, MapPin, AlertCircle, Cpu, Scale, CheckCircle2 } from 'lucide-react';
 import { Reveal } from './ui';
-import { motion } from 'framer-motion';
 
 const MethodologyPanel = ({
   index,
@@ -21,12 +20,8 @@ const MethodologyPanel = ({
   children: React.ReactNode;
   action?: React.ReactNode;
 }) => (
-  <motion.div
+  <div
     className="method-doc-panel"
-    initial={{ opacity: 0, y: 12 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: '-40px' }}
-    transition={{ duration: 0.42, ease: [0.16, 1, 0.3, 1] }}
   >
     <div className="method-panel-header">
       <div className="method-panel-icon-wrap">
@@ -40,7 +35,7 @@ const MethodologyPanel = ({
       {action && <div className="method-panel-action">{action}</div>}
     </div>
     <div className="method-panel-body">{children}</div>
-  </motion.div>
+  </div>
 );
 
 export function Methodology() {
@@ -59,23 +54,21 @@ export function Methodology() {
             <span className="hero-em"> Interpretive Limits.</span>
           </h1>
           <p className="hero-desc">
-            A comprehensive specification of data origin, geographic boundary standards,
-            distributed Apache Spark query processing, and explicit statistical interpretation boundaries.
+            A short guide to the dataset, state boundaries, Spark SQL processing, and the limits of these counts.
           </p>
         </div>
       </Reveal>
 
-      {/* Critical Statistical Notice Banner */}
+      {/* Data interpretation */}
       <Reveal delay={0.05} className="methodology-alert-banner">
         <div className="alert-banner-icon">
           <AlertCircle size={22} />
         </div>
         <div className="alert-banner-text">
-          <strong>Mandatory Statistical Interpretation Notice</strong>
+          <strong>How to read these numbers</strong>
           <p>
-            Figures presented across this platform represent <em>police-registered First Information Reports (FIRs)</em> under the
-            Information Technology Act and Indian Penal Code sections. They <strong>do not</strong> represent total cybercrime occurrences,
-            financial fraud volumes, monetary amounts defrauded, victim complaint portal tickets, or judicial conviction rates.
+            Figures represent registered cybercrime cases. They are not a count of every incident, losses in money, complaints,
+            or convictions.
           </p>
         </div>
       </Reveal>
@@ -87,43 +80,24 @@ export function Methodology() {
           index="§ 14"
           icon={Database}
           title="Case Statistics Provenance"
-          subtitle="Statewise Cybercrime Dataset"
-          action={
-            <a
-              href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287039&lang=1&reg=3"
-              target="_blank"
-              rel="noreferrer"
-              className="method-source-link"
-            >
-              <span>PIB Gazette 2287039</span>
-              <ExternalLink size={12} />
-            </a>
-          }
+          subtitle="Statewise case counts · 2020–2024"
         >
           <dl className="editorial-spec-list">
             <dt>Primary Source</dt>
             <dd>
-              <em>Crime in India</em> annual publications;
-              published via Press Information Bureau (PIB Release ID: 2287039), 21 July 2026.
+              The bundled statewise cybercrime dataset covering calendar years 2020 through 2024.
             </dd>
 
-            <dt>Underlying Dataset</dt>
+            <dt>Coverage</dt>
             <dd>
-              <code>data/statewise_cyber_crimes_2020_2024.csv</code> — Longitudinal series recording registered
-              cases across all 28 states and 8 Union Territories (36 administrative jurisdictions) for calendar years 2020 through 2024.
-            </dd>
-
-            <dt>Coverage Standard</dt>
-            <dd>
-              100% jurisdictional coverage of India's administrative boundaries. Every state and Union Territory maintains
-              continuous yearly entries.
+              28 states and 8 union territories, with yearly case counts for 2020–2024.
             </dd>
 
             <dt>What Figures Represent</dt>
             <dd>
               <div className="spec-check-item positive-check">
                 <CheckCircle2 size={14} />
-                <span>Counts of police-registered criminal cases (FIRs) under cybercrime crime-heads.</span>
+                <span>Counts of registered cybercrime cases by jurisdiction and year.</span>
               </div>
             </dd>
 
@@ -131,7 +105,7 @@ export function Methodology() {
             <dd>
               <div className="spec-check-item negative-check">
                 <AlertCircle size={14} />
-                <span>Unreported incidents, Citizen Financial Cyber Fraud Reporting System (1930) distress calls, bank dispute chargebacks, or population-adjusted crime rates.</span>
+                <span>Unreported incidents, financial losses, or population-adjusted rates.</span>
               </div>
             </dd>
           </dl>
@@ -142,7 +116,7 @@ export function Methodology() {
           index="§ 15"
           icon={MapPin}
           title="Cartographic & Geospatial Standards"
-          subtitle="Survey of India and DataMeet verified administrative boundaries"
+          subtitle="Bundled India state and union territory boundaries"
           action={
             <span className="panel-stat-pill">
               <MapPin size={13} />
@@ -153,23 +127,17 @@ export function Methodology() {
           <dl className="editorial-spec-list">
             <dt>Boundary Dataset</dt>
             <dd>
-              <code>frontend/public/geo/india-states.geojson</code> — Level-1 administrative divisions (ADM1) covering
-              all 36 jurisdictions. Island territories are preserved with complete multi-part fidelity
-              (Andaman & Nicobar Islands: 187 polygon parts; Lakshadweep: 22 parts; Puducherry: 21 parts).
+              The boundary layer covers all 36 jurisdictions, including Goa and the island territories.
             </dd>
 
             <dt>Attribution & Licence</dt>
             <dd>
-              Derived from geoBoundaries (gbOpen IND ADM1) and the DataMeet India open-source cartographic community,
-              aligned with Election Commission of India administrative boundaries.
-              Licensed under <strong>Creative Commons Attribution 2.5 India (CC BY 2.5 IN)</strong>.
+              The map uses the bundled geoBoundaries data under its Creative Commons Attribution 2.5 India licence.
             </dd>
 
             <dt>Projection & Verification</dt>
             <dd>
-              Native WGS84 coordinates projected via Spherical Mercator for WebGL 3D rendering.
-              Strict verification via <code>tools/validate_boundaries.py</code> guarantees zero self-intersections,
-              36/36 matched boundaries, and identical coordinate bounds. No boundary was synthesized or approximated.
+              WGS84 coordinates are projected with d3-geo and displayed as separate jurisdiction shapes in the 3D map.
             </dd>
           </dl>
         </MethodologyPanel>
@@ -179,7 +147,7 @@ export function Methodology() {
           index="§ 16"
           icon={Cpu}
           title="Compute Engine & Spark SQL Processing"
-          subtitle="Distributed analytics pipeline and real-time REST serving"
+          subtitle="Backend calculations and dashboard API"
           action={
             <span className="panel-stat-pill">
               <Cpu size={13} />
@@ -190,14 +158,13 @@ export function Methodology() {
           <dl className="editorial-spec-list">
             <dt>Query Execution</dt>
             <dd>
-              All aggregations, rank computations, category segmentations, and multi-year time-series matrices
-              are computed using <strong>Apache Spark SQL</strong> (PySpark 3.5.0) within the local warehouse.
-              The web client performs zero speculative statistical derivation.
+              Aggregations, rankings, category totals, and yearly matrices are calculated with
+              <strong> Apache Spark SQL</strong> in the backend.
             </dd>
 
             <dt>API Endpoints</dt>
             <dd>
-              High-throughput asynchronous FastAPI gateway exposing:
+              FastAPI endpoints provide:
               <ul className="api-endpoint-list">
                 <li><code>GET /api/overview?year={'{y}'}</code> — National aggregates & jurisdiction counts</li>
                 <li><code>GET /api/states?year={'{y}'}</code> — Statewise case counts and administrative types</li>
@@ -218,53 +185,34 @@ export function Methodology() {
         <MethodologyPanel
           index="§ 17"
           icon={Scale}
-          title="Dataset Separation & Governance"
-          subtitle="Clear delineation between baseline records and diagnostic prototypes"
+          title="Dataset Notes"
+          subtitle="Baseline case counts and custom uploads are kept separate"
           action={
             <span className="panel-stat-pill">
               <Scale size={13} />
-              <span>DATA GOVERNANCE</span>
+              <span>DATA SCOPE</span>
             </span>
           }
         >
           <dl className="editorial-spec-list">
-            <dt>Baseline Statistics</dt>
+            <dt>Dashboard data</dt>
             <dd>
-              <code>data/statewise_cyber_crimes_2020_2024.csv</code> is the verified single source of truth
-              for this observatory.
+              Statewise case counts drive the overview, map, dossier, and national analytics.
             </dd>
 
-            <dt>Indicator Table 9A</dt>
+            <dt>Other indicators</dt>
             <dd>
-              <code>data/india_cyber_crimes.csv</code> contains all-India crime indicators and is strictly isolated
-              from statewise geographical calculations to eliminate aggregation mismatch.
+              Other bundled indicators are not included in statewise totals or map calculations.
             </dd>
 
-            <dt>Original Streamlit Prototype</dt>
+            <dt>Dataset Studio</dt>
             <dd>
-              The original machine-learning prototype (<code>app.py</code> and <code>src/spark_engine.py</code>)
-              with demo synthetic transaction records remains preserved in the repository root for algorithmic reference
-              and is not part of this public intelligence dashboard.
+              Uploaded datasets can be explored separately and do not change the dashboard's baseline figures.
             </dd>
           </dl>
         </MethodologyPanel>
       </div>
 
-      {/* Footer compliance strip */}
-      <Reveal delay={0.2} className="method-compliance-strip">
-        <div className="compliance-item">
-          <ShieldCheck size={16} />
-          <span>Verified data only — no synthetic or interpolated figures</span>
-        </div>
-        <div className="compliance-item">
-          <BookOpen size={16} />
-          <span>All computations traceable to public government publications</span>
-        </div>
-        <div className="compliance-item">
-          <Database size={16} />
-          <span>Apache Spark SQL processes all aggregations server-side</span>
-        </div>
-      </Reveal>
     </div>
   );
 }

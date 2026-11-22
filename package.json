@@ -1,0 +1,11 @@
+{
+  "name": "india-cyber-crime-dashboard",
+  "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others --names API,WEB \"python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

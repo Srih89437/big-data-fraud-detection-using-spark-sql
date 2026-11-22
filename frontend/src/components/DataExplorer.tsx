@@ -1,7 +1,4 @@
-// Data Explorer: High-Density Analytical Intelligence Matrix.
-// Bloomberg / Linear grade data grid with 5-year longitudinal history, inline sparkbars,
-// instant search, filter chips, keyboard shortcuts, and dual CSV/JSON export.
-// Strictly sourced from the Apache Spark SQL backend.
+// Searchable statewise case table with yearly history and CSV/JSON export.
 
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -25,7 +22,6 @@ export interface DataExplorerProps {
   years: number[];
   year: number;
   loading: boolean;
-  source: string;
   onSelect: (name: string) => void;
   /** Full historical matrix: jurisdiction -> year -> cases. */
   history: Map<string, Map<number, number>>;
@@ -88,7 +84,6 @@ export function DataExplorer({
   years,
   year,
   loading,
-  source,
   onSelect,
   history,
   matrixRows,
@@ -212,11 +207,11 @@ export function DataExplorer({
             <span className="eyebrow-year">MASTER DATASET</span>
           </div>
           <h1 className="explorer-main-headline">
-            All 36 Jurisdictions,
-            <span className="headline-gradient-text"> Standardized & Audited.</span>
+            All 36 jurisdictions,
+            <span className="headline-gradient-text"> in one table.</span>
           </h1>
           <p className="explorer-headline-desc">
-            Complete high-density data matrix representing all 28 States and 8 Union Territories with five-year police FIR registrations (2020–2024).
+            Compare registered case counts across states and union territories from 2020 to 2024.
           </p>
         </div>
 
@@ -395,7 +390,6 @@ export function DataExplorer({
 
         <div className="matrix-footer-deck">
           <span className="footer-records-count">Showing {rows.length} of {states.length} reporting jurisdictions</span>
-          <span className="footer-source-note">{source}</span>
         </div>
       </div>
     </div>
